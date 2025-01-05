@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <!-- Menu de Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg container-fluid">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/Fatou5.png" alt="Logo" class="logo me-2" height="70">
+        </a>
+
+        <!-- Bouton toggle pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens du menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="tableau.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Formation.html">Formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentorat.html">Mentorat</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Projet.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="espace.html">Espace Kids</a>
+                </li>
+                
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CSS amélioré -->
+<style>
+    /* Style général */
+    .navbar {
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 0;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.4s ease;
+        background-color: #ffffff;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #7f3fbf; /* Couleur féminine et élégante */
+        transition: transform 0.4s ease, color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+        color: #ff69b4; /* Changement de couleur dynamique au survol */
+    }
+
+    .navbar .logo {
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar .logo:hover {
+        transform: scale(1.15); /* Animation plus forte du logo */
+    }
+
+    /* Liens du menu */
+    .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #7f3fbf;
+        margin: 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+        color: #ff69b4; /* Rose vif pour un effet féminin */
+        text-shadow: 1px 1px 5px rgba(255, 105, 180, 0.6);
+        font-weight: 700;
+        transform: translateY(-3px);
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        background-color: #fff5f8; /* Douce couleur de fond */
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .dropdown-menu a {
+        font-size: 1rem;
+        color: #555;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #ffebf2; /* Effet de survol féminin */
+    }
+
+    /* Animation du dropdown */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .navbar-nav {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+    }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Hero Section -->
+<section id="hero" style="background-image: url('images/Former.jpg'); background-size: cover; background-position: center; height: 60vh; width: 100%; position: relative;">
+    <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; max-width: 90%; width: 100%;">
+      <h1 class="hero-title" data-aos="fade-up" style="font-size: 4rem; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); line-height: 1.2;">Devenez une Leader dans la Technologie</h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.5rem; font-weight: 300; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); margin-top: 20px; line-height: 1.6;">Nos programmes sont conçus pour vous donner les compétences nécessaires pour exceller dans les secteurs numériques les plus dynamiques.</p>
+      <div data-aos="fade-up" data-aos-delay="400" class="hero-buttons" style="margin-top: 40px;">
+        <a href="#formations" class="btn btn-hero btn-hero-primary me-3" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Explorer nos formations</a>
+        <a href="#video" class="btn btn-hero btn-hero-secondary" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Regarder la Vidéo</a>
+      </div>
+    </div>
+  
+    <!-- Overlay Effect for Better Contrast -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+  </section>
+  
+  <!-- Animation Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- Custom JS for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS animation library
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="our-trainings" class="py-5" style="background: linear-gradient(to right, #f0f0f0, #ffffff);">
+    <div class="container">
+      <h1 class="text-center mb-5 text-primary" style="font-family: 'Montserrat', sans-serif; font-weight: 600; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);">NOS FORMATIONS</h1>
+  
+      <div class="row align-items-center">
+        <!-- Column 1: Image -->
+        <div class="col-lg-6 mb-4">
+          <div class="text-center">
+            <img src="images/award.png" alt="Nos Formations chez Jongoma Tech" class="img-fluid rounded shadow-lg" style="max-height: 650px; object-fit: cover; transition: transform 0.3s ease; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+          </div>
+        </div>
+  
+        <!-- Column 2: Text -->
+        <div class="col-lg-6">
+          <h2 class="mb-4 text-dark text-center" style="font-family: 'Lora', serif; font-weight: 700; color: #00796b; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);">Explorez Nos Programmes</h2>
+          <p class="lead" style="font-size: 1.1rem; color: #333; line-height: 1.8;">
+            Chez Jongoma Tech, nous croyons en la puissance de la technologie pour transformer les vies. Nos formations innovantes sont conçues pour permettre aux femmes africaines de briller dans l'univers numérique.
+          </p>
+          <p style="color: #555;">
+            Qu'il s'agisse de maîtriser les bases du codage, d'explorer les avancées en cybersécurité ou de plonger dans les mondes captivants de l'intelligence artificielle et du marketing digital, nos programmes offrent des opportunités infinies pour apprendre, créer et exceller.
+          </p>
+          <div class="text-center">
+            <a href="#contact" class="btn btn-primary btn-lg shadow mt-3" style="border-radius: 25px; transition: all 0.3s ease; font-weight: 600; padding: 15px 30px; background-color: #00796b; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">Découvrir nos formations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    #our-trainings .btn-primary {
+      background-color: #00796b;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-size: 1.1rem;
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    #our-trainings .btn-primary:hover {
+      background-color: #004d40;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+  
+    #our-trainings .btn-primary:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+  
+    #our-trainings .text-center a {
+      display: inline-block;
+    }
+  
+    #our-trainings .img-fluid:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+  
+    #our-trainings h2 {
+      font-family: 'Lora', serif;
+      color: #333;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+  
+    #our-trainings p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+    }
+  </style>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <section class="container-fluid py-5" id="parcours-aventure-technologique">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-warning">🚀 Aventure Technologique : Explorez les Sciences et la Technologie !</h2>
+            <p class="text-muted">Rejoignez notre aventure éducative et découvrez les merveilles de la science, de la technologie et de l'innovation à travers des jeux et des missions amusantes !</p>
+        </div>
+    
+        <!-- Missions Thématiques -->
+        <div class="row g-4">
+            <!-- Mission 1 : Robotique -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 hover-card">
+                    <img src="images/exceptionnel.png" class="card-img-top" alt="Mission Robotique">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mission Robotique 🤖</h5>
+                        <p class="card-text">Construis ton propre robot virtuel et apprends comment ils aident dans la vie de tous les jours !</p>
+                        <button class="btn btn-warning btn-sm interact-btn" data-message="Mission Robotique : Prêt à construire ton robot ?">Lancer la Mission</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mission 2 : Exploration Spatiale -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 hover-card">
+                    <img src="images/spatial.png" class="card-img-top" alt="Mission Spatiale" style="margin-top: 20px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Exploration Spatiale 🌌</h5>
+                        <p class="card-text">Voyage dans l'espace et découvre les mystères des planètes, des étoiles et des galaxies lointaines !</p>
+                        <button class="btn btn-warning btn-sm interact-btn" data-message="Mission Spatiale : Prépare ton vaisseau et envole-toi !">Explorer l'Espace</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Mission 3 : Ingénierie de Ponts -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 hover-card">
+                    <img src="images/ingenieur.png" class="card-img-top" alt="Mission Ingénierie">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ingénierie : Construis ton Pont ! 🌉</h5>
+                        <p class="card-text">Deviens un ingénieur et construis un pont capable de supporter des poids. Teste tes compétences en génie civil !</p>
+                        <button class="btn btn-warning btn-sm interact-btn" data-message="Mission Ingénierie : À toi de construire le pont parfait !">Lancer la Construction</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Quiz et Défis -->
+        <div class="text-center mt-5">
+            <h4 class="fw-bold text-warning">🧩 Quiz et Défis Scientifiques</h4>
+            <p class="text-muted">Teste tes connaissances avec nos quiz sur la science et la technologie. Es-tu prêt à relever le défi ?</p>
+            <button class="btn btn-warning btn-lg animate__animated animate__bounceIn">Lancer le Quiz</button>
+        </div>
+    
+        <!-- Section Bonus pour Parents -->
+        <div class="text-center mt-5">
+            <h4 class="fw-bold text-warning">🎁 Bonus pour les Parents</h4>
+            <p class="text-muted">Découvrez comment encourager vos enfants à explorer la science et la technologie de manière ludique à la maison !</p>
+            <a href="#" class="btn btn-success btn-lg animate__animated animate__fadeInUp">Ressources pour Parents</a>
+        </div>
+    
+        <style>
+            /* Section Aventure Technologique */
+            #parcours-aventure-technologique {
+                font-family: 'Poppins', sans-serif;
+                background: #f8f9fa;
+                padding: 50px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+    
+            .card {
+                border-radius: 20px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+    
+            .card:hover {
+                transform: scale(1.1);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+                animation: shake 0.5s ease;
+            }
+    
+            @keyframes shake {
+                0% { transform: rotate(0deg); }
+                25% { transform: rotate(5deg); }
+                50% { transform: rotate(0deg); }
+                75% { transform: rotate(-5deg); }
+                100% { transform: rotate(0deg); }
+            }
+    
+            .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+    
+            .btn-warning {
+                background-color: #ffc107;
+                border: none;
+                border-radius: 25px;
+                transition: background-color 0.3s;
+            }
+    
+            .btn-warning:hover {
+                background-color: #e0a800;
+                transform: scale(1.1);
+            }
+    
+            .btn-success {
+                background-color: #28a745;
+                border-radius: 25px;
+                transition: background-color 0.3s, transform 0.3s;
+            }
+    
+            .btn-success:hover {
+                background-color: #218838;
+                transform: scale(1.05);
+            }
+    
+            .text-warning {
+                color: #ffc107;
+            }
+    
+            .btn-lg {
+                font-size: 1.2rem;
+            }
+    
+            .hover-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .notification {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #ffc107;
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                animation: fadeIn 0.5s, fadeOut 0.5s 3.5s;
+                z-index: 999;
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+    
+            @keyframes fadeOut {
+                from { opacity: 1; transform: translateY(0); }
+                to { opacity: 0; transform: translateY(20px); }
+            }
+    
+            /* Animations via animate.css */
+            .animate__bounceIn {
+                animation: bounceIn 1s ease-out;
+            }
+    
+            .animate__fadeInUp {
+                animation: fadeInUp 1s ease-out;
+            }
+        </style>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+    
+        <script>
+            // Notifications dynamiques
+            document.querySelectorAll('.interact-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const message = event.target.dataset.message;
+    
+                    // Créer une notification
+                    const notification = document.createElement('div');
+                    notification.className = 'notification';
+                    notification.textContent = message;
+    
+                    // Ajouter au DOM
+                    document.body.appendChild(notification);
+    
+                    // Suppression après 4 secondes
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 4000);
+                });
+            });
+        </script>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <section class="container-fluid py-5" id="technologie-pour-enfants">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">🎨 Découvrez le Monde de la Technologie pour les Enfants !</h2>
+            <p class="text-muted">Explorez l'univers magique des nouvelles technologies de manière ludique et interactive. Apprenez en jouant !</p>
+        </div>
+    
+        <!-- Activités et Ateliers pour les Enfants -->
+        <div class="row g-4">
+            <!-- Atelier Découverte IA -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 hover-card">
+                    <img src="images/child.PNG" class="card-img-top" alt="Atelier IA pour Enfants">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Explore l'Intelligence Artificielle ! 🤖</h5>
+                        <p class="card-text">Un atelier pour comprendre comment l'IA aide à résoudre des problèmes amusants et intéressants. Parfait pour les jeunes génies en herbe !</p>
+                        <button class="btn btn-primary btn-sm interact-btn" data-message="Prêt à découvrir l’IA ? C’est parti !">Découvrir l'Atelier</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Atelier Apprendre la Blockchain -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 hover-card">
+                    <img src="images/children.PNG" class="card-img-top" alt="Atelier Blockchain pour Enfants">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">La Magie de la Blockchain ! 🔗</h5>
+                        <p class="card-text">Découvre comment la blockchain peut être utilisée pour garder des secrets et créer des jeux fantastiques.</p>
+                        <button class="btn btn-primary btn-sm interact-btn" data-message="Découvre les secrets de la blockchain !">Explorer la Blockchain</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Jeux et Ressources Interactifs -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 hover-card">
+                    <img src="images/noiro.PNG" class="card-img-top" alt="Jeux éducatifs pour enfants">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Jeux Éducatifs 🧩</h5>
+                        <p class="card-text">Jouez à des jeux pour apprendre tout en vous amusant. Découvrez des jeux qui vous aideront à comprendre la technologie tout en vous amusant !</p>
+                        <button class="btn btn-primary btn-sm interact-btn" data-message="Lance-toi dans un jeu fun et éducatif !">Jouer maintenant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section Bonus pour les Parents et Educateurs -->
+        <div class="text-center mt-5">
+            <h4 class="fw-bold text-primary">🎁 Bonus Spécial</h4>
+            <p class="text-muted">Une ressource supplémentaire pour les parents et éducateurs : comment enseigner les bases de la technologie de façon ludique et interactive.</p>
+            <a href="#" class="btn btn-success btn-lg">Rejoindre un Atelier pour Educateurs</a>
+        </div>
+    
+        <style>
+            /* Section Technologie pour Enfants */
+            #technologie-pour-enfants {
+                font-family: 'Poppins', sans-serif;
+                background: #f0f9f4;
+                padding: 50px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+    
+            .card {
+                border-radius: 20px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .card:hover {
+                transform: scale(1.05);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            }
+    
+            .card-img-top {
+                height: 200px;
+                object-fit: cover;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+    
+            .btn-primary {
+                background-color: #007bff;
+                border: none;
+                border-radius: 25px;
+            }
+    
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+    
+            .btn-success {
+                background-color: #28a745;
+                border-radius: 25px;
+            }
+    
+            .btn-success:hover {
+                background-color: #218838;
+            }
+    
+            .text-primary {
+                color: #007bff;
+            }
+    
+            .hover-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            /* Notifications */
+            .notification {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #28a745;
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                animation: fadeIn 0.5s, fadeOut 0.5s 3.5s;
+                z-index: 999;
+            }
+    
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+            }
+        </style>
+    
+        <script>
+            // Notifications dynamiques
+            document.querySelectorAll('.interact-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const message = event.target.dataset.message;
+    
+                    // Créer une notification
+                    const notification = document.createElement('div');
+                    notification.className = 'notification';
+                    notification.textContent = message;
+    
+                    // Ajouter au DOM
+                    document.body.appendChild(notification);
+    
+                    // Suppression après 4 secondes
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 4000);
+                });
+            });
+        </script>
+    </section>
+    
+<!-- Section des Formations Recommandées par les Experts -->
+<section class="expert-recommended-courses">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2 class="section-title">Formations Recommandées par les Experts</h2>
+            <p class="section-description">Découvrez les formations sélectionnées par les leaders de l'industrie pour développer vos compétences professionnelles.</p>
+        </div>
+
+        <!-- Filtres Interactifs -->
+        <div class="filters">
+            <select class="filter-dropdown" id="difficulty-filter">
+                <option value="all">Tous les Niveaux</option>
+                <option value="beginner">Débutant</option>
+                <option value="intermediate">Intermédiaire</option>
+                <option value="advanced">Avancé</option>
+            </select>
+        </div>
+
+        <div class="course-cards">
+            <!-- Carte de formation recommandée -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="images/marketing.jpeg" alt="Formation en Marketing Digital" class="img-fluid">
+                    <div class="course-overlay">
+                        <h4>Stratégies Avancées en Marketing Digital</h4>
+                        <p>Maîtrisez les meilleures pratiques du marketing digital pour propulser vos campagnes à un autre niveau.</p>
+                        <div class="rating">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <span class="expert-name">Recommandé par : <strong>Claire Dupuis</strong></span>
+                        <a href="#" class="btn">Voir la formation</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte de formation recommandée -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="images/Data.jpg" alt="Formation en Data Science" class="img-fluid">
+                    <div class="course-overlay">
+                        <h4>Data Science pour les Débutants</h4>
+                        <p>Initiez-vous à la science des données et découvrez les concepts clés du machine learning.</p>
+                        <div class="rating">
+                            <span>⭐⭐⭐⭐</span>
+                        </div>
+                        <span class="expert-name">Recommandé par : <strong>Dr. Martin Lefevre</strong></span>
+                        <a href="#" class="btn">Explorer la formation</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte de formation recommandée -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="images/Design.jpeg" alt="Formation en Design UX/UI" class="img-fluid">
+                    <div class="course-overlay">
+                        <h4>Design UX/UI : Créer des Interfaces Impactantes</h4>
+                        <p>Apprenez à concevoir des interfaces utilisateurs esthétiques et intuitives pour des applications réussies.</p>
+                        <div class="rating">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <span class="expert-name">Recommandé par : <strong>Thomas Meunier</strong></span>
+                        <a href="#" class="btn">Démarrer la formation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section des Témoignages -->
+        <div class="testimonials">
+            <h3 class="testimonials-title">Ce que disent nos étudiants</h3>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p>"Cette formation m'a permis de développer des compétences en marketing digital que je peux appliquer immédiatement dans mon travail. Hautement recommandé!"</p>
+                    <span>- <strong>Julie Martin</strong>, Marketing Manager</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Le cours de Data Science est exceptionnel, avec des concepts clairs et des exercices pratiques. Je recommande vivement!"</p>
+                    <span>- <strong>David Lefevre</strong>, Data Analyst</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        /* Style général de la section */
+        .expert-recommended-courses {
+            background: linear-gradient(135deg, #fdf4f2, #f1f0f4);
+            padding: 80px 0;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Filtres interactifs */
+        .filters {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-dropdown {
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .filter-dropdown:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .course-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .course-card {
+            width: 30%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            padding: 15px;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: glow 1s infinite alternate;
+        }
+
+        .course-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .course-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover .course-img img {
+            transform: scale(1.1);
+        }
+
+        .course-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        .course-card:hover .course-overlay {
+            opacity: 1;
+        }
+
+        .course-overlay h4 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .rating {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: gold;
+        }
+
+        .expert-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        /* Section des Témoignages */
+        .testimonials {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .testimonials-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-card {
+            width: 45%;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            color: #7f8c8d;
+            text-align: left;
+        }
+
+        .testimonial-card span {
+            font-weight: bold;
+            color: #3498db;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Animation pour le rayon */
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+    </style>
+
+    <script>
+        // Effet de survol rayonnant pour les cartes de formation
+        const courseCards = document.querySelectorAll('.course-card');
+
+        courseCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.animation = 'glow 1s infinite alternate';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.animation = 'none';
+            });
+        });
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid my-5">
+    <h2 class="text-center mb-5" style="font-family: 'Georgia', serif; color: #ff6f61;">Technologies Émergentes</h2>
+
+    <!-- Barre de recherche -->
+    <div class="mb-4 text-center">
+        <input type="text" id="searchBar" class="form-control w-50 mx-auto" placeholder="Recherchez une technologie..." onkeyup="filterTechnologies()" style="border: 2px solid #ff6f61; border-radius: 30px;">
+    </div>
+
+    <div class="row" id="techContainer">
+        <!-- IA Card -->
+        <div class="col-md-4 mb-4 tech-card" data-category="IA">
+            <div class="card" style="border-radius: 20px;">
+                <div id="carouselIA" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/Capture.PNG" class="d-block w-100" alt="Image IA 1" style="height: 55vh; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/veste.PNG" class="d-block w-100" alt="Image IA 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIA" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIA" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="color: #ff6f61;">Intelligence Artificielle (IA)</h5>
+                    <span class="badge bg-success" style="background-color: #ffb6c1;">Populaire</span>
+                    <p class="card-text">L'IA transforme le monde, des applications en santé à la reconnaissance faciale. Découvrez comment l'IA aide à résoudre des défis mondiaux.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-primary" onclick="openTechDetails('IA')" style="background-color: #ff6f61; border: none;">En savoir plus</button>
+                        <button class="btn btn-outline-secondary favorite-btn" onclick="addToFavorites('IA')">Favoris ❤️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blockchain Card -->
+        <div class="col-md-4 mb-4 tech-card" data-category="Blockchain">
+            <div class="card" style="border-radius: 20px;">
+                <img src="images/maybe.PNG" class="card-img-top" alt="Image Blockchain" style="height: 55vh; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="color: #ff6f61;">Blockchain</h5>
+                    <span class="badge bg-primary" style="background-color: #ffa07a;">Tendance</span>
+                    <p class="card-text">La blockchain est une technologie révolutionnaire qui permet des transactions sécurisées et décentralisées. Découvrez ses applications dans la finance, la santé et plus encore.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-primary" onclick="openTechDetails('Blockchain')" style="background-color: #ff6f61; border: none;">En savoir plus</button>
+                        <button class="btn btn-outline-secondary favorite-btn" onclick="addToFavorites('Blockchain')">Favoris ❤️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Science Card -->
+        <div class="col-md-4 mb-4 tech-card" data-category="Data Science">
+            <div class="card" style="border-radius: 20px;">
+                <img src="images/boom.PNG" class="card-img-top" alt="Image Data Science" style="height: 55vh; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="color: #ff6f61;">Data Science</h5>
+                    <span class="badge bg-info" style="background-color: #dda0dd;">Innovation</span>
+                    <p class="card-text">Les données sont le nouveau pétrole. Découvrez comment la data science aide les entreprises et les chercheurs à prendre des décisions éclairées.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-primary" onclick="openTechDetails('Data Science')" style="background-color: #ff6f61; border: none;">En savoir plus</button>
+                        <button class="btn btn-outline-secondary favorite-btn" onclick="addToFavorites('Data Science')">Favoris ❤️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+    function filterTechnologies() {
+        const query = document.getElementById("searchBar").value.toLowerCase();
+        document.querySelectorAll(".tech-card").forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(query) ? "block" : "none";
+        });
+    }
+
+    function addToFavorites(tech) {
+        const favoriteBtn = document.querySelector(`.favorite-btn[onclick="addToFavorites('${tech}')"]`);
+        favoriteBtn.innerText = `${tech} ajouté ❤️`;
+        favoriteBtn.classList.add("btn-success");
+    }
+</script>
+
+<!-- Styles -->
+<style>
+    .badge {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    .tech-card:hover .card {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transform: scale(1.03);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-outline-secondary:hover {
+        background-color: #ff6f61;
+        color: white;
+    }
+
+    .favorite-btn {
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .favorite-btn:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+
+
+
+
+<section class="container-fluid py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-gradient">🌸 Certifications & Parcours d'Excellence 🌟</h2>
+        <p class="text-muted">Progressez avec des parcours sur-mesure et des certifications reconnues à l'international.</p>
+    </div>
+
+    <!-- Certifications Disponibles -->
+    <div class="mb-5">
+        <h4 class="text-gradient">📜 Certifications Disponibles</h4>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">💻 Développement Web</h5>
+                        <p class="card-text text-muted">"Apprenez les bases du HTML, CSS et JavaScript pour créer des sites modernes."</p>
+                        <button class="btn btn-pink btn-sm">Voir Détails</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">📊 Data Science</h5>
+                        <p class="card-text text-muted">"Maîtrisez Python et les bases de la science des données."</p>
+                        <button class="btn btn-pink btn-sm">Voir Détails</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">⚙️ Développement Full-Stack</h5>
+                        <p class="card-text text-muted">"Devenez un expert full-stack avec ce parcours intensif."</p>
+                        <button class="btn btn-pink btn-sm">Voir Détails</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mes Certifications -->
+    <div class="certifications-section mb-5">
+        <h4 class="text-gradient text-center mb-4">🎓 Mes Certifications</h4>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="table-gradient">
+                    <tr>
+                        <th>Certification</th>
+                        <th>Statut</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/web.png" alt="Web" class="img-thumbnail me-2" width="80">Développement Web</td>
+                        <td><span class="badge bg-success">🎉 Complété</span></td>
+                        <td>15/12/2024</td>
+                        <td><button class="btn btn-outline-pink btn-sm">Télécharger</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/data.png" alt="Data" class="img-thumbnail me-2" width="80">Data Science</td>
+                        <td><span class="badge bg-warning">⏳ En cours</span></td>
+                        <td>-</td>
+                        <td><button class="btn btn-outline-pink btn-sm">Continuer</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-gradient btn-lg rounded-pill">Découvrir Plus</a>
+        </div>
+    </div>
+</section>
+
+<!-- Styles -->
+<style>
+    .text-gradient {
+        background: linear-gradient(to right, #ff7eb3, #ff758c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn-pink {
+        background: #ff758c;
+        color: #fff;
+    }
+
+    .btn-pink:hover {
+        background: #ff4b6e;
+    }
+
+    .btn-gradient {
+        background: linear-gradient(45deg, #ff758c, #ff4b6e);
+        color: #fff;
+        border: none;
+    }
+
+    .btn-gradient:hover {
+        background: linear-gradient(45deg, #ff4b6e, #ff758c);
+    }
+
+    .certifications-section {
+        background: #fef5f7;
+        border: 1px solid #f8d5dd;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    .table-gradient thead {
+        background: linear-gradient(45deg, #ff758c, #ff4b6e);
+        color: #fff;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #ffe6ec;
+    }
+</style>
+
+
+
+
+
+<section class="resources-library">
+    <div class="container-fluid">
+        <!-- Barre de recherche -->
+        <div class="search-bar mb-5">
+            <input type="text" class="form-control search-input" placeholder="Recherchez des ressources...">
+            <button class="btn btn-primary search-btn">🔍 Rechercher</button>
+        </div>
+
+        <!-- Header de la section -->
+        <div class="section-header text-center mb-5">
+            <h2 class="fw-bold gradient-text">🎓 Ressources et Bibliothèque</h2>
+            <p class="text-muted">Explorez un monde d'opportunités d'apprentissage avec des outils, des tutoriels et des guides conçus pour vous.</p>
+        </div>
+
+        <!-- Catégories de ressources -->
+        <div class="resource-categories row g-4">
+            <!-- Carte catégorie -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="category-card bg-white shadow p-4 rounded-3">
+                    <div class="card-icon">
+                        <i class="bi bi-laptop display-4 text-primary"></i>
+                    </div>
+                    <h4 class="text-dark mb-3">💻 Développement Web</h4>
+                    <p class="text-muted">Des guides pratiques pour créer des sites web modernes et performants.</p>
+                    <button class="btn btn-outline-primary mt-3 show-details" data-category="web">Explorer ➔</button>
+                </div>
+            </div>
+
+            <!-- Catégorie IA -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="category-card bg-white shadow p-4 rounded-3">
+                    <div class="card-icon">
+                        <i class="bi bi-brain display-4 text-warning"></i>
+                    </div>
+                    <h4 class="text-dark mb-3">🧠 Intelligence Artificielle</h4>
+                    <p class="text-muted">Plongez dans les concepts de Machine Learning et Deep Learning.</p>
+                    <button class="btn btn-outline-warning mt-3 show-details" data-category="ai">Explorer ➔</button>
+                </div>
+            </div>
+
+            <!-- Catégorie Mobile -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="category-card bg-white shadow p-4 rounded-3">
+                    <div class="card-icon">
+                        <i class="bi bi-phone display-4 text-success"></i>
+                    </div>
+                    <h4 class="text-dark mb-3">📱 Développement Mobile</h4>
+                    <p class="text-muted">Apprenez à créer des applications mobiles intuitives et performantes.</p>
+                    <button class="btn btn-outline-success mt-3 show-details" data-category="mobile">Explorer ➔</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ressources populaires -->
+        <div class="popular-resources mt-5">
+            <h3 class="text-center gradient-text mb-4">✨ Ressources Populaires</h3>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <div class="resource-card bg-white shadow p-4 rounded-3">
+                            <h4 class="text-dark">Tutoriel JavaScript Avancé</h4>
+                            <p class="text-muted">Maîtrisez les concepts avancés du JavaScript moderne.</p>
+                            <a href="#" class="btn btn-primary">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="resource-card bg-white shadow p-4 rounded-3">
+                            <h4 class="text-dark">Créer une API REST</h4>
+                            <p class="text-muted">Développez des API robustes avec Node.js.</p>
+                            <a href="#" class="btn btn-primary">Voir plus</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="resource-card bg-white shadow p-4 rounded-3">
+                            <h4 class="text-dark">Introduction au Deep Learning</h4>
+                            <p class="text-muted">Découvrez les bases du Deep Learning avec TensorFlow.</p>
+                            <a href="#" class="btn btn-primary">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Palette de couleurs */
+:root {
+    --primary: #007bff;
+    --warning: #f9ca24;
+    --success: #28a745;
+    --background: #f8f9fa;
+    --text-muted: #6c757d;
+}
+
+/* Section globale */
+.resources-library {
+    padding: 50px 0;
+    background: var(--background);
+}
+
+/* Texte avec effet dégradé */
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary), var(--warning));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    padding: 15px;
+    width: 70%;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    outline: none;
+    font-size: 1.1rem;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: var(--success);
+}
+
+.search-btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-btn:hover {
+    background-color: var(--success);
+    transform: scale(1.05);
+}
+
+/* Cartes des catégories */
+.category-card {
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .card-icon i {
+    transform: scale(1.2);
+}
+
+/* Carousel */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    margin: 0 10px;
+}
+
+.resource-card {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+</style>
+
+
+
+
+
+
+
+<section class="container-fluid py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold gradient-text text-center">🌸 Créativité et Innovation : Développez votre Univers</h2>
+        <p class="text-muted">Libérez votre créativité, relevez des défis passionnants et inspirez-vous de projets uniques.</p>
+    </div>
+
+    <!-- Ateliers Créatifs -->
+    <div class="mb-5">
+        <h4 class="section-title text-center">💡 Ateliers Créatifs</h4>
+        <div class="card shadow-lg bg-white border-0">
+            <div class="card-body d-flex align-items-center">
+                <div>
+                    <h6 class="fw-bold text-primary">Créer votre première application mobile</h6>
+                    <p class="text-muted">Apprenez à développer une application simple et fonctionnelle grâce à des outils accessibles.</p>
+                    <button class="btn btn-primary btn-sm interact-btn">Commencer ➜</button>
+                </div>
+                <img src="images/atelier.png" alt="Atelier" class="ms-auto img-fluid" style="max-width: 150px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Défi de la Semaine -->
+    <div class="mb-5 text-center">
+        <h4 class="section-title">🌟 Défi de la Semaine</h4>
+        <div class="challenge-card p-4 bg-gradient rounded shadow-lg">
+            <h6 class="fw-bold text-dark">"Réalisez une œuvre d’art numérique à partir de vos photos"</h6>
+            <p class="text-dark">Utilisez nos outils pour donner vie à vos idées et partagez votre création avec la communauté.</p>
+            <button class="btn btn-light btn-sm interact-btn">Participer ➜</button>
+        </div>
+    </div>
+
+    <!-- Galerie Collaborative -->
+    <div class="mb-5">
+        <h4 class="section-title text-center">🎨 Inspiration du Jour</h4>
+        <div class="row g-4">
+            <!-- Carte Projet -->
+            <div class="col-md-4">
+                <div class="card gallery-card border-0 shadow-lg">
+                    <img src="images/logoféminine.png" class="card-img-top rounded-top" alt="Projet Créatif">
+                    <div class="card-body">
+                        <h6 class="fw-bold text-primary">Design de Logo Créatif</h6>
+                        <p class="text-muted">Un logo élégant réalisé avec des outils gratuits. Découvrez le processus créatif.</p>
+                        <button class="btn btn-outline-primary btn-sm interact-btn">Voir Plus ➜</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card gallery-card border-0 shadow-lg">
+                    <img src="images/inspirant.png" class="card-img-top rounded-top" alt="Peinture Digitale">
+                    <div class="card-body">
+                        <h6 class="fw-bold text-primary">Œuvre Digitale Inspirante</h6>
+                        <p class="text-muted">Une création artistique captivante réalisée sur tablette.</p>
+                        <button class="btn btn-outline-primary btn-sm interact-btn">Voir Plus ➜</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card gallery-card border-0 shadow-lg">
+                    <img src="images/wesh.png" class="card-img-top rounded-top" alt="Court-Métrage">
+                    <div class="card-body">
+                        <h6 class="fw-bold text-primary">Court-métrage Émotionnel</h6>
+                        <p class="text-muted">Un récit émouvant capturé avec un smartphone et monté avec soin.</p>
+                        <button class="btn btn-outline-primary btn-sm interact-btn">Voir Plus ➜</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Palette de couleurs */
+:root {
+    --primary-color: #e56b6f;
+    --secondary-color: #f8edeb;
+    --accent-color: #c5a3ff;
+    --bg-gradient: linear-gradient(135deg, #e56b6f, #c5a3ff);
+}
+
+/* Section principale */
+section {
+    background-color: #fef9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Titres et textes */
+h2 {
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Boutons */
+.btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #c94e4e;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Défi de la Semaine */
+.challenge-card {
+    background: var(--bg-gradient);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+<script>
+// Ajout d'une notification lors du clic sur un bouton
+document.querySelectorAll('.interact-btn').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        const notif = document.createElement('div');
+        notif.className = 'notification';
+        notif.textContent = `Merci pour votre interaction avec "${event.target.textContent.trim()}"`;
+        document.body.appendChild(notif);
+
+        setTimeout(() => notif.remove(), 3000); // Supprime la notification après 3 secondes
+    });
+});
+
+// Animation d'apparition des notifications
+const style = document.createElement('style');
+style.innerHTML = `
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fade-in-out 3s ease forwards;
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+}`;
+document.head.appendChild(style);
+</script>
+
+
+
+
+
+
+<section class="container-fluid py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-info">Tech et Bien-être : Simplifiez votre Vie</h2>
+        <p class="text-muted">Alliez technologie et sérénité pour un quotidien plus équilibré.</p>
+    </div>
+    <!-- Méthodes de Relaxation -->
+    <div class="mb-5">
+        <h4 class="text-secondary">Relaxation Numérique</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <img src="images/relaxation.png" class="img-fluid rounded mb-3" alt="Méditation">
+                        <h6 class="fw-bold">Méditation Guidée</h6>
+                        <p class="text-muted">Des séances en ligne pour vous aider à réduire le stress et trouver la paix intérieure.</p>
+                        <button class="btn btn-outline-info btn-sm">Commencer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <img src="images/salsa.png" class="img-fluid rounded mb-3"  alt="Bien-être">
+                        <h6 class="fw-bold">Relaxation avec Musique</h6>
+                        <p class="text-muted">Écoutez des playlists relaxantes conçues pour apaiser l’esprit.</p>
+                        <button class="btn btn-outline-info btn-sm">Écouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fitness & Tech -->
+ <!-- Fitness et Technologie -->
+<section class="fitness-tech-extraordinary py-5">
+    <div class="container-fluid">
+        <!-- En-tête -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold display-4 text-gradient">Fitness & Technologie</h2>
+            <p class="text-muted fs-5">Fusionnez le fitness et la technologie pour un style de vie sain, connecté et motivant.</p>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="row align-items-center">
+            <!-- Image d'illustration -->
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                <div class="image-wrapper position-relative">
+                    <img src="images/mobile.png" class="img-fluid rounded shadow-lg" alt="Fitness Moderne" style="max-height: 400px; object-fit: cover;">
+                    <div class="badge position-absolute top-0 start-0 p-3 bg-primary text-white shadow-sm rounded">
+                        <i class="bi bi-award me-2"></i> Défi du Mois
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenu textuel -->
+            <div class="col-lg-6">
+                <h3 class="fw-bold text-dark mb-4">Rejoignez une révolution fitness connectée</h3>
+                <ul class="list-unstyled fs-5">
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-success me-3"></i>
+                        <strong>Suivi en temps réel</strong> de vos performances avec des montres connectées.
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-success me-3"></i>
+                        <strong>Accès à des plans personnalisés</strong> via vos applications fitness préférées.
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-check-circle-fill text-success me-3"></i>
+                        <strong>Partagez vos réussites</strong> avec une communauté active et inspirante.
+                    </li>
+                </ul>
+                <!-- Boutons interactifs améliorés -->
+                <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                    <button class="btn btn-primary btn-lg shadow-sm flex-grow-1">Rejoindre le Défi</button>
+                    <button class="btn btn-outline-dark btn-lg shadow-sm flex-grow-1">Découvrir Plus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section des Conseils -->
+        <div class="mt-5">
+            <h4 class="text-center text-gradient mb-4">Nos Conseils pour un Fitness Connecté</h4>
+            <div class="row g-4">
+                <!-- Conseil 1 -->
+                <div class="col-md-4">
+                    <div class="card p-4 shadow-lg border-0">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-primary text-white mb-3">
+                                <i class="bi bi-smartwatch display-4"></i>
+                            </div>
+                            <h5 class="fw-bold">Synchronisez vos Objets Connectés</h5>
+                            <p class="text-muted">Combinez montres, smartphones et appareils pour un suivi sans faille.</p>
+                            <button class="btn btn-link text-primary fw-bold">En savoir plus <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Conseil 2 -->
+                <div class="col-md-4">
+                    <div class="card p-4 shadow-lg border-0">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-success text-white mb-3">
+                                <i class="bi bi-graph-up display-4"></i>
+                            </div>
+                            <h5 class="fw-bold">Analysez vos Progrès</h5>
+                            <p class="text-muted">Utilisez des graphiques détaillés pour ajuster vos efforts.</p>
+                            <button class="btn btn-link text-success fw-bold">Découvrir les outils <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Conseil 3 -->
+                <div class="col-md-4">
+                    <div class="card p-4 shadow-lg border-0">
+                        <div class="card-body text-center">
+                            <div class="icon-circle bg-danger text-white mb-3">
+                                <i class="bi bi-people display-4"></i>
+                            </div>
+                            <h5 class="fw-bold">Rejoignez une Communauté</h5>
+                            <p class="text-muted">Motivez-vous mutuellement avec des groupes partageant vos objectifs.</p>
+                            <button class="btn btn-link text-danger fw-bold">Trouver votre groupe <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Section générale */
+.fitness-tech-extraordinary {
+    background: linear-gradient(to right, #f8f9fa, #e9f7ef);
+    border-radius: 20px;
+}
+
+/* Texte avec dégradé */
+.text-gradient {
+    background: linear-gradient(90deg, #007bff, #28a745);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Badge */
+.badge {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-outline-dark {
+    border: 2px solid #343a40;
+    border-radius: 50px;
+    padding: 12px 30px;
+}
+
+.btn-outline-dark:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Conseil - icônes circulaires */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+/* Cartes */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+<section class="container py-5">
+    <!-- Équilibre Travail/Vie Personnelle -->
+    <div class="mb-5">
+        <div class="text-center">
+            <h4 class="fw-bold gradient-text">🌸 Trouver l’Équilibre Parfait 🌸</h4>
+            <p class="text-muted">Harmonisez votre quotidien avec des solutions pensées pour vous.</p>
+        </div>
+        <div class="row g-4">
+            <!-- Carte 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0 hover-card">
+                    <div class="card-body text-center">
+                        <img src="images/IA.jpg" class="img-fluid rounded mb-3" alt="IA" style="max-height: 200px;">
+                        <h6 class="fw-bold text-primary">Gérer Votre Temps avec l'IA</h6>
+                        <p class="text-muted">Optimisez votre emploi du temps avec des outils intelligents et automatisés.</p>
+                        <button class="btn btn-primary btn-sm interact-btn" data-message="Découvrez les outils IA pour mieux gérer votre temps !">Explorer ➜</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0 hover-card">
+                    <div class="card-body text-center">
+                        <img src="images/equilibre.jpg" class="img-fluid rounded mb-3" alt="Équilibre" style="max-height: 200px;">
+                        <h6 class="fw-bold text-primary">Atteindre l’Équilibre</h6>
+                        <p class="text-muted">Des outils pour vous aider à trouver l'équilibre entre votre vie professionnelle et personnelle.</p>
+                        <button class="btn btn-primary btn-sm interact-btn" data-message="Atteignez l'équilibre dans votre vie dès aujourd'hui !">Voir Plus ➜</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Palette féminine et design élégant */
+:root {
+    --primary-color: #f78fb3; /* Rose pastel */
+    --secondary-color: #ffe5ec; /* Rose clair */
+    --accent-color: #e056fd; /* Violet doux */
+    --bg-gradient: linear-gradient(135deg, #f78fb3, #e056fd);
+}
+
+/* Section principale */
+section {
+    background: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+.gradient-text {
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+}
+
+/* Cartes */
+.card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    animation: fade-in-out 4s ease forwards;
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; transform: translateY(20px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+}
+</style>
+
+<script>
+/* Ajouter une notification dynamique */
+document.querySelectorAll('.interact-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const message = event.target.dataset.message;
+
+        // Création de la notification
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+
+        // Ajout de la notification au corps
+        document.body.appendChild(notification);
+
+        // Suppression automatique après 4 secondes
+        setTimeout(() => {
+            notification.remove();
+        }, 4000);
+    });
+});
+</script>
+
+
+<section class="container-fluid py-5" id="ateliers-et-ressources">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold gradient-text">🎨 Ateliers et Ressources</h2>
+        <p class="text-muted">Développez vos compétences créatives avec des vidéos, articles et outils technologiques conçus pour vous inspirer.</p>
+    </div>
+
+    <!-- Ressources -->
+    <div class="row g-4">
+        <!-- Tutoriels Vidéo -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 hover-card">
+                <img src="images/vidéo.jpg" class="card-img-top" alt="Tutoriel Vidéo">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Tutoriels Vidéo</h5>
+                    <p class="card-text">Apprenez les bases du design graphique et de l'illustration numérique grâce à des vidéos pratiques.</p>
+                    <button class="btn btn-primary btn-sm interact-btn" data-message="Découvrez nos tutoriels vidéo dès maintenant !">Explorer les Vidéos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 hover-card">
+                <img src="images/Blog.jpg" class="card-img-top" alt="Articles de Blog">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Articles</h5>
+                    <p class="card-text">Lisez des articles sur les tendances en création digitale, art, et design.</p>
+                    <button class="btn btn-primary btn-sm interact-btn" data-message="Plongez dans nos articles inspirants !">Lire les Articles</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ressources Téléchargeables -->
+        <div class="col-md-4">
+            <div class="card shadow-lg border-0 hover-card">
+                <img src="images/Big.png" class="card-img-top" alt="Ressources Téléchargeables">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ressources Téléchargeables</h5>
+                    <p class="card-text">Accédez à des fichiers et outils pour concrétiser vos projets créatifs.</p>
+                    <button class="btn btn-primary btn-sm interact-btn" data-message="Téléchargez des ressources pour booster votre créativité !">Télécharger les Ressources</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Bonus -->
+    <div class="text-center mt-5">
+        <h4 class="fw-bold gradient-text">🌟 Bonus</h4>
+        <p class="text-muted">Participez à nos ateliers en ligne, découvrez de nouvelles techniques et améliorez vos compétences.</p>
+        <button class="btn btn-success btn-lg interact-btn" data-message="Inscrivez-vous à nos ateliers exclusifs !">Rejoindre un Atelier</button>
+    </div>
+</section>
+
+<style>
+/* Palette féminine et design élégant */
+:root {
+    --primary-color: #f78fb3; /* Rose pastel */
+    --secondary-color: #ffe5ec; /* Rose clair */
+    --accent-color: #e056fd; /* Violet doux */
+    --bg-gradient: linear-gradient(135deg, #f78fb3, #e056fd);
+}
+
+/* Section Ateliers et Ressources */
+#ateliers-et-ressources {
+    font-family: 'Poppins', sans-serif;
+    background: var(--secondary-color);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--bg-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Cards */
+.card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+.btn-success {
+    background-color: var(--accent-color);
+    border-radius: 25px;
+}
+
+.btn-success:hover {
+    background-color: var(--primary-color);
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s, fadeOut 0.5s 3.5s;
+    z-index: 999;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+</style>
+
+<script>
+// Notifications dynamiques
+document.querySelectorAll('.interact-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const message = event.target.dataset.message;
+
+        // Créer une notification
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+
+        // Ajouter au DOM
+        document.body.appendChild(notification);
+
+        // Suppression après 4 secondes
+        setTimeout(() => {
+            notification.remove();
+        }, 4000);
+    });
+});
+
+// Effet de barre de progression au clic
+document.querySelectorAll('.btn-primary, .btn-success').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Chargement...';
+        setTimeout(() => {
+            btn.innerHTML = 'Terminé !';
+        }, 2000);
+    });
+});
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+</body>
+</html>
+
+
+<footer class=" container-fluid text-dark py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: About -->
+        <div class="col-md-3 mb-4">
+          <h5>À propos de Jongoma Tech</h5>
+          <p>
+            Jongoma Tech est une plateforme dédiée à l'autonomisation des femmes africaines dans la technologie. 
+            Nous connectons, soutenons et inspirons les femmes pour façonner l'avenir de la tech.
+          </p>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled text-dark">
+            <li><a href="#about-us" class="text-dark text-decoration-none">À propos</a></li>
+            <li><a href="#features" class="text-dark text-decoration-none">Fonctionnalités</a></li>
+            <li><a href="#blog" class="text-dark text-decoration-none">Blog</a></li>
+            <li><a href="#testimonials" class="text-dark text-decoration-none">Témoignages</a></li>
+            <li><a href="#contact" class="text-dark text-decoration-none">Contactez-nous</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+            <li><i class="bi bi-telephone-fill"></i> +221 33 123 4567</li>
+            <li><i class="bi bi-envelope-fill"></i> contact@jongomatech.com</li>
+          </ul>
+        </div>
+  
+        <!-- Column 4: Follow Us -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Suivez-nous</h5>
+          <div class="d-flex">
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light text-dark">
+      <!-- Footer Bottom -->
+      <div class="text-center">
+        <p class="mb-0">
+          &copy; 2024 Jongoma Tech. Tous droits réservés. | Conçu avec 💖 par Jongoma Tech Team
+        </p>
+      </div>
+    </div>
+  </footer>
+  

@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jongoma Tech Star Award - Tableau de Bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+ <!-- Menu de Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg container-fluid">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/Fatou5.png" alt="Logo" class="logo me-2" height="70">
+        </a>
+
+        <!-- Bouton toggle pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens du menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="tableau.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Formation.html">Formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentorat.html">Mentorat</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Projet.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="espace.html">Espace Kids</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CSS amélioré -->
+<style>
+    /* Style général */
+    .navbar {
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 0;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.4s ease;
+        background-color: #ffffff;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #7f3fbf; /* Couleur féminine et élégante */
+        transition: transform 0.4s ease, color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+        color: #ff69b4; /* Changement de couleur dynamique au survol */
+    }
+
+    .navbar .logo {
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar .logo:hover {
+        transform: scale(1.15); /* Animation plus forte du logo */
+    }
+
+    /* Liens du menu */
+    .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #7f3fbf;
+        margin: 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+        color: #ff69b4; /* Rose vif pour un effet féminin */
+        text-shadow: 1px 1px 5px rgba(255, 105, 180, 0.6);
+        font-weight: 700;
+        transform: translateY(-3px);
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        background-color: #fff5f8; /* Douce couleur de fond */
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .dropdown-menu a {
+        font-size: 1rem;
+        color: #555;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #ffebf2; /* Effet de survol féminin */
+    }
+
+    /* Animation du dropdown */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .navbar-nav {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+    }
+
+</style>
+
+
+
+<!-- Hero Section -->
+<section id="hero" style="background-image: url('images/project.jpg'); background-size: cover; background-position: center; height: 60vh; width: 100%; position: relative;">
+    <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; max-width: 90%; width: 100%;">
+      <h1 class="hero-title" data-aos="fade-up" style="font-size: 4rem; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); line-height: 1.2;">Un Lieu pour Mettre en Avant Vos Projets</h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.5rem; font-weight: 300; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); margin-top: 20px; line-height: 1.6;">Venez exposer vos projets numériques, qu’ils soient en phase de développement ou déjà réalisés. Profitez de l’opportunité d’obtenir des conseils, du soutien et d'ouvrir des portes à de nouvelles collaborations.</p>
+      <div data-aos="fade-up" data-aos-delay="400" class="hero-buttons" style="margin-top: 40px;">
+        <a href="#formations" class="btn btn-hero btn-hero-primary me-3" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Explorer nos formations</a>
+        <a href="#video" class="btn btn-hero btn-hero-secondary" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Regarder la Vidéo</a>
+      </div>
+    </div>
+  
+    <!-- Overlay Effect for Better Contrast -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+  </section>
+  
+  <!-- Animation Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- Custom JS for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS animation library
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Espace de Présentation de Projets -->
+<section class="project-showcase">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2 class="section-title">Espace de Présentation de Projets</h2>
+            <p class="section-description">Découvrez, partagez et collaborez autour des projets innovants créés par notre communauté dynamique.</p>
+        </div>
+
+        <!-- Filtres et Catégories -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-category="all">Tous</button>
+            <button class="filter-btn" data-category="web">Web</button>
+            <button class="filter-btn" data-category="mobile">Mobile</button>
+            <button class="filter-btn" data-category="ai">IA</button>
+            <button class="filter-btn" data-category="cloud">Cloud</button>
+        </div>
+
+        <!-- Galerie de Projets -->
+        <div class="project-gallery">
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="images/woming.jpg" alt="Projet 1" class="img-fluid">
+                    <div class="overlay">
+                        <h4 class="project-title">Plateforme E-commerce</h4>
+                        <div class="project-info">
+                            <button class="btn vote-btn"><i class="fas fa-thumbs-up"></i> Voter</button>
+                            <button class="btn comment-btn"><i class="fas fa-comment-alt"></i> Commenter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ajouter plus de projets ici -->
+        </div>
+
+        <!-- Projets en Vedette -->
+        <div class="featured-projects">
+            <h3 class="featured-title">Projets en Vedette</h3>
+            <div class="featured-gallery">
+                <div class="featured-card" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+                    <img src="images/womed.jpg" alt="Featured Project" class="img-fluid" id="project1" style="height: 90vh;">
+                    <div class="featured-info">
+                        <h5>Projets IA Innovants</h5>
+                        <p>Les projets utilisant des technologies avancées d'intelligence artificielle pour transformer les industries.</p>
+                    </div>
+                </div>
+                <div class="featured-card" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+                    <img src="images/séduit2.png" alt="Featured Project" class="img-fluid" style="height: 100%; width: 100%;" id="project2">
+                    <div class="featured-info">
+                        <h5>Applications Web</h5>
+                        <p>Les meilleures applications développées par notre communauté, transformant l'expérience numérique.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary mt-4" onclick="loadMoreProjects()">Charger Plus</button>
+        </div>
+
+        <style>
+            /* Style général de la section */
+            .project-showcase {
+                background: linear-gradient(135deg, #f8e8f6, #fff3f8);
+                padding: 100px 0;
+                border-radius: 30px;
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            /* En-tête de section */
+            .section-header {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            .section-title {
+                font-size: 3.8rem;
+                font-weight: bold;
+                color: #ff4081;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                margin-bottom: 20px;
+                text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            .section-description {
+                font-size: 1.3rem;
+                color: #666;
+                line-height: 1.8;
+                max-width: 800px;
+                margin: 0 auto;
+                font-style: italic;
+            }
+
+            /* Barre de filtres */
+            .filter-bar {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 50px;
+                gap: 30px;
+            }
+
+            .filter-btn {
+                padding: 14px 35px;
+                background: transparent;
+                border: 2px solid #ff4081;
+                color: #ff4081;
+                border-radius: 30px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .filter-btn.active, .filter-btn:hover {
+                background-color: #ff4081;
+                color: white;
+                transform: scale(1.1);
+            }
+
+            /* Galerie de projets */
+            .project-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+                margin-bottom: 80px;
+            }
+
+            /* Carte projet */
+            .project-card {
+                width: 320px;
+                background: #fff;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.4s ease, box-shadow 0.3s ease;
+            }
+
+            .project-card:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            }
+
+            .project-img {
+                width: 100%;
+                height: 220px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .project-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .project-card:hover .project-img img {
+                transform: scale(1.1);
+            }
+
+            /* Overlay d'information */
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                color: white;
+            }
+
+            .project-card:hover .overlay {
+                opacity: 1;
+            }
+
+            .project-title {
+                font-size: 1.8rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-family: 'Dancing Script', cursive;
+            }
+
+            .project-info {
+                display: flex;
+                gap: 20px;
+                font-size: 1.2rem;
+                font-family: 'Lobster', cursive;
+            }
+
+            .btn {
+                background-color: #ff4081;
+                color: white;
+                padding: 14px 25px;
+                border-radius: 30px;
+                border: none;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s ease;
+            }
+
+            .btn:hover {
+                background-color: #f50057;
+                transform: scale(1.05);
+            }
+
+            /* Section des projets en vedette */
+            .featured-projects {
+                margin-top: 80px;
+                background: linear-gradient(135deg, #ffe0f0, #f8c7e7);
+                padding: 40px 0;
+                border-radius: 20px;
+            }
+
+            .featured-title {
+                font-size: 2.8rem;
+                color: #ff4081;
+                margin-bottom: 35px;
+                text-align: center;
+                font-weight: bold;
+                text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .featured-gallery {
+                display: flex;
+                gap: 30px;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+
+            .featured-card {
+                width: 48%;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+                position: relative;
+                transition: transform 0.4s ease;
+            }
+
+            .featured-card:hover {
+                transform: translateY(-12px);
+                box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+            }
+
+            .featured-img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .featured-card:hover .featured-img {
+                transform: scale(1.05);
+            }
+
+            .featured-info {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: white;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 15px;
+                border-radius: 15px;
+                width: 80%;
+                text-align: center;
+                font-family: 'Dancing Script', cursive;
+            }
+
+            .featured-info h5 {
+                font-size: 1.6rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .featured-info p {
+                font-size: 1.2rem;
+            }
+        </style>
+    </div>
+</section>
+
+<script>
+    // Fonction pour zoomer sur l'image lors du survol
+    function zoomIn(card) {
+        const image = card.querySelector('img');
+        image.style.transform = 'scale(1.1)';
+    }
+
+    function zoomOut(card) {
+        const image = card.querySelector('img');
+        image.style.transform = 'scale(1)';
+    }
+
+    // Charger plus de projets avec un effet d'animation
+    function loadMoreProjects() {
+        const newProject = `
+            <div class="featured-card">
+                <img src="images/new_project.jpg" alt="Nouveau Projet" class="img-fluid">
+                <div class="featured-info">
+                    <h5>Nouveaux Projets IA</h5>
+                    <p>Découvrez les derniers projets développés par notre équipe avec des technologies avancées.</p>
+                </div>
+            </div>
+        `;
+        document.querySelector('.featured-gallery').innerHTML += newProject;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="container-fluid py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Innovation Lab : Créez vos Projets Tech</h2>
+        <p class="text-muted">Transformez vos idées en réalité grâce à un espace dédié à la collaboration et à l’innovation.</p>
+    </div>
+
+    <!-- Idées de Projets -->
+    <div class="mb-5">
+        <h4 class="text-secondary">Idées de Projets</h4>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Application de Bien-être</h5>
+                        <p class="card-text text-muted">"Créez une application pour améliorer la santé mentale grâce à la méditation et au suivi quotidien."</p>
+                        <button class="btn btn-outline-feminine btn-sm">Explorer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Plateforme de Mentorats</h5>
+                        <p class="card-text text-muted">"Développez une plateforme pour connecter mentors et débutants dans la tech."</p>
+                        <button class="btn btn-outline-feminine btn-sm">Explorer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Application de Santé</h5>
+                        <p class="card-text text-muted">"Créez une application pour suivre la santé physique et mentale." </p>
+                        <button class="btn btn-outline-feminine btn-sm">Explorer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collaboration en Équipe -->
+    <div class="mb-5">
+        <h4 class="text-secondary">Collaboration en Équipe</h4>
+        <div class="d-flex align-items-center justify-content-between bg-light p-4 rounded-lg shadow-lg team-collab-card">
+            <div class="team-info">
+                <h6 class="fw-bold text-dark">Rejoignez une Équipe</h6>
+                <button class="btn btn-primary btn-sm" onclick="joinTeam()">Créer ou Rejoindre une Équipe</button>
+                <p class="text-muted mb-0">Partagez vos compétences et collaborez sur des projets innovants avec d'autres passionnées.</p>
+            </div>
+            <img src="images/collaboration.png" alt="Collaboration" class="team-image">
+        </div>
+    </div>
+
+    <!-- Ressources et Outils -->
+    <div class="mb-5">
+        <h4 class="text-secondary">Ressources et Outils</h4>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card bg-light shadow-sm custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Modèles de Projets</h5>
+                        <p class="card-text text-muted">"Accédez à des modèles prêts à l’emploi pour vous lancer rapidement."</p>
+                        <button class="btn btn-warning btn-sm">Voir les Modèles</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card bg-light shadow-sm custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tutoriels Vidéos</h5>
+                        <p class="card-text text-muted">"Apprenez les bases des technologies nécessaires pour votre projet."</p>
+                        <button class="btn btn-warning btn-sm">Voir les Tutoriels</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card bg-light shadow-sm custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Modèles de Projets</h5>
+                        <p class="card-text text-muted">"Accédez à des modèles prêts à l’emploi pour vous lancer rapidement."</p>
+                        <button class="btn btn-warning btn-sm">Voir les Modèles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Palette de couleurs */
+        .text-muted {
+            color: #a29bfe !important;
+        }
+
+        /* Cards spécifiques */
+        .custom-card {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f39c12;
+            position: relative;
+            background: linear-gradient(145deg, #f3f3f3, #ffffff);
+        }
+
+        .custom-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Boutons spécifiques */
+        .btn-outline-feminine {
+            color: #ff66b2;
+            border-color: #ff66b2;
+            font-family: 'Dancing Script', cursive;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 12px 30px;
+            border-radius: 30px;
+        }
+
+        .btn-outline-feminine:hover {
+            background-color: #ff66b2;
+            color: white;
+            border-color: #ff66b2;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animation des cartes */
+        .custom-card h5 {
+            font-family: 'Dancing Script', cursive;
+            color: #8e44ad;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* Image de la carte */
+        .team-image {
+            max-width: 50%;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .team-collab-card:hover .team-image {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Cartes de collaboration */
+        .team-collab-card {
+            background: #ffebf1;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-collab-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-info {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.2rem;
+        }
+
+        /* Ajout de bordures colorées */
+        .team-collab-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #ff66b2, #8e44ad);
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Animation d’apparition */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .team-collab-card {
+            animation: fadeInUp 1s ease-out;
+        }
+    </style>
+
+    <script>
+        function joinTeam() {
+            const button = document.querySelector('.btn');
+            button.disabled = true;
+            button.textContent = "Chargement...";
+
+            setTimeout(() => {
+                alert("Vous êtes sur le point de rejoindre ou créer une équipe. Fonction en développement !");
+                button.disabled = false;
+                button.textContent = "Créer ou Rejoindre une Équipe";
+            }, 1500);
+        }
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="moodboard-container  container-fluid ">
+    <div class="text-center mb-5">
+        <h2 class="moodboard-title text-dark">Moodboard Créatif & Féminin</h2>
+        <p class="moodboard-description text-dark">Inspirez-vous de cette ambiance dynamique, colorée et pleine de créativité.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="moodboard-item bg-gradient rounded-lg shadow-lg">
+                <div class="moodboard-item-content">
+                    <h3 class="item-title text-dark">Design Audacieux</h3>
+                    <p class="item-text text-dark">Mélangez des formes géométriques et des couleurs vives pour créer un effet visuel fort.</p>
+                    <button class="btn btn-primary">Explorer</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="moodboard-item bg-gradient rounded-lg shadow-lg">
+                <div class="moodboard-item-content">
+                    <h3 class="item-title text-dark">Typographie Créative</h3>
+                    <p class="item-text text-dark">Associez des polices audacieuses et élégantes pour ajouter du caractère à vos projets.</p>
+                    <button class="btn btn-warning">Explorer</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="moodboard-item bg-gradient rounded-lg shadow-lg">
+                <div class="moodboard-item-content">
+                    <h3 class="item-title text-dark">Images Inspirantes</h3>
+                    <p class="item-text text-dark">Utilisez des visuels vibrants, modernes et féminins pour véhiculer un message fort.</p>
+                    <button class="btn btn-success">Explorer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Container principal du moodboard */
+        .moodboard-container {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        /* Titre du moodboard */
+        .moodboard-title {
+            font-size: 2.5rem;
+            color: #d6336c;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Description */
+        .moodboard-description {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        /* Cartes individuelles */
+        .moodboard-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            height: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .moodboard-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dégradé de fond */
+        .bg-gradient {
+            background: linear-gradient(135deg, #ff7f7f, #ffb3b3);
+            border-radius: 15px;
+        }
+
+        /* Contenu des cartes */
+        .moodboard-item-content {
+            text-align: center;
+            color: white;
+        }
+
+        /* Titres des cartes */
+        .item-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Texte des cartes */
+        .item-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+        }
+
+        /* Boutons */
+        .btn {
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: #ff7f7f;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #e63946;
+        }
+
+        .btn-warning {
+            background-color: #ffcc00;
+            border: none;
+        }
+
+        .btn-warning:hover {
+            background-color: #ff9900;
+        }
+
+        .btn-success {
+            background-color: #00c853;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #00e676;
+        }
+    </style>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="container-fluid py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">Projets Collaboratifs & Challenges</h2>
+        <p class="text-muted">Relevez des défis passionnants et collaborez sur des projets technologiques innovants.</p>
+    </div>
+
+    <!-- Projets en cours -->
+    <div class="mb-4">
+        <h4 class="text-primary">Projets en cours</h4>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Création d'une Application Mobile Éco-responsable</h5>
+                        <p class="card-text text-muted">"Un projet pour sensibiliser à l'écologie avec une app innovante."</p>
+                        <button class="btn btn-outline-success btn-sm">Rejoindre le projet</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Création d'une Application Mobile Éco-responsable</h5>
+                        <p class="card-text text-muted">"Un projet pour sensibiliser à l'écologie avec une app innovante."</p>
+                        <button class="btn btn-outline-success btn-sm">Rejoindre le projet</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Automatisation avec l'IA pour PME</h5>
+                        <p class="card-text text-muted">"Créer un modèle d'IA pour optimiser les processus d'entreprise."</p>
+                        <button class="btn btn-outline-success btn-sm">Rejoindre le projet</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Challenges en direct -->
+    <div class="mb-4">
+        <h4 class="text-primary">Challenges en direct</h4>
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card bg-light shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Hackathon : Développer une API sécurisée</h5>
+                        <p class="card-text text-muted">Délai : 5 jours | Récompense : Certificat + Badge</p>
+                        <button class="btn btn-warning btn-sm">Participer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card bg-light shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Challenge : Concevoir une Landing Page intuitive</h5>
+                        <p class="card-text text-muted">Délai : 3 jours | Récompense : Certificat + Goodies</p>
+                        <button class="btn btn-warning btn-sm">Participer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card bg-light shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning">Challenge : Concevoir une Landing Page intuitive</h5>
+                        <p class="card-text text-muted">Délai : 3 jours | Récompense : Certificat + Goodies</p>
+                        <button class="btn btn-warning btn-sm">Participer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton pour proposer un projet ou un challenge -->
+    <div class="text-center mt-5">
+        <a href="#" class="btn btn-success btn-lg rounded-pill px-4">Proposer un Projet ou Challenge</a>
+    </div>
+
+    <style>
+     /* Styles généraux */
+section {
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-outline-success {
+    border-radius: 20px;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-warning {
+    border-radius: 20px;
+}
+
+.btn-warning:hover {
+    background-color: #d39e00;
+    color: white;
+}
+
+/* Section principale */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+   
+    </style>
+</section>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+</body>
+</html>
+
+
+
+
+<footer class="bg-dark text-white py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Column 1: About -->
+        <div class="col-md-3 mb-4">
+          <h5>À propos de Jongoma Tech</h5>
+          <p>
+            Jongoma Tech est une plateforme dédiée à l'autonomisation des femmes africaines dans la technologie. 
+            Nous connectons, soutenons et inspirons les femmes pour façonner l'avenir de la tech.
+          </p>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-md-3 mb-4">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about-us" class="text-white text-decoration-none">À propos</a></li>
+            <li><a href="#features" class="text-white text-decoration-none">Fonctionnalités</a></li>
+            <li><a href="#blog" class="text-white text-decoration-none">Blog</a></li>
+            <li><a href="#testimonials" class="text-white text-decoration-none">Témoignages</a></li>
+            <li><a href="#contact" class="text-white text-decoration-none">Contactez-nous</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact -->
+        <div class="col-md-3 mb-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+            <li><i class="bi bi-telephone-fill"></i> +221 33 123 4567</li>
+            <li><i class="bi bi-envelope-fill"></i> contact@jongomatech.com</li>
+          </ul>
+        </div>
+  
+        <!-- Column 4: Follow Us -->
+        <div class="col-md-3 mb-4">
+          <h5>Suivez-nous</h5>
+          <div class="d-flex">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <!-- Footer Bottom -->
+      <div class="text-center">
+        <p class="mb-0">
+          &copy; 2024 Jongoma Tech. Tous droits réservés. | Conçu avec 💖 par Jongoma Tech Team
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+

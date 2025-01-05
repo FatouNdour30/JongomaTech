@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Menu de Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg container-fluid">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/Fatou5.png" alt="Logo" class="logo me-2" height="70">
+        </a>
+
+        <!-- Bouton toggle pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens du menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="tableau.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Formation.html">Formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentorat.html">Mentorat</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Projet.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="espace.html">Espace Kids</a>
+                </li>
+                
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CSS amélioré -->
+<style>
+    /* Style général */
+    .navbar {
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 0;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.4s ease;
+        background-color: #ffffff;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #7f3fbf; /* Couleur féminine et élégante */
+        transition: transform 0.4s ease, color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+        color: #ff69b4; /* Changement de couleur dynamique au survol */
+    }
+
+    .navbar .logo {
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar .logo:hover {
+        transform: scale(1.15); /* Animation plus forte du logo */
+    }
+
+    /* Liens du menu */
+    .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #7f3fbf;
+        margin: 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+        color: #ff69b4; /* Rose vif pour un effet féminin */
+        text-shadow: 1px 1px 5px rgba(255, 105, 180, 0.6);
+        font-weight: 700;
+        transform: translateY(-3px);
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        background-color: #fff5f8; /* Douce couleur de fond */
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .dropdown-menu a {
+        font-size: 1rem;
+        color: #555;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #ffebf2; /* Effet de survol féminin */
+    }
+
+    /* Animation du dropdown */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .navbar-nav {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+    }
+
+</style>
+
+<!-- Hero Section -->
+<section id="hero" style="background-image: url('images/allfemmes.png'); background-size: cover; background-position: center; height: 60vh; width: 100%; position: relative;">
+  <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; max-width: 90%; width: 100%;">
+    <h1 class="hero-title" data-aos="fade-up" style="font-size: 4rem; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); line-height: 1.2;">Éveillez la Curiosité des Jeunes Génies du Numérique</h1>
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.5rem; font-weight: 300; margin-top: 20px; line-height: 1.6; ">Rejoignez notre programme dédié aux enfants et apprenez les bases de la programmation, du codage et de la robotique dans un environnement fun et stimulant</p>
+    <div data-aos="fade-up" data-aos-delay="400" class="hero-buttons" style="margin-top: 40px;">
+      <a href="#formations" class="btn btn-hero btn-hero-primary me-3" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Explorer nos formations</a>
+      <a href="#video" class="btn btn-hero btn-hero-secondary" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Regarder la Vidéo</a>
+    </div>
+  </div>
+
+  <!-- Overlay Effect for Better Contrast -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+</section>
+
+<!-- Animation Libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- Custom JS for Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Initialize AOS animation library
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+<section id="kids-ai-awareness" class="ai-awareness">
+  <div class="container">
+    <header class="ai-awareness-header">
+      <h2>🤖 L'IA et Toi : Le Futur de Tes Études</h2>
+      <p>Découvre comment l'intelligence artificielle peut t'aider à mieux apprendre et réussir dans tes études !</p>
+    </header>
+
+    <div class="ai-awareness-container">
+      <!-- Assistant Personnel IA -->
+      <div class="ai-awareness-item" id="study-assistant">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Assistant+IA" alt="Assistant IA">
+        </div>
+        <h3>Ton Assistant Personnel d'Études IA</h3>
+        <p>Un robot IA qui t'aide à organiser ton emploi du temps et à réviser plus efficacement !</p>
+        <button class="btn" id="start-assistant">Essayer l'Assistant IA</button>
+      </div>
+
+      <!-- Découvrir comment l'IA transforme l'éducation -->
+      <div class="ai-awareness-item" id="ai-in-education">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Éducation+IA" alt="Éducation IA">
+        </div>
+        <h3>Comment l'IA Change l'Éducation</h3>
+        <p>Regarde des vidéos pour voir comment l'IA t'aide à apprendre plus vite !</p>
+        <button class="btn" id="start-education">Découvrir l'Éducation IA</button>
+      </div>
+
+      <!-- Mission IA pour les études -->
+      <div class="ai-awareness-item" id="ai-mission">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Mission+IA" alt="Mission IA">
+        </div>
+        <h3>Mission IA : Résous des Problèmes Scolaires</h3>
+        <p>Utilise l'IA pour résoudre des énigmes et améliorer tes compétences scolaires !</p>
+        <button class="btn" id="start-mission">Commencer la Mission</button>
+      </div>
+
+      <!-- Atelier Pratique IA -->
+      <div class="ai-awareness-item" id="create-chatbot">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Chatbot+IA" alt="Créer Chatbot IA">
+        </div>
+        <h3>Crée ton Chatbot IA</h3>
+        <p>Apprends à créer un chatbot qui répond à tes questions scolaires !</p>
+        <button class="btn" id="start-chatbot">Créer mon Chatbot</button>
+      </div>
+
+      <!-- Les Bénéfices et Défis de l'IA -->
+      <div class="ai-awareness-item" id="ai-benefits">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Bénéfices+IA" alt="Bénéfices IA">
+        </div>
+        <h3>Les Bénéfices et Défis de l'IA dans l'Éducation</h3>
+        <p>Découvre les avantages et les défis de l'IA pour ton apprentissage !</p>
+        <button class="btn" id="start-benefits">Commencer les Bénéfices</button>
+      </div>
+    </div>
+
+    <div class="ai-awareness-progress">
+      <h3>Ton Progrès en IA et Études</h3>
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-bar" style="width: 0"></div>
+        </div>
+        <span>Progrès : 0%</span>
+      </div>
+      <button class="btn">Voir mes progrès</button>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Styles pour la section Sensibilisation à l'IA */
+.ai-awareness {
+  background: linear-gradient(to bottom, #ff9f43, #f2f2f2);
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ai-awareness-header h2 {
+  font-size: 2.6rem;
+  color: #e74c3c;
+}
+
+.ai-awareness-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.ai-awareness-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.ai-awareness-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-awareness-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.ai-awareness-item h3 {
+  font-size: 1.8rem;
+  color: #2ecc71;
+}
+
+.ai-awareness-item p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+}
+
+.ai-awareness-progress {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+.progress {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #3498db;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  transition: width 0.4s ease-in-out;
+}
+
+</style>
+
+<script>
+// Interactivité
+document.getElementById('start-assistant').addEventListener('click', function() {
+  alert('L\'Assistant IA t\'aide à organiser ton emploi du temps et à réviser efficacement !');
+  document.querySelector('.progress-bar').style.width = "25%";
+});
+
+document.getElementById('start-education').addEventListener('click', function() {
+  alert('Découvre comment l\'IA transforme l\'éducation et aide les élèves à apprendre plus rapidement !');
+  document.querySelector('.progress-bar').style.width = "50%";
+});
+
+document.getElementById('start-mission').addEventListener('click', function() {
+  alert('Utilise l\'IA pour résoudre des problèmes scolaires et améliorer tes compétences !');
+  document.querySelector('.progress-bar').style.width = "75%";
+});
+
+document.getElementById('start-chatbot').addEventListener('click', function() {
+  alert('Crée ton chatbot pour répondre à des questions scolaires !');
+  document.querySelector('.progress-bar').style.width = "100%";
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="future-skills" class="section">
+  <div class="section-icon">🔮</div>
+  <h2>Développement des Compétences de Demain</h2>
+
+  <div class="sub-section">
+      <h3>Préparation à l'avenir du travail</h3>
+      <p>L'IA est appelée à être une composante majeure de nombreux secteurs d'activité dans les années à venir. En apprenant à coder avec l'aide de l'IA, les jeunes se préparent non seulement à une carrière dans le développement de logiciels, mais aussi à comprendre des technologies qui transformeront le monde du travail, comme l'IA, le machine learning, et l'automatisation.</p>
+  </div>
+
+  <div class="sub-section">
+      <h3>Compétences en intelligence artificielle</h3>
+      <p>L'IA peut introduire les jeunes à la programmation avancée et aux concepts de machine learning, les préparant à des carrières dans des domaines émergents comme l'IA, la robotique, et la cybersécurité.</p>
+  </div>
+
+  <div class="sub-section">
+      <h3>Co-création de projets avec l'IA</h3>
+      <p>Les jeunes programmeurs peuvent utiliser des outils basés sur l'IA pour créer des applications et des jeux. Par exemple, des plateformes comme MIT App Inventor ou Google's Teachable Machine permettent de créer des applications avec peu de code et de voir immédiatement les résultats, stimulant la créativité et la capacité à réaliser des projets concrets.</p>
+  </div>
+
+  <div class="sub-section">
+      <h3>Aide à la création de bots et d'applications intelligentes</h3>
+      <p>L'IA permet aux enfants d’apprendre à développer des chatbots et des applications simples, en leur offrant des exemples pratiques et des suggestions pour aller plus loin.</p>
+  </div>
+  <style>
+      body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f9fc;
+  color: #333;
+}
+
+h2, h3 {
+  color: #2c3e50;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #34495e;
+  margin: 10px 0;
+}
+
+.section {
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 900px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-icon {
+  font-size: 40px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.sub-section {
+  background-color: #f9f9f9;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-section h3 {
+  color: #3498db;
+}
+
+.sub-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .section {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .sub-section {
+      padding: 15px;
+  }
+}
+
+
+  </style>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="kids-ai" class="ai-kids">
+  <div class="container">
+    <header class="ai-header">
+      <h2>🚀 Deviens un Expert de l'IA !</h2>
+      <p>Apprends les bases de l'IA à travers des jeux et des projets interactifs. Crée, résous, et explore !</p>
+    </header>
+
+    <div class="ai-container">
+      <!-- Création d'Avatars IA -->
+      <div class="ai-item" id="create-avatar">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/8e44ad/ffffff?text=Avatar+IA" alt="Création d'Avatar IA">
+        </div>
+        <h3>Créer ton Avatar IA</h3>
+        <p>Crée un avatar IA et programme-le pour accomplir des missions fun et créatives !</p>
+        <button class="btn" id="start-avatar-creation">Créer mon Avatar</button>
+      </div>
+
+      <!-- Exploration des Algorithmes -->
+      <div class="ai-item" id="explore-algorithms">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/8e44ad/ffffff?text=Algorithmes" alt="Explorer les Algorithmes">
+        </div>
+        <h3>Exploration des Algorithmes</h3>
+        <p>Découvre comment les machines prennent des décisions avec des jeux interactifs sur les algorithmes !</p>
+        <button class="btn" id="start-algorithms">Lancer les Jeux</button>
+      </div>
+
+      <!-- IA et Histoire -->
+      <div class="ai-item" id="story-with-ai">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/8e44ad/ffffff?text=Histoire+IA" alt="IA et Histoire">
+        </div>
+        <h3>IA et Création d'Histoire</h3>
+        <p>Crée une histoire où l'IA prend des décisions et fait évoluer le récit à chaque étape !</p>
+        <button class="btn" id="start-story">Commencer l'Histoire</button>
+      </div>
+
+      <!-- Jeux de Logique IA -->
+      <div class="ai-item" id="logic-games">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/8e44ad/ffffff?text=Jeux+Logiques" alt="Jeux de Logique IA">
+        </div>
+        <h3>Jeux de Logique IA</h3>
+        <p>Résous des énigmes et défis logiques pour comprendre comment les machines pensent !</p>
+        <button class="btn" id="start-logic-games">Jouer aux Énigmes</button>
+      </div>
+    </div>
+
+    <div class="ai-progress">
+      <h3>Ton Progrès en IA</h3>
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-bar" style="width: 0"></div>
+        </div>
+        <span>Progrès : 0%</span>
+      </div>
+      <button class="btn">Voir mes réalisations</button>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Styles de la section IA pour Enfants */
+.ai-kids {
+  background: linear-gradient(to bottom, #f2f2f2, #ff9f43);
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ai-header h2 {
+  font-size: 2.8rem;
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.ai-header p {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.ai-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.ai-item {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.ai-item h3 {
+  font-size: 1.8rem;
+  color: #8e44ad;
+}
+
+.ai-item p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.btn {
+  background-color: #8e44ad;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #6c3483;
+}
+
+/* Suivi de progrès */
+.ai-progress {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+.progress {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #3498db;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  transition: width 0.4s ease-in-out;
+}
+
+</style>
+
+<script>
+// Animation d'Avatar IA
+document.getElementById('start-avatar-creation').addEventListener('click', function() {
+  alert('Crée ton Avatar IA et programme-le pour accomplir des missions créatives et amusantes!');
+  document.querySelector('.progress-bar').style.width = "25%";
+});
+
+// Exploration des Algorithmes
+document.getElementById('start-algorithms').addEventListener('click', function() {
+  alert('Joue à des jeux interactifs pour découvrir comment les machines prennent des décisions !');
+  document.querySelector('.progress-bar').style.width = "50%";
+});
+
+// Histoire IA
+document.getElementById('start-story').addEventListener('click', function() {
+  alert('Crée une histoire où l\'IA influence le récit à chaque étape !');
+  document.querySelector('.progress-bar').style.width = "75%";
+});
+
+// Jeux de Logique
+document.getElementById('start-logic-games').addEventListener('click', function() {
+  alert('Résous des énigmes pour comprendre comment les machines réfléchissent !');
+  document.querySelector('.progress-bar').style.width = "100%";
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="kids-ai" class="ai-section">
+  <div class="container">
+    <header class="ai-header">
+      <h2>🤖 Explore l'Intelligence Artificielle</h2>
+      <p>Découvre comment fonctionne l'IA et deviens un jeune génie de la technologie !</p>
+    </header>
+
+    <div class="ai-container">
+      <div class="ai-item" id="ai-introduction">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/2ecc71/ffffff?text=Introduction" alt="Introduction IA">
+        </div>
+        <h3>Introduction à l'IA</h3>
+        <p>Regarde des animations qui t'expliquent comment l'IA fonctionne et change notre monde.</p>
+        <button class="btn" id="start-ai-introduction">Commencer l'animation</button>
+      </div>
+
+      <div class="ai-item" id="build-ai-robot">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/2ecc71/ffffff?text=Robot" alt="Construis ton Robot IA">
+        </div>
+        <h3>Construis ton Robot IA</h3>
+        <p>Crée ton robot et programme-le pour accomplir des missions en utilisant l'IA.</p>
+        <button class="btn" id="start-build-robot">Commencer la construction</button>
+      </div>
+
+      <div class="ai-item" id="ai-creativity">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/2ecc71/ffffff?text=Créativité" alt="IA et Créativité">
+        </div>
+        <h3>IA et Créativité</h3>
+        <p>Utilise l'IA pour créer des œuvres d'art, de la musique ou des histoires originales.</p>
+        <button class="btn" id="start-ai-creativity">Lancer la créativité</button>
+      </div>
+
+      <div class="ai-item" id="ai-quiz">
+        <div class="icon-container">
+          <img src="https://via.placeholder.com/150x150/2ecc71/ffffff?text=Quiz" alt="Quiz IA">
+        </div>
+        <h3>Quiz IA</h3>
+        <p>Teste tes connaissances sur l'IA avec un quiz amusant et gagne des récompenses !</p>
+        <button class="btn" id="start-ai-quiz">Commencer le quiz</button>
+      </div>
+    </div>
+
+    <div class="ai-progress">
+      <h3>Progrès de ton apprentissage</h3>
+      <div class="progress-container">
+        <div class="progress">
+          <div class="progress-bar" style="width: 30%"></div>
+        </div>
+        <span>Progression : 30%</span>
+      </div>
+      <button class="btn">Voir mes réalisations</button>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Principale */
+.ai-section {
+  background: linear-gradient(to bottom, #ffffff, #f8f9f9);
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  border-radius: 15px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.ai-header h2 {
+  font-size: 3rem;
+  color: #2ecc71;
+  text-transform: uppercase;
+}
+
+.ai-header p {
+  font-size: 1.4rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+/* Conteneur des Sections */
+.ai-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.ai-item {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.ai-item h3 {
+  font-size: 1.8rem;
+  color: #2ecc71;
+}
+
+.ai-item p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.btn {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+/* Suivi de Progrès */
+.ai-progress {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+  margin-top: 20px;
+}
+
+.progress {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #3498db;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  transition: width 0.4s ease-in-out;
+}
+
+</style>
+
+<script>
+// Introduction à l'IA
+document.getElementById('start-ai-introduction').addEventListener('click', function() {
+  alert('Commence à explorer les bases de l\'IA avec une animation simple et ludique !');
+});
+
+// Construire un Robot IA
+document.getElementById('start-build-robot').addEventListener('click', function() {
+  alert('Crée ton robot IA et programme-le pour accomplir des missions !');
+});
+
+// IA et Créativité
+document.getElementById('start-ai-creativity').addEventListener('click', function() {
+  alert('Utilise l\'IA pour créer des œuvres d\'art, de la musique ou des histoires !');
+});
+
+// Quiz IA
+document.getElementById('start-ai-quiz').addEventListener('click', function() {
+  alert('Test tes connaissances sur l\'IA avec un quiz amusant !');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #eef7ff;
+      margin: 20px;
+      text-align: center;
+  }
+  h1 {
+      color: #2c3e50;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+  }
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+  .video-container {
+      margin-bottom: 30px;
+  }
+  .activity {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      width: 80%;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .activity:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .activity h2 {
+      color: #0077b6;
+      border-left: 6px solid #0077b6;
+      padding-left: 15px;
+  }
+  .activity p, .activity ul {
+      color: #34495e;
+      line-height: 1.7;
+  }
+  .activity ul {
+      list-style-type: square;
+      margin-left: 20px;
+  }
+  .activity a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  .activity a:hover {
+      text-decoration: underline;
+  }
+  .cta {
+      margin-top: 20px;
+  }
+  .cta button {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s;
+  }
+  .cta button:hover {
+      background-color: #005f8a;
+  }
+  .quiz {
+      background-color: #e3f2fd;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .quiz h2 {
+      color: #2c3e50;
+  }
+  .quiz button {
+      background-color: #27ae60;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s;
+  }
+  .quiz button:hover {
+      background-color: #219150;
+  }
+</style>
+
+<h1>🌟 Découvrons la Blockchain ! 🌟</h1>
+
+<div class="video-container">
+  <h2>📻 Qu'est-ce que la Blockchain ?</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vPMDpb9ho4s" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="activity">
+  <h2>🧠 Activité Ludique : Construisons notre Chaîne de Blocs</h2>
+  <p>Utilisons des blocs de construction pour créer notre propre chaîne de blocs. Chaque bloc représente une transaction, illustrant l'immuabilité de la blockchain.</p>
+  <p><strong>Matériel nécessaire :</strong> Blocs de construction ou cartes.</p>
+</div>
+
+<div class="activity">
+  <h2>📚 Ressource Supplémentaire</h2>
+  <p>Pour approfondir, découvrez ce jeu éducatif sur la blockchain adapté aux enfants :</p>
+  <a href="https://www.tinytap.com/activities/g4twt/play/blockchain-explained-for-kids" target="_blank">Blockchain Explained for Kids</a>
+</div>
+
+<div class="activity">
+  <h2>🎨 Exploration Interactive : Créez votre Propre NFT</h2>
+  <p>Apprenez à créer un NFT en utilisant des outils conviviaux pour comprendre la notion de propriété numérique.</p>
+  <p><strong>Ressource recommandée :</strong> <a href="https://arxiv.org/abs/2303.09847" target="_blank">Méthode utilisant Google Blockly et les NFTs</a></p>
+</div>
+
+<div class="activity">
+  <h2>💰 Jeu de Rôle : Le Marché des Cryptomonnaies</h2>
+  <p>Simulez un marché où les enfants peuvent acheter et vendre des "cryptomonnaies" fictives.</p>
+</div>
+
+<div class="quiz">
+  <h2>🎮 Testez vos connaissances !</h2>
+  <p>Quelle est la principale caractéristique de la blockchain ?</p>
+  <button onclick="alert('Bonne réponse ! La blockchain est immuable et sécurisée.')">Immuabilité</button>
+  <button onclick="alert('Essayez encore !')">Modifiable</button>
+</div>
+
+<div class="cta">
+  <button onclick="alert('Merci pour votre participation !')">Participez dès maintenant !</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      margin: 0;
+      text-align: center;
+      color: #2c3e50;
+      overflow-x: hidden;
+  }
+  h1 {
+      font-size: 3em;
+      margin-top: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+  }
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+  .container {
+      max-width: 80%;
+      margin: auto;
+      padding: 20px;
+  }
+  .activity {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      position: relative;
+  }
+  .activity:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  .activity h2 {
+      color: #0077b6;
+  }
+  .activity p, .activity ul {
+      line-height: 1.7;
+  }
+  .cta {
+      margin-top: 20px;
+  }
+  .cta button {
+      background-color: #ff7eb3;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s;
+  }
+  .cta button:hover {
+      background-color: #ff3e88;
+  }
+  .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0077b6;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 1.5em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .scroll-to-top:hover {
+      background: #005f8a;
+  }
+</style>
+</head>
+<body>
+<h1>🚀 L'Avenir de l'IA dans l'Éducation des Enfants</h1>
+<div class="container">
+  <div class="activity">
+      <h2>💡 Comment utiliser l'IA sans impact négatif sur les études</h2>
+      <p>Voici quelques conseils pour aider les enfants à profiter de l'IA tout en gardant un bon équilibre dans leur apprentissage :</p>
+      <ul>
+          <li>📚 Utiliser l'IA comme un outil complémentaire, et non un substitut à l'apprentissage personnel.</li>
+          <li>🔍 Vérifier les informations obtenues via l'IA pour éviter les erreurs et apprendre à analyser les sources.</li>
+          <li>⏳ Limiter le temps d'utilisation des outils basés sur l'IA pour éviter la dépendance.</li>
+          <li>🎨 Privilégier les outils éducatifs qui stimulent la réflexion et la créativité.</li>
+          <li>🤝 Encourager l'interaction avec les enseignants et les pairs pour enrichir l'expérience d'apprentissage.</li>
+      </ul>
+  </div>
+  
+  <div class="activity">
+      <h2>📚 Ressources éducatives basées sur l'IA</h2>
+      <p>Découvrez des plateformes qui utilisent l'IA pour améliorer l'apprentissage :</p>
+      <ul>
+          <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - Cours personnalisés utilisant l'IA.</li>
+          <li><a href="https://www.duolingo.com/" target="_blank">Duolingo</a> - Apprentissage ludique des langues grâce à l'IA.</li>
+          <li><a href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a> - Outil d'analyse pour matières scientifiques.</li>
+      </ul>
+  </div>
+  
+  <div class="activity">
+      <h2>🔮 L'avenir de l'IA dans l'éducation</h2>
+      <p>À mesure que l'IA évolue, elle pourrait transformer encore plus l'éducation en permettant :</p>
+      <ul>
+          <li>👨‍🏫 Des tuteurs IA personnalisés pour chaque élève.</li>
+          <li>📊 Des analyses intelligentes pour adapter les leçons au rythme de chaque enfant.</li>
+          <li>🌎 Une accessibilité accrue à l'éducation, même dans les zones reculées.</li>
+          <li>🤖 Des expériences immersives avec la réalité augmentée et l'IA.</li>
+      </ul>
+  </div>
+</div>
+
+<div class="cta">
+  <button onclick="showPopup()">En savoir plus</button>
+</div>
+
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">⬆</div>
+
+<script>
+  function showPopup() {
+      alert("Merci pour votre participation ! Continuez à explorer l'IA de manière responsable !");
+  }
+  
+  window.addEventListener("scroll", function() {
+      let scrollButton = document.getElementById("scrollToTop");
+      if (window.scrollY > 300) {
+          scrollButton.style.display = "block";
+      } else {
+          scrollButton.style.display = "none";
+      }
+  });
+  
+  function scrollToTop() {
+      window.scrollTo({top: 0, behavior: "smooth"});
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #f2f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+  }
+  h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-top: 50px;
+      color: #4e8df5;
+  }
+  .container-fluid {
+      width: 100%;
+      padding: 0 15px;
+  }
+  .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px 0;
+  }
+  .col {
+      width: 48%;
+  }
+  .image-col img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  .text-col h2 {
+      font-size: 2.5em;
+      color: #0077b6;
+      font-weight: bold;
+  }
+  .text-col p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #555;
+  }
+  .text-col button {
+      background: #ff65a3;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+  }
+  .text-col button:hover {
+      background: #ff3e88;
+  }
+
+  /* Section texte supplémentaire */
+  .extra-text {
+      display: none;
+      margin-top: 20px;
+      background: #ffebf1;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+</head>
+<body>
+<h1>🤖 Sensibilisation à l'IA pour les Enfants</h1>
+
+<div class="container-fluid">
+  <div class="row">
+      <!-- Colonne Image -->
+      <div class="col image-col">
+          <img src="images/mother.png" alt="Illustration IA">
+      </div>
+
+      <!-- Colonne Texte -->
+      <div class="col text-col">
+          <h2>Qu'est-ce que l'Intelligence Artificielle ?</h2>
+          <p>L'IA est une technologie qui permet aux machines de penser et de résoudre des problèmes comme un humain. Elle aide les enfants à apprendre, à s'amuser et même à créer ! Mais il est important de l'utiliser de manière responsable pour ne pas devenir trop dépendant des machines.</p>
+          <button onclick="toggleText()">Savoir plus</button>
+          
+          <!-- Texte supplémentaire caché au départ -->
+          <div class="extra-text" id="extraText">
+              <p>L'IA peut être utilisée dans de nombreux domaines, comme les jeux vidéo, l'apprentissage des langues, et même la création artistique. Elle peut aider les enfants à trouver des réponses rapidement, mais il est essentiel de toujours vérifier ces informations et de se rappeler que l'IA n'est qu'un outil pour améliorer notre créativité et nos connaissances.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  // Fonction pour afficher le texte supplémentaire lorsque le bouton est cliqué
+  function toggleText() {
+      var extraText = document.getElementById('extraText');
+      if (extraText.style.display === "none" || extraText.style.display === "") {
+          extraText.style.display = "block";
+      } else {
+          extraText.style.display = "none";
+      }
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      transition: background-color 0.3s ease-in-out;
+  }
+  h1 {
+      font-size: 3.5em;
+      text-align: center;
+      color: #48c6ef;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      animation: fadeIn 1s ease-out;
+  }
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  .container-fluid {
+      width: 100%;
+      padding: 0 15px;
+  }
+  .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 50px 0;
+  }
+  .col {
+      width: 45%;
+  }
+  .text-col {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  .text-col:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  .text-col h2 {
+      font-size: 2.5em;
+      color: #4b79a1;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+  }
+  .text-col:hover h2 {
+      color: #ff7eb3;
+  }
+  .text-col p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+  }
+  .cta button {
+      background: #ff7eb3;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s ease, transform 0.2s;
+  }
+  .cta button:hover {
+      background: #ff3e88;
+      transform: scale(1.1);
+  }
+  .cta button:focus {
+      outline: none;
+  }
+
+  .advice-list {
+      list-style-type: disc;
+      padding-left: 30px;
+      color: #0077b6;
+  }
+  .advice-list li {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+  }
+
+  .image-col img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease-in-out;
+  }
+  .image-col img:hover {
+      transform: scale(1.1);
+  }
+
+  .carousel {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+  }
+  .carousel img {
+      width: 30%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  }
+  .carousel img:hover {
+      transform: scale(1.1);
+  }
+
+  .quote {
+      text-align: center;
+      font-size: 1.4em;
+      font-style: italic;
+      color: #ff7eb3;
+      margin-top: 50px;
+      animation: fadeInUp 2s ease-out;
+  }
+
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(30px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+</style>
+<h1>🤖 Conseils pour Utiliser l'IA de Manière Fun et Responsable !</h1>
+    
+<div class="container-fluid">
+    <div class="row">
+        <!-- Colonne Texte -->
+        <div class="col text-col">
+            <h2>🎯 Restez Passionné par l'IA avec Ces Astuces</h2>
+            <p>L'IA est un outil incroyable, mais il est important de l'utiliser de manière équilibrée et amusante ! Voici quelques conseils pour rester motivé et apprendre tout en gardant un bon équilibre :</p>
+            
+            <ul class="advice-list">
+                <li>🕹️ **Joue avec l'IA** : Utilise des jeux éducatifs qui intègrent l'IA pour apprendre tout en t'amusant. Par exemple, des applications qui proposent des quiz personnalisés ou des défis de réflexion.</li>
+                <li>🎨 **Sois créatif avec l'IA** : Utilise l'IA pour créer des œuvres d'art, des histoires ou même des animations. Cela t'aidera à développer ta créativité tout en explorant la technologie.</li>
+                <li>📅 **Fixe des limites** : L'IA est super, mais il est important de ne pas passer trop de temps sur les écrans. Fixe des horaires pour étudier et pour t'amuser avec l'IA.</li>
+                <li>🔄 **Reste curieux** : Explore de nouvelles fonctionnalités de l'IA chaque jour. Par exemple, découvre comment l'IA peut t'aider dans tes devoirs, ou comment elle fonctionne derrière les applications que tu utilises.</li>
+                <li>🧑‍🏫 **Demande de l'aide** : Si tu ne comprends pas quelque chose avec l'IA, n'hésite pas à demander à un adulte ou un professeur. C'est une excellente occasion d'apprendre ensemble !</li>
+            </ul>
+
+            <div class="cta">
+                <button onclick="showMoreAdvice()">Plus de conseils pratiques</button>
+            </div>
+
+            <!-- Textes supplémentaires -->
+            <div id="extraAdvice" style="display: none;">
+                <p>Tu peux aussi t'inscrire à des plateformes en ligne comme <strong>Scratch</strong> ou <strong>Code.org</strong>, qui t'apprennent à coder avec l'IA tout en t'amusant ! Ces outils t'aident à mieux comprendre comment l'IA fonctionne et comment l'utiliser de manière responsable.</p>
+            </div>
+        </div>
+
+        <!-- Colonne Image -->
+        <div class="col image-col">
+            <img src="images/sébi.png" alt="Utiliser l'IA">
+        </div>
+    </div>
+
+    <!-- Carrousel d'images -->
+    <div class="carousel">
+        <img src="images/appris.jpg" alt="IA Créative">
+        <img src="images/joue.png" alt="Jouer avec l'IA">
+        <img src="images/block.jpg" alt="Apprendre avec l'IA">
+    </div>
+
+    <!-- Citation inspirante -->
+    <div class="quote">
+        <p>"L'intelligence artificielle n'est pas là pour remplacer l'humain, mais pour amplifier son potentiel et lui permettre de réaliser l'impossible." – Ndeye Fatou NDOUR</p>
+    </div>
+</div>
+
+<script>
+    // Afficher ou masquer les conseils supplémentaires
+    function showMoreAdvice() {
+        var extraAdvice = document.getElementById('extraAdvice');
+        if (extraAdvice.style.display === "none" || extraAdvice.style.display === "") {
+            extraAdvice.style.display = "block";
+        } else {
+            extraAdvice.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e6f7ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+  }
+  h1 {
+      font-size: 3.5em;
+      text-align: center;
+      color: #2d87f0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+  }
+  .container-fluid {
+      width: 100%;
+      padding: 0 15px;
+  }
+  .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 50px 0;
+  }
+  .col {
+      width: 45%;
+  }
+  .text-col {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  .text-col:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+  .text-col h2 {
+      font-size: 2.5em;
+      color: #0077b6;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+  .text-col p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+  }
+  .cta button {
+      background: #ff7eb3;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s ease, transform 0.2s;
+  }
+  .cta button:hover {
+      background: #ff3e88;
+      transform: scale(1.1);
+  }
+
+  .advice-list {
+      list-style-type: disc;
+      padding-left: 30px;
+      color: #0077b6;
+  }
+  .advice-list li {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+  }
+
+  .image-col img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease-in-out;
+  }
+  .image-col img:hover {
+      transform: scale(1.1);
+  }
+
+  .quote {
+      text-align: center;
+      font-size: 1.4em;
+      font-style: italic;
+      color: #ff7eb3;
+      margin-top: 50px;
+  }
+
+  @media (max-width: 768px) {
+      .row {
+          flex-direction: column;
+          text-align: center;
+      }
+      .col {
+          width: 100%;
+      }
+  }
+</style>
+
+
+<h1>🎓 Conseils pour les Professeurs : Comment Utiliser l'IA de Manière Responsable avec les Élèves</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Colonne Texte -->
+        <div class="col text-col">
+            <h2>📚 Former les Élèves à l'Utilisation de l'IA sans Compromettre leurs Notes</h2>
+            <p>Les enseignants ont un rôle clé à jouer dans la manière dont les élèves interagissent avec l'IA. Voici quelques stratégies pour s'assurer que l'IA est utilisée de manière positive et bénéfique pour les études des élèves :</p>
+
+            <ul class="advice-list">
+                <li>🔍 **Encouragez la recherche personnelle** : L'IA peut être un excellent outil de recherche, mais elle ne doit pas remplacer la réflexion et les compétences analytiques des élèves. Encouragez-les à vérifier les informations et à les comparer avec d'autres sources.</li>
+                <li>🎯 **Utilisez l'IA pour la personnalisation des cours** : Grâce à l'IA, vous pouvez adapter les leçons aux besoins spécifiques de chaque élève. Par exemple, des exercices ou des défis interactifs peuvent être créés pour les aider à progresser à leur rythme.</li>
+                <li>💡 **Encouragez les projets créatifs avec l'IA** : L'IA ne se limite pas à des réponses automatiques, elle peut aussi être utilisée pour stimuler la créativité. Par exemple, demandez aux élèves de créer un projet, comme un jeu ou une vidéo, en utilisant des outils d'IA.</li>
+                <li>⏰ **Fixez des limites de temps** : L'IA peut être une distraction si elle est utilisée trop longtemps. Conseillez aux élèves de ne pas passer trop de temps sur les outils basés sur l'IA pour éviter qu'ils ne soient trop dépendants.</li>
+                <li>🔄 **Expliquez les risques de la dépendance** : Bien que l'IA soit un excellent outil, il est essentiel que les élèves comprennent que leur réflexion et leur apprentissage ne peuvent pas dépendre uniquement d'elle. Encouragez-les à l'utiliser comme un outil de soutien, et non comme une solution de facilité.</li>
+            </ul>
+
+            <div class="cta">
+                <button onclick="showMoreTeacherAdvice()">Plus d'astuces pour les enseignants</button>
+            </div>
+
+            <!-- Textes supplémentaires -->
+            <div id="extraTeacherAdvice" style="display: none;">
+                <p>Les outils d'IA peuvent aussi aider à créer des tests adaptatifs. Par exemple, vous pouvez utiliser des plateformes éducatives alimentées par l'IA pour générer des évaluations personnalisées selon le niveau des élèves.</p>
+            </div>
+        </div>
+
+        <!-- Colonne Image -->
+        <div class="col image-col">
+            <img src="images/conseil.png" alt="Utilisation de l'IA par les enseignants">
+        </div>
+    </div>
+
+    <!-- Citation inspirante -->
+    <div class="quote">
+        <p>"Enseigner aux élèves à utiliser l'IA de manière responsable est l'une des clés pour leur réussite dans le monde numérique d'aujourd'hui." – Anonyme</p>
+    </div>
+</div>
+
+<script>
+    // Afficher ou masquer les conseils supplémentaires pour les enseignants
+    function showMoreTeacherAdvice() {
+        var extraAdvice = document.getElementById('extraTeacherAdvice');
+        if (extraAdvice.style.display === "none" || extraAdvice.style.display === "") {
+            extraAdvice.style.display = "block";
+        } else {
+            extraAdvice.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+  }
+
+  h1 {
+      font-size: 3.5em;
+      text-align: center;
+      color: #28a745;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      animation: fadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  .container-fluid {
+      width: 100%;
+      padding: 0 15px;
+      margin-top: 50px;
+  }
+
+  .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 30px 0;
+      animation: slideUp 1s ease-in-out;
+  }
+
+  @keyframes slideUp {
+      from {
+          opacity: 0;
+          transform: translateY(30px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .col {
+      width: 45%;
+  }
+
+  .text-col {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      position: relative;
+  }
+
+  .text-col:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-col h2 {
+      font-size: 2.5em;
+      color: #0077b6;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  .text-col p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+  }
+
+  .cta button {
+      background: #ff7eb3;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+  }
+
+  .cta button:hover {
+      background: #ff3e88;
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .image-col img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease-in-out;
+      object-fit: cover;
+  }
+
+  .image-col img:hover {
+      transform: scale(1.1);
+  }
+
+  .quote {
+      text-align: center;
+      font-size: 1.4em;
+      color: #28a745;
+      margin-top: 40px;
+  }
+
+  .quiz-section {
+      background-color: #e9f7ef;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .quiz-section form {
+      margin-bottom: 20px;
+  }
+
+  .quiz-section button {
+      background-color: #ff7eb3;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3em;
+  }
+
+  .quiz-section button:hover {
+      background-color: #ff3e88;
+  }
+
+  .blockchain-characters {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+  }
+
+  .blockchain-characters .character {
+      text-align: center;
+  }
+
+  .blockchain-characters img {
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .blockchain-map {
+      background-color: #f0f8ff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      text-align: center;
+  }
+
+  .blockchain-map .step {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: #28a745;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .blockchain-map .step:hover {
+      background-color: #0077b6;
+      transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+      .row {
+          flex-direction: column;
+          text-align: center;
+      }
+      .col {
+          width: 100%;
+      }
+      .cta button {
+          width: 100%;
+      }
+  }
+
+</style>
+
+<h1>🚀 Découverte de la Blockchain pour les Enfants</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Colonne Texte -->
+        <div class="col text-col">
+            <h2>🔐 Qu'est-ce que la Blockchain ?</h2>
+            <p>La blockchain est une technologie qui permet de stocker des informations de manière très sécurisée. Imagine que tu écris quelque chose dans un carnet que tout le monde peut voir, mais personne ne peut effacer ou changer ce que tu as écrit. La blockchain, c’est un peu comme ce carnet spécial, mais sur Internet !</p>
+            <p>Elle est utilisée pour sécuriser des transactions (comme de l'argent virtuel) et peut même aider à suivre les livres ou jeux vidéos que tu achètes en ligne. C'est une technologie qui pourrait changer beaucoup de choses dans le futur, même dans les écoles !</p>
+
+            <div class="cta">
+                <button onclick="showMoreBlockchainInfo()">En savoir plus sur la Blockchain</button>
+            </div>
+
+            <!-- Texte supplémentaire sur la Blockchain -->
+            <div id="extraBlockchainInfo" class="extra-content" style="display: none;">
+                <p>Les entreprises utilisent déjà la blockchain pour suivre les produits qu'elles fabriquent, comme les téléphones et les vêtements. Certains jeux utilisent aussi la blockchain pour que les joueurs possèdent vraiment leurs objets de jeu.</p>
+            </div>
+        </div>
+
+        <!-- Colonne Image -->
+        <div class="col image-col">
+            <img src="images/blockainGirl.png" alt="La Blockchain expliqué aux enfants">
+        </div>
+    </div>
+
+    <!-- Citation inspirante -->
+    <div class="quote">
+        <p>"Avec la blockchain, nous pouvons rendre Internet plus sûr et plus transparent." - Anonyme</p>
+    </div>
+
+    <!-- Quiz Interactif -->
+    <div class="quiz-section">
+        <h3>Testez vos connaissances sur la Blockchain !</h3>
+        <form id="quizForm">
+            <label for="q1">1. Qu'est-ce que la Blockchain ?</label><br>
+            <input type="radio" name="q1" value="correct"> Un carnet spécial où personne ne peut effacer les informations.<br>
+            <input type="radio" name="q1" value="incorrect"> Un programme de télévision.<br>
+            <input type="radio" name="q1" value="incorrect"> Un type de jeu vidéo.<br><br>
+
+            <label for="q2">2. La Blockchain peut-elle être utilisée pour :</label><br>
+            <input type="radio" name="q2" value="incorrect"> Regarder des films en streaming.<br>
+            <input type="radio" name="q2" value="correct"> Suivre les objets et sécuriser les informations.<br><br>
+
+            <button type="button" onclick="submitQuiz()">Soumettre</button>
+        </form>
+        <div id="quizResult" style="display: none;">
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <!-- Blockchain Characters -->
+    <div class="blockchain-characters">
+        <div class="character">
+            <img src="https://via.placeholder.com/150x150?text=Lion" alt="Lion">
+            <p>Léo le Lion</p>
+            <p>Je garde toutes les informations en sécurité avec ma Blockchain !</p>
+        </div>
+        <div class="character">
+            <img src="https://via.placeholder.com/150x150?text=Elephant" alt="Éléphant">
+            <p>Ella l'Éléphant</p>
+            <p>Avec la blockchain, je peux tout suivre et tout vérifier !</p>
+        </div>
+    </div>
+
+    <!-- Carte de la Blockchain -->
+    <div class="blockchain-map">
+        <h3>Explorez la Blockchain étape par étape!</h3>
+        <div class="step" onclick="alert('Voici comment le bloc est validé dans la Blockchain !')">1. Validation du Bloc</div>
+        <div class="step" onclick="alert('Les informations sont ajoutées à la Blockchain !')">2. Ajout à la Blockchain</div>
+        <div class="step" onclick="alert('La Blockchain devient un carnet sécurisé et infalsifiable!')">3. Informations Sécurisées</div>
+    </div>
+
+</div>
+
+<script>
+    // Afficher ou masquer les conseils supplémentaires sur la Blockchain
+    function showMoreBlockchainInfo() {
+        var extraInfo = document.getElementById('extraBlockchainInfo');
+        if (extraInfo.style.display === "none" || extraInfo.style.display === "") {
+            extraInfo.style.display = "block";
+        } else {
+            extraInfo.style.display = "none";
+        }
+    }
+
+    // Quiz fonction
+    function submitQuiz() {
+        var score = 0;
+        var q1 = document.querySelector('input[name="q1"]:checked');
+        var q2 = document.querySelector('input[name="q2"]:checked');
+
+        if (q1 && q1.value === "correct") score++;
+        if (q2 && q2.value === "correct") score++;
+
+        var resultMessage = document.getElementById("resultMessage");
+        var quizResult = document.getElementById("quizResult");
+        quizResult.style.display = "block";
+
+        if (score === 2) {
+            resultMessage.innerText = "Bravo! Vous avez tout bon!";
+            resultMessage.style.color = "#28a745";
+        } else {
+            resultMessage.innerText = "Essayez encore! Vous pouvez le faire!";
+            resultMessage.style.color = "#ff3e88";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="mission-cybersecurite" class="cybersecurity-section">
+  <div class="section-header">
+      <h2>🛡️ Mission Sécurisée : Devenez un Héros de la Cybersécurité</h2>
+      <p>Apprenez à protéger vos données et à naviguer en toute sécurité dans le monde numérique.</p>
+  </div>
+
+  <div class="missions-container">
+      <div class="mission-card" id="mission-phishing">
+          <div class="mission-icon">📧</div>
+          <h3>Mission 1: Éviter le Phishing</h3>
+          <p>Apprenez à reconnaître les emails et messages frauduleux pour ne pas tomber dans les pièges des hackers.</p>
+          <button class="start-btn">Commencer la Mission</button>
+      </div>
+
+      <div class="mission-card" id="mission-password">
+          <div class="mission-icon">🔑</div>
+          <h3>Mission 2: Créer des Mots de Passe Sécurisés</h3>
+          <p>Découvrez comment créer des mots de passe forts et sécurisés pour protéger vos comptes en ligne.</p>
+          <button class="start-btn">Commencer la Mission</button>
+      </div>
+
+      <div class="mission-card" id="mission-privacy">
+          <div class="mission-icon">🔒</div>
+          <h3>Mission 3: Protéger Ta Vie Privée</h3>
+          <p>Apprends à contrôler tes paramètres de confidentialité et à protéger tes informations personnelles.</p>
+          <button class="start-btn">Commencer la Mission</button>
+      </div>
+
+      <div class="mission-card" id="mission-virus">
+          <div class="mission-icon">🦠</div>
+          <h3>Mission 4: Éviter les Virus et Malwares</h3>
+          <p>Explore comment éviter les virus et malwares qui peuvent infecter ton appareil et voler tes données.</p>
+          <button class="start-btn">Commencer la Mission</button>
+      </div>
+  </div>
+  <style>
+   body {
+  font-family: 'Arial', sans-serif;
+  background: #f5f5f5;
+  color: #2c3e50;
+}
+
+.cybersecurity-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.section-header h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-header p {
+  font-size: 1.2em;
+  color: #ecf0f1;
+  margin-bottom: 40px;
+}
+
+.missions-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.mission-card {
+  background: #ecf0f1;
+  color: #34495e;
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mission-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+.mission-card h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.start-btn {
+  background-color: #3498db;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .missions-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .mission-card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
+ 
+  </style>
+</section>
+
+
+
+
+
+<section id="future-skills" class="skills-section">
+  <div class="skills-header">
+      <h2>🌟 Développement des Compétences de Demain</h2>
+      <p>Préparez-vous pour l'avenir avec l'IA, le codage et plus encore !</p>
+  </div>
+
+  <div class="skills-container">
+      <div class="skill-card" id="skill-1">
+          <h3>💼 Préparation à l'avenir du travail</h3>
+          <p>Apprenez à coder avec l'IA et explorez les technologies qui redéfiniront l'avenir du travail. L'IA, le machine learning et l'automatisation vont transformer des secteurs entiers.</p>
+      </div>
+
+      <div class="skill-card" id="skill-2">
+          <h3>🤖 Compétences en Intelligence Artificielle</h3>
+          <p>L'IA peut introduire les jeunes aux concepts avancés de la programmation, machine learning, robotique et cybersécurité.</p>
+      </div>
+
+      <div class="skill-card" id="skill-3">
+          <h3>🛠️ Co-création de projets avec l'IA</h3>
+          <p>Développez des applications et des jeux en utilisant des outils IA comme MIT App Inventor et Google's Teachable Machine. Créez des projets concrets !</p>
+      </div>
+
+      <div class="skill-card" id="skill-4">
+          <h3>🤖 Création de bots et d'applications intelligentes</h3>
+          <p>Utilisez l'IA pour apprendre à créer des chatbots et des applications simples avec des exemples pratiques et des suggestions pour aller plus loin.</p>
+      </div>
+  </div>
+  <style>
+      body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fc;
+  color: #34495e;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #eef2f7;
+  border-bottom: 5px solid #3498db;
+}
+
+.skills-header h2 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.skills-header p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: linear-gradient(to right, #3498db, #9b59b6);
+  border-radius: 15px;
+  padding: 25px;
+  width: 250px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+.skill-card:before {
+  content: "✨";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2.5em;
+  color: #f1c40f;
+  opacity: 0.8;
+  animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle {
+  0% {
+      transform: scale(1);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .skill-card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
+
+  </style>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+</body>
+</html>
+<footer class=" container-fluid text-dark py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: About -->
+        <div class="col-md-3 mb-4">
+          <h5>À propos de Jongoma Tech</h5>
+          <p>
+            Jongoma Tech est une plateforme dédiée à l'autonomisation des femmes africaines dans la technologie. 
+            Nous connectons, soutenons et inspirons les femmes pour façonner l'avenir de la tech.
+          </p>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled text-dark">
+            <li><a href="#about-us" class="text-dark text-decoration-none">À propos</a></li>
+            <li><a href="#features" class="text-dark text-decoration-none">Fonctionnalités</a></li>
+            <li><a href="#blog" class="text-dark text-decoration-none">Blog</a></li>
+            <li><a href="#testimonials" class="text-dark text-decoration-none">Témoignages</a></li>
+            <li><a href="#contact" class="text-dark text-decoration-none">Contactez-nous</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+            <li><i class="bi bi-telephone-fill"></i> +221 33 123 4567</li>
+            <li><i class="bi bi-envelope-fill"></i> contact@jongomatech.com</li>
+          </ul>
+        </div>
+  
+        <!-- Column 4: Follow Us -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Suivez-nous</h5>
+          <div class="d-flex">
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light text-dark">
+      <!-- Footer Bottom -->
+      <div class="text-center">
+        <p class="mb-0">
+          &copy; 2024 Jongoma Tech. Tous droits réservés. | Conçu avec 💖 par Jongoma Tech Team
+        </p>
+      </div>
+    </div>
+  </footer>
+  

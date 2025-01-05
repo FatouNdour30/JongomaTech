@@ -1,0 +1,5052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+ <!-- Menu de Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg container-fluid">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/Fatou5.png" alt="Logo" class="logo me-2" height="70">
+        </a>
+
+        <!-- Bouton toggle pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens du menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="tableau.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Formation.html">Formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentorat.html">Mentorat</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Projet.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="espace.html">Espace Kids</a>
+                </li>
+                
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CSS amélioré -->
+<style>
+    /* Style général */
+    .navbar {
+        font-family: 'Poppins', sans-serif;
+        padding: 20px 0;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.4s ease;
+        background-color: #ffffff;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #7f3fbf; /* Couleur féminine et élégante */
+        transition: transform 0.4s ease, color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+        color: #ff69b4; /* Changement de couleur dynamique au survol */
+    }
+
+    .navbar .logo {
+        border-radius: 50%;
+        transition: transform 0.5s ease;
+    }
+
+    .navbar .logo:hover {
+        transform: scale(1.15); /* Animation plus forte du logo */
+    }
+
+    /* Liens du menu */
+    .nav-link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #7f3fbf;
+        margin: 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+        color: #ff69b4; /* Rose vif pour un effet féminin */
+        text-shadow: 1px 1px 5px rgba(255, 105, 180, 0.6);
+        font-weight: 700;
+        transform: translateY(-3px);
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        background-color: #fff5f8; /* Douce couleur de fond */
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .dropdown-menu a {
+        font-size: 1rem;
+        color: #555;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #ffebf2; /* Effet de survol féminin */
+    }
+
+    /* Animation du dropdown */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .navbar-nav {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+    }
+
+</style>
+
+<!-- Hero Section -->
+<section id="hero" style="background-image: url('images/mentorat.jpg'); background-size: cover; background-position: center; height: 60vh; width: 100%; position: relative;">
+  <div class="hero-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; max-width: 90%; width: 100%;">
+    <h1 class="hero-title" data-aos="fade-up" style="font-size: 4rem; font-weight: bold; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); line-height: 1.2;">Un Mentorat Inspirant pour Votre Avenir</h1>
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" style="font-size: 1.5rem; font-weight: 300; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); margin-top: 20px; line-height: 1.6;">Profitez de conseils pratiques, d'orientations stratégiques et d'une écoute attentive pour vous aider à surmonter les défis et à saisir les opportunités dans la technologie</p>
+    <div data-aos="fade-up" data-aos-delay="400" class="hero-buttons" style="margin-top: 40px;">
+      <a href="#formations" class="btn btn-hero btn-hero-primary me-3" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Explorer nos formations</a>
+      <a href="#video" class="btn btn-hero btn-hero-secondary" style="padding: 15px 35px; font-size: 1.2rem; border-radius: 35px; transition: background 0.3s ease;">Regarder la Vidéo</a>
+    </div>
+  </div>
+
+  <!-- Overlay Effect for Better Contrast -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+</section>
+
+<!-- Animation Libraries -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- Custom JS for Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  // Initialize AOS animation library
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="mentorat-section py-5">
+  <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary animate-title">Nos Chaleureux Mentors</h2>
+      <p class="text-muted animate-text">Rejoignez notre programme de mentorat et bénéficiez de l'accompagnement de professionnels passionnés pour faire évoluer vos projets.</p>
+  </div>
+
+  <!-- Trois cadres dans une ligne (row) -->
+  <div class="container">
+      <div class="row">
+          
+          <!-- Mentor 1 -->
+          <div class="col-md-4 mb-4">
+              <div class="card mentor-card shadow-lg text-center">
+                  <div class="mentor-img-wrapper mx-auto">
+                      <img src="images/mentor1.png" alt="Marie Dupont" class="mentor-img">
+                  </div>
+                  <div class="card-body">
+                      <h5 class="card-title text-primary">Marie Dupont</h5>
+                      <p class="card-text">"Experte en développement web, passionnée par le partage de connaissances."</p>
+                      <button class="btn btn-outline-pink" data-bs-toggle="modal" data-bs-target="#mentorModal" data-mentor="Marie Dupont" data-details="Spécialisée en React, Angular et Node.js.">
+                          Voir Détails
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Mentor 2 -->
+          <div class="col-md-4 mb-4">
+              <div class="card mentor-card shadow-lg text-center">
+                  <div class="mentor-img-wrapper mx-auto">
+                      <img src="images/mentor2.png" alt="Alexandra Martin" class="mentor-img">
+                  </div>
+                  <div class="card-body">
+                      <h5 class="card-title text-primary">Alexandra Martin</h5>
+                      <p class="card-text">"Chef de projet digital avec plus de 10 ans d'expérience dans l'innovation."</p>
+                      <button class="btn btn-outline-pink" data-bs-toggle="modal" data-bs-target="#mentorModal" data-mentor="Alexandra Martin" data-details="Experte en stratégie digitale et gestion de projet.">
+                          Voir Détails
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Mentor 3 -->
+          <div class="col-md-4 mb-4">
+              <div class="card mentor-card shadow-lg text-center">
+                  <div class="mentor-img-wrapper mx-auto">
+                      <img src="images/mentor3.png" alt="Sophie Lemoine" class="mentor-img">
+                  </div>
+                  <div class="card-body">
+                      <h5 class="card-title text-primary">Sophie Lemoine</h5>
+                      <p class="card-text">"Spécialiste en cybersécurité et entrepreneuriat."</p>
+                      <button class="btn btn-outline-pink" data-bs-toggle="modal" data-bs-target="#mentorModal" data-mentor="Sophie Lemoine" data-details="Spécialisée dans la protection des systèmes informatiques et l'accompagnement d'entrepreneurs dans le secteur numérique.">
+                          Voir Détails
+                      </button>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+  <!-- Modal de Mentorat -->
+  <div class="modal fade" id="mentorModal" tabindex="-1" aria-labelledby="mentorModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="mentorModalLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p id="mentorDetails"></p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Style et Animation -->
+<style>
+  .mentor-card {
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .mentor-card:hover {
+      transform: scale(1.05);
+  }
+
+  .mentor-img-wrapper {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ddd;
+  }
+
+  .mentor-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .btn-outline-pink {
+      border-color: #e91e63;
+      color: #e91e63;
+      transition: background-color 0.3s;
+  }
+
+  .btn-outline-pink:hover {
+      background-color: #e91e63;
+      color: white;
+  }
+
+  /* Modal */
+  .modal-content {
+      border-radius: 10px;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  // Ajouter la fonctionnalité de la modale avec informations dynamiques
+  const mentorModal = document.getElementById('mentorModal');
+  mentorModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const mentorName = button.getAttribute('data-mentor');
+      const mentorDetails = button.getAttribute('data-details');
+      const modalTitle = mentorModal.querySelector('.modal-title');
+      const modalDetails = mentorModal.querySelector('#mentorDetails');
+      modalTitle.textContent = mentorName;
+      modalDetails.textContent = mentorDetails;
+  });
+</script>
+
+
+
+
+
+
+<section class="mentor-faq py-5">
+  <div class="container text-center mb-5">
+      <h2 class="fw-bold text-gradient">FAQ - Mentorat et Accompagnement</h2>
+      <p class="text-muted">Trouvez des réponses aux questions fréquentes sur notre programme de mentorat et d’accompagnement personnalisé.</p>
+  </div>
+
+  <div class="container mb-4">
+      <input type="text" id="searchFAQ" class="form-control" placeholder="Recherchez une question..." onkeyup="searchFAQ()" />
+  </div>
+
+  <div class="container">
+      <div class="accordion" id="mentorFaqAccordion">
+          <div class="accordion-item shadow-sm" data-category="processus">
+              <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <i class="bi bi-person-plus me-2"></i> Comment puis-je devenir mentor ?
+                  </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#mentorFaqAccordion">
+                  <div class="accordion-body">
+                      Vous pouvez postuler pour devenir mentor en remplissant un formulaire d'inscription disponible sur notre plateforme. Nous examinons chaque candidature avec soin.
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item shadow-sm" data-category="session">
+              <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <i class="bi bi-clock me-2"></i> Combien de temps dure chaque session de mentorat ?
+                  </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mentorFaqAccordion">
+                  <div class="accordion-body">
+                      Chaque session de mentorat dure généralement entre 30 minutes et 1 heure, selon les besoins et les disponibilités des participants.
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item shadow-sm" data-category="processus">
+              <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <i class="bi bi-gear me-2"></i> Quel est le processus de mentorat ?
+                  </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mentorFaqAccordion">
+                  <div class="accordion-body">
+                      Le processus commence par une rencontre initiale pour fixer des objectifs clairs. Un plan personnalisé est ensuite élaboré pour accompagner le mentoré dans son parcours.
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  .mentor-faq {
+      background: linear-gradient(135deg, #ffe8f3, #fdfdfd);
+      padding: 60px 0;
+  }
+
+  .text-gradient {
+      background: linear-gradient(90deg, #ff66b2, #e55c99);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  .accordion-button {
+      background: #fff;
+      border: 1px solid #ff66b2;
+      color: #333;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+
+  .accordion-button:not(.collapsed) {
+      background: #ff66b2;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .accordion-item {
+      border: none;
+      margin-bottom: 15px;
+  }
+
+  .accordion-body {
+      background: #fff;
+      border-radius: 0 0 10px 10px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+  }
+
+  .shadow-sm {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  i.bi {
+      color: #ff66b2;
+      font-size: 1.2rem;
+  }
+
+  #searchFAQ {
+      font-size: 1.1rem;
+      border-radius: 25px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<script>
+  function searchFAQ() {
+      let input = document.getElementById("searchFAQ").value.toLowerCase();
+      let items = document.querySelectorAll(".accordion-item");
+
+      items.forEach(function(item) {
+          let question = item.querySelector(".accordion-button").textContent.toLowerCase();
+          if (question.indexOf(input) > -1) {
+              item.style.display = "";
+          } else {
+              item.style.display = "none";
+          }
+      });
+  }
+</script>
+
+
+
+
+
+
+
+<section class="impact-mentorship py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Mentorat Impactant : Objectifs et Réalisations</h2>
+            <p class="text-muted">Découvrez comment le mentorat transforme des idées en réussites concrètes.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <h4 class="text-secondary">Progression des Mentoré(e)s</h4>
+                <div class="progress-bar-container mb-4">
+                    <h5>Compétences Techniques</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container mb-4">
+                    <h5>Confiance en Soi</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container mb-4">
+                    <h5>Réseautage Professionnel</h5>
+                    <div class="progress" style="height: 20px;">
+                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <h4 class="text-secondary">Histoires Inspirantes</h4>
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Le Parcours de Maria</h5>
+                        <p class="card-text text-muted">"Grâce à son mentor, Maria a lancé son entreprise de design et a doublé ses revenus en 6 mois."</p>
+                        <a href="#" class="btn btn-outline-primary">Lire son Histoire</a>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Le Parcours de Marc</h5>
+                        <p class="card-text text-muted">"Marc a gagné en confiance et a décroché un poste de leadership après 3 mois de mentorat."</p>
+                        <a href="#" class="btn btn-outline-primary">Lire son Histoire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="text-secondary">Pourquoi le Mentorat Change des Vies</h4>
+            <p class="text-muted">Le mentorat n'est pas seulement un transfert de connaissances, c'est un catalyseur de changement personnel et professionnel.</p>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#impactModal">Voir les Statistiques Impactantes</button>
+        </div>
+    </div>
+
+    <!-- Modal with impact statistics -->
+    <div class="modal fade" id="impactModal" tabindex="-1" aria-labelledby="impactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="impactModalLabel">Impact du Mentorat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <h6>85% des mentoré(e)s déclarent avoir amélioré leurs compétences techniques grâce au mentorat.</h6>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>70% des mentoré(e)s trouvent un emploi dans les 6 mois suivant leur parcours de mentorat.</h6>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6>90% des mentoré(e)s améliorent leur réseau professionnel après seulement 3 mois de mentorat.</h6>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .impact-mentorship {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+    }
+
+    .progress-bar-container h5 {
+        font-size: 1.1rem;
+        color: #6c757d;
+        font-weight: 600;
+    }
+
+    .btn-outline-primary {
+        border-radius: 30px;
+        font-size: 1rem;
+        border-color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .modal-body {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .modal-body h6 {
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        background-color: #007bff;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="bold-mentorship py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Mentorat Audacieux : Racontez Votre Histoire</h2>
+            <p class="text-muted">Transformez vos rêves en actions. Découvrez les parcours inspirants du mentorat qui mènent à des réussites audacieuses.</p>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h4 class="text-secondary">Mentorat pour des Changements Réels</h4>
+                <p class="text-muted">Explorez des histoires de mentorat où chaque étape est une victoire. Des conseils pratiques, des discussions audacieuses, et des résultats qui inspirent.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="images/mentor1.png" alt="Mentorat Audacieux" class="img-fluid rounded-circle shadow-lg">
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Carte 1 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">L'Impact de la Confiance</h5>
+                        <p class="card-text text-muted">"Après 6 mois de mentorat, Clara a gagné en confiance et a lancé sa propre start-up dans le secteur technologique."</p>
+                        <a href="#" class="btn btn-danger btn-lg">Lire son Histoire</a>
+                    </div>
+                    <img src="images/clara_startup.png" alt="Clara Mentorat" class="card-img-bottom rounded-0">
+                </div>
+            </div>
+            <!-- Carte 2 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">D'un Rêve à la Réalité</h5>
+                        <p class="card-text text-muted">"Marc a transformé son rêve en projet concret, grâce à l'expertise et la sagesse de son mentor." </p>
+                        <a href="#" class="btn btn-danger btn-lg">Lire son Histoire</a>
+                    </div>
+                    <img src="images/marc_mentor.png" alt="Marc Mentorat" class="card-img-bottom rounded-0">
+                </div>
+            </div>
+            <!-- Carte 3 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Réussir Ensemble</h5>
+                        <p class="card-text text-muted">"Le mentorat a permis à Amina et son mentor de collaborer sur des projets d'envergure internationale."</p>
+                        <a href="#" class="btn btn-danger btn-lg">Lire son Histoire</a>
+                    </div>
+                    <img src="images/amina_mentor.png" alt="Amina Mentorat" class="card-img-bottom rounded-0">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <h4 class="text-secondary">Les Mentors changent des vies. Découvrez comment vous pouvez aussi impacter.</h4>
+            <p class="text-muted">Joignez-vous à nous et devenez un acteur du changement audacieux dans la communauté tech et au-delà.</p>
+            <button class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#mentorModal">Devenez Mentor(e)</button>
+        </div>
+    </div>
+
+    <!-- Modal with mentorship application form -->
+    <div class="modal fade" id="mentorModal" tabindex="-1" aria-labelledby="mentorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mentorModalLabel">Devenez un(e) Mentor(e) Audacieux(se)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="mentorName" class="form-label">Votre Nom</label>
+                            <input type="text" class="form-control" id="mentorName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mentorSkills" class="form-label">Compétences</label>
+                            <input type="text" class="form-control" id="mentorSkills" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mentorExperience" class="form-label">Expérience</label>
+                            <textarea class="form-control" id="mentorExperience" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bold-mentorship {
+        background-color: #f1f1f1;
+        padding: 50px 0;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #e74c3c;
+    }
+
+    .card-body {
+        background-color: #ffffff;
+        padding: 30px;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        border-radius: 30px;
+        padding: 12px 25px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #c0392b;
+        transform: scale(1.05);
+    }
+
+    .btn-warning {
+        background-color: #f39c12;
+        border-color: #e67e22;
+    }
+
+    .btn-warning:hover {
+        background-color: #e67e22;
+    }
+
+    .modal-body {
+        font-size: 1rem;
+        color: #34495e;
+    }
+
+    .modal-header {
+        background-color: #2c3e50;
+        color: white;
+    }
+
+    .modal-header .btn-close {
+        background-color: #7f8c8d;
+    }
+
+    .img-fluid {
+        border-radius: 50%;
+        border: 5px solid #e74c3c;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="interactive-mentorship py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Mentorat Inspirant : Cultivez Votre Potentiel</h2>
+            <p class="text-muted">Un parcours de mentorat où chaque succès compte. Découvrez un système de récompenses qui valorise vos efforts !</p>
+        </div>
+
+        <!-- Début du parcours mentoré -->
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <h4 class="text-secondary">Commencez Votre Parcours</h4>
+                <p class="text-muted">Que vous soyez un mentor ou un mentoré, chaque étape vous rapproche de la réussite. Apprenez, collaborez et obtenez des badges de progression !</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="images/mentor1.png" alt="Mentorat Inspirant" class="img-fluid rounded-circle shadow-lg">
+            </div>
+        </div>
+
+        <!-- Badges de Récompense -->
+        <div class="row mb-5">
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Badge de Débutant</h5>
+                        <p class="card-text text-muted">"Acquérez votre badge de Débutant après vos premières sessions de mentorat et commencez à bâtir des relations." </p>
+                        <button class="btn btn-info btn-lg">Obtenez-le</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Badge d'Expertise</h5>
+                        <p class="card-text text-muted">"Atteignez votre badge d'Expertise en partageant des connaissances et en atteignant des objectifs spécifiques." </p>
+                        <button class="btn btn-success btn-lg">Obtenez-le</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Badge de Leadership</h5>
+                        <p class="card-text text-muted">"Recevez ce badge en inspirant et en guidant un mentoré vers ses propres réussites." </p>
+                        <button class="btn btn-warning btn-lg">Obtenez-le</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Témoignages Inspirants -->
+        <div class="text-center mb-5">
+            <h4 class="text-secondary">Ils ont réussi grâce au Mentorat</h4>
+            <div class="row">
+                <!-- Témoignage 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card p-4 shadow-lg text-center">
+                        <p class="quote">"Grâce à mon mentor, j'ai pu réaliser mon projet de startup et recevoir des financements !"</p>
+                        <p class="name">- Clara, Mentorat Tech</p>
+                        <img src="images/clara_testimonial.png" alt="Clara Témoignage" class="rounded-circle mb-3" width="100">
+                    </div>
+                </div>
+                <!-- Témoignage 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card p-4 shadow-lg text-center">
+                        <p class="quote">"Le mentorat m'a permis de décrocher un stage dans une entreprise tech de renommée internationale !"</p>
+                        <p class="name">- Marc, Mentoré en développement</p>
+                        <img src="images/marc_testimonial.png" alt="Marc Témoignage" class="rounded-circle mb-3" width="100">
+                    </div>
+                </div>
+                <!-- Témoignage 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="testimonial-card p-4 shadow-lg text-center">
+                        <p class="quote">"Je n'aurais jamais cru que le mentorat pouvait transformer ma carrière, mais ça a changé ma vie !" </p>
+                        <p class="name">- Amina, Mentorée en gestion de projet</p>
+                        <img src="images/amina_testimonial.png" alt="Amina Témoignage" class="rounded-circle mb-3" width="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-5">
+            <h4 class="text-secondary">Rejoignez notre communauté de mentorat audacieuse !</h4>
+            <p class="text-muted">Découvrez comment vous pouvez évoluer dans votre parcours avec des badges de succès et des objectifs clairs.</p>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#mentorModal">Devenez Mentor(e) ou Mentoré(e)</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mentorModal" tabindex="-1" aria-labelledby="mentorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mentorModalLabel">Rejoignez l'Aventure du Mentorat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="skills" class="form-label">Compétences</label>
+                            <input type="text" class="form-control" id="skills" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="goals" class="form-label">Objectifs</label>
+                            <textarea class="form-control" id="goals" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .interactive-mentorship {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .testimonial-card {
+        border: 2px solid #e74c3c;
+        border-radius: 15px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote {
+        font-style: italic;
+        color: #7f8c8d;
+        font-size: 1rem;
+    }
+
+    .name {
+        font-weight: bold;
+        color: #e74c3c;
+        margin-top: 10px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 14px 30px;
+        border-radius: 30px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        border-color: #2980b9;
+    }
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+    .btn-info {
+        background-color: #1abc9c;
+        border-color: #16a085;
+    }
+
+    .btn-success {
+        background-color: #2ecc71;
+        border-color: #27ae60;
+    }
+
+    .btn-warning {
+        background-color: #f39c12;
+        border-color: #e67e22;
+    }
+
+    .btn-info:hover,
+    .btn-success:hover,
+    .btn-warning:hover {
+        transform: scale(1.05);
+    }
+
+    .modal-body {
+        font-size: 1rem;
+        color: #34495e;
+    }
+
+    .modal-header {
+        background-color: #2c3e50;
+        color: white;
+    }
+
+    .modal-header .btn-close {
+        background-color: #7f8c8d;
+    }
+
+    .img-fluid {
+        border-radius: 50%;
+        border: 5px solid #e74c3c;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="à-la-carte-mentorat py-5">
+  <div class="container">
+      <div class="text-center mb-5">
+          <h2 class="fw-bold text-primary animate-title">Mentorat à la Carte : Accès à des Experts</h2>
+          <p class="text-muted animate-text">Réservez des sessions avec des experts pour aborder des sujets spécifiques et obtenir des conseils sur mesure.</p>
+      </div>
+
+      <!-- Réservation de sessions -->
+      <div class="row mb-5">
+          <div class="col-lg-4 mb-4">
+              <div class="card shadow-lg mentor-card">
+                  <div class="card-body">
+                      <h5 class="card-title">Session Développement Mobile</h5>
+                      <p class="card-text text-muted">"Obtenez des conseils d'expert sur le développement d'applications mobiles." </p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal" data-session="Développement Mobile">Réserver une Session</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+              <div class="card shadow-lg mentor-card">
+                  <div class="card-body">
+                      <h5 class="card-title">Session IA et Machine Learning</h5>
+                      <p class="card-text text-muted">"Discutez de vos projets IA avec un expert du domaine." </p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal" data-session="IA et Machine Learning">Réserver une Session</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+              <div class="card shadow-lg mentor-card">
+                  <div class="card-body">
+                      <h5 class="card-title">Session Cybersécurité</h5>
+                      <p class="card-text text-muted">"Recevez des conseils pratiques sur la cybersécurité pour vos projets." </p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal" data-session="Cybersécurité">Réserver une Session</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal de réservation -->
+  <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="reservationModalLabel">Réservation de Session</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <p id="sessionDetails"></p>
+                  <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Entrez votre nom" id="nameInput">
+                  </div>
+                  <div class="input-group mt-3">
+                      <input type="email" class="form-control" placeholder="Entrez votre email" id="emailInput">
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                  <button type="button" class="btn btn-success" id="confirmReservationBtn">Confirmer la Réservation</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Style et Animation -->
+<style>
+  .à-la-carte-mentorat {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+      border-radius: 15px;
+  }
+
+  .mentor-card {
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .mentor-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary {
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      border-radius: 50px;
+      background-color: #007bff;
+      border: none;
+      transition: background-color 0.3s;
+  }
+
+  .btn-primary:hover {
+      background-color: #0056b3;
+  }
+
+  /* Modal */
+  .modal-content {
+      border-radius: 10px;
+  }
+
+  .input-group {
+      border-radius: 10px;
+  }
+
+  .modal-body input {
+      border-radius: 10px;
+      margin-bottom: 15px;
+  }
+
+  /* Animation de titre */
+  .animate-title {
+      animation: slideIn 1s ease-in-out;
+  }
+
+  .animate-text {
+      animation: fadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes slideIn {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
+  }
+
+  @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  // Ajouter les informations dynamiques pour chaque session
+  const reservationModal = document.getElementById('reservationModal');
+  reservationModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const session = button.getAttribute('data-session');
+      const sessionDetails = {
+          'Développement Mobile': "Obtenez des conseils d'expert pour développer des applications mobiles adaptées aux besoins de vos utilisateurs.",
+          'IA et Machine Learning': "Explorez les dernières avancées en IA et Machine Learning avec des experts du domaine.",
+          'Cybersécurité': "Assurez la sécurité de vos projets grâce à des conseils pratiques sur la cybersécurité."
+      };
+
+      const modalTitle = reservationModal.querySelector('.modal-title');
+      const modalDetails = reservationModal.querySelector('#sessionDetails');
+      modalTitle.textContent = `Réservation pour ${session}`;
+      modalDetails.textContent = sessionDetails[session];
+  });
+
+  // Confirmer la réservation et afficher un message de succès
+  document.getElementById('confirmReservationBtn').addEventListener('click', function() {
+      const name = document.getElementById('nameInput').value;
+      const email = document.getElementById('emailInput').value;
+      if (name && email) {
+          alert(`Merci ${name} ! Votre session a été réservée avec succès. Un email de confirmation a été envoyé à ${email}.`);
+          $('#reservationModal').modal('hide');
+      } else {
+          alert('Veuillez remplir tous les champs.');
+      }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="interactive-mentorship py-5">
+  <div class="container">
+      <div class="text-center mb-5">
+          <h2 class="fw-bold text-primary">Mentorat Interactif : Défis de Compétences</h2>
+          <p class="text-muted">Relevez des défis ensemble et développez des compétences pratiques pour avancer plus vite.</p>
+      </div>
+
+      <!-- Défis -->
+      <div class="row mb-5">
+          <div class="col-lg-4 mb-4">
+              <div class="card shadow-lg challenge-card">
+                  <div class="card-body">
+                      <h5 class="card-title">Défi Développement Web</h5>
+                      <p class="card-text text-muted">"Créez une application web dynamique en utilisant HTML, CSS, et JavaScript." </p>
+                      <button class="btn btn-primary challenge-btn" onclick="startChallenge('Défi Développement Web')">Commencer le Défi</button>
+                      <div class="progress mt-3">
+                          <div class="progress-bar" style="width: 0%;" id="progress1"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+              <div class="card shadow-lg challenge-card">
+                  <div class="card-body">
+                      <h5 class="card-title">Hackathon de Data Science</h5>
+                      <p class="card-text text-muted">"Participez à un hackathon sur les techniques de machine learning." </p>
+                      <button class="btn btn-primary challenge-btn" onclick="startChallenge('Hackathon de Data Science')">Rejoindre le Hackathon</button>
+                      <div class="progress mt-3">
+                          <div class="progress-bar" style="width: 0%;" id="progress2"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+              <div class="card shadow-lg challenge-card">
+                  <div class="card-body">
+                      <h5 class="card-title">Étude de Cas : Fintech</h5>
+                      <p class="card-text text-muted">"Résolvez un cas réel dans le domaine des technologies financières." </p>
+                      <button class="btn btn-primary challenge-btn" onclick="startChallenge('Étude de Cas Fintech')">Commencer l'Étude de Cas</button>
+                      <div class="progress mt-3">
+                          <div class="progress-bar" style="width: 0%;" id="progress3"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Suivi des Résultats -->
+      <div class="results-section">
+          <h4 class="text-secondary">Suivi des Résultats</h4>
+          <p class="text-muted">Suivez vos progrès dans chaque défi et améliorez vos compétences au fur et à mesure.</p>
+          <button class="btn btn-warning" id="viewResultsBtn">Voir Mes Résultats</button>
+          <div id="resultsMessage" class="mt-3 text-success" style="display: none;">
+              <p>Bravo ! Vous avez complété tous vos défis avec succès. Continuez à progresser !</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  .interactive-mentorship {
+      background-color: #ffffff;
+      padding: 60px 0;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .btn {
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+      background-color: #5cb85c;
+  }
+
+  .challenge-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .challenge-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .results-section {
+      background-color: #f8f9fa;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+  }
+
+  .progress {
+      height: 20px;
+      background-color: #f1f1f1;
+  }
+
+  .progress-bar {
+      height: 100%;
+      background-color: #28a745;
+      transition: width 1s ease;
+  }
+</style>
+
+<script>
+  function startChallenge(challengeName) {
+      alert('Vous avez commencé le ' + challengeName + '! Bonne chance!');
+      
+      // Mise à jour de la barre de progression
+      let progressBar = document.getElementById('progress1');  // Ex: Changer avec l'ID du défi actuel
+      progressBar.style.width = "100%";
+      
+      // Animation ou message de fin
+      setTimeout(function() {
+          alert("Félicitations pour avoir terminé le défi " + challengeName + " !");
+      }, 2000);
+  }
+
+  document.getElementById('viewResultsBtn').addEventListener('click', function() {
+      const resultsMessage = document.getElementById('resultsMessage');
+      resultsMessage.style.display = 'block';
+      this.style.backgroundColor = '#28a745';
+      this.innerText = "Félicitations ! Vous avez bien progressé !";
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="video-mentorship py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Mentorat Vidéo en Temps Réel : Rencontres en Direct</h2>
+            <p class="text-muted">Discutez en direct avec votre mentor ou mentorée, échangez des idées et avancez ensemble.</p>
+        </div>
+
+        <!-- Vidéo en direct -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="video-chat">
+                    <button class="btn btn-danger">Démarrer une Session Vidéo</button>
+                    <p class="text-muted">Connectez-vous avec votre mentorée pour une rencontre en direct.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enregistrement des sessions -->
+        <div class="recordings">
+            <h4 class="text-secondary">Enregistrements de Sessions</h4>
+            <p class="text-muted">Revivez les sessions précédentes avec vos mentors pour améliorer vos compétences.</p>
+            <button class="btn btn-info">Voir les Enregistrements</button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .video-mentorship {
+        background-color: #e9ecef;
+        padding: 60px 0;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+        border-radius: 25px;
+    }
+
+    .video-chat button {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    .recordings {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="workshops py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary">Ateliers Interactifs</h2>
+            <p class="text-muted">Participez à des ateliers pratiques pour développer vos compétences et rencontrer d'autres mentorés.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Atelier Gestion de Projet</h5>
+                        <p class="card-text text-muted">Apprenez à gérer des projets de manière efficace en utilisant des outils modernes.</p>
+                        <button class="btn btn-success">S'inscrire</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Atelier Prise de Parole</h5>
+                        <p class="card-text text-muted">Développez vos compétences en communication pour mieux vous exprimer en public.</p>
+                        <button class="btn btn-success">S'inscrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.workshops {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="library py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-primary">Bibliothèque du Mentor</h2>
+            <p class="text-muted">Explorez une collection de ressources organisées pour vous accompagner dans votre parcours de mentorat.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <img src="images/article.PNG" class="card-img-top" alt="Article">
+                    <div class="card-body">
+                        <h5 class="card-title">Articles inspirants</h5>
+                        <p class="card-text text-muted">Des articles sélectionnés pour développer vos compétences et élargir vos horizons.</p>
+                        <a href="#" class="btn btn-primary">Lire Plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <img src="images/vidéos.png" class="card-img-top" alt="Vidéo">
+                    <div class="card-body">
+                        <h5 class="card-title">Vidéos éducatives</h5>
+                        <p class="card-text text-muted">Regardez des vidéos pratiques et inspirantes pour approfondir vos connaissances.</p>
+                        <a href="#" class="btn btn-primary">Explorer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <img src="images/book.png" class="card-img-top" alt="Livres">
+                    <div class="card-body">
+                        <h5 class="card-title">Livres recommandés</h5>
+                        <p class="card-text text-muted">Une sélection de livres pour renforcer vos compétences techniques et personnelles.</p>
+                        <a href="#" class="btn btn-primary">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.library {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+}
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="mentor-talks" class="podcast-section">
+  <div class="container">
+    <header class="podcast-header">
+      <h2>🎙️ Mentor Talks</h2>
+      <p>Découvrez des conseils de mentors inspirants et participez à la conversation en temps réel !</p>
+    </header>
+
+    <div class="podcast-content">
+      <!-- Section Audio avec animation de progression -->
+      <div class="audio-player">
+        <audio id="audio-player" controls>
+          <source src="episode1.mp3" type="audio/mpeg" />
+          Votre navigateur ne prend pas en charge la lecture audio.
+        </audio>
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+        <div id="progress-text" class="progress-text">00:00</div>
+        <p>Épisode 1 : Leadership authentique</p>
+        <div class="like-button">
+          <button id="like-btn">👍 J'aime</button> <span id="like-count">0</span> J'aime
+        </div>
+      </div>
+
+      <!-- Modale de discussion en direct -->
+      <div class="live-chat">
+        <button id="open-chat-btn" class="chat-btn">💬 Discussion en Direct</button>
+        <div id="chat-modal" class="chat-modal">
+          <div class="chat-header">
+            <h3>Discussion avec le Mentor</h3>
+            <button id="close-chat-btn" class="close-chat-btn">×</button>
+          </div>
+          <div class="chat-body">
+            <p>Entrez vos questions :</p>
+            <textarea id="chat-input" placeholder="Écrivez ici..." required></textarea>
+            <button id="send-chat" class="send-chat-btn">Envoyer</button>
+            <div id="chat-response"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ressources -->
+      <div class="resources">
+        <h3>Ressources</h3>
+        <ul>
+          <li><a href="resource1.pdf" download class="resource-link">Guide sur le leadership (PDF)</a></li>
+          <li><a href="resource2.pdf" download class="resource-link">Conseils pratiques pour l'innovation</a></li>
+        </ul>
+        <p>Partagez vos réflexions sur Twitter avec <strong>#MentorTalks2025</strong></p>
+        <button id="share-twitter" class="twitter-share-btn">Partager sur Twitter</button>
+      </div>
+
+      <!-- Compteur d'écoute en temps réel -->
+      <div id="live-stats" class="live-stats">
+        <p><strong>Écoute en direct :</strong> <span id="listener-count">0</span> personnes écoutent actuellement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Amélioration de l'apparence de la section */
+  .podcast-section {
+    background: linear-gradient(135deg, #f0f4f7, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: background-color 1s ease-in-out;
+  }
+  
+  /* Animation de fond dynamique */
+  @keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #f3f4f7, #ffffff); }
+    50% { background: linear-gradient(135deg, #ffffff, #f3f4f7); }
+    100% { background: linear-gradient(135deg, #f3f4f7, #ffffff); }
+  }
+
+  /* Barre de progression */
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  .progress {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.2s ease-in-out;
+  }
+
+  .progress-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+  }
+</style>
+
+
+<style>
+  /* Section globale */
+  .podcast-section {
+    background: linear-gradient(135deg, #f3f4f7, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: background-color 1s ease-in-out;
+  }
+
+  /* Animation de fond dynamique */
+  .podcast-section {
+    animation: backgroundAnimation 20s infinite;
+  }
+
+  @keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #f3f4f7, #ffffff); }
+    50% { background: linear-gradient(135deg, #ffffff, #f3f4f7); }
+    100% { background: linear-gradient(135deg, #f3f4f7, #ffffff); }
+  }
+
+  /* En-tête */
+  .podcast-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .podcast-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0078D4;
+  }
+  .podcast-header p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  /* Player audio */
+  .audio-player {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .audio-player audio {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .audio-player p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    margin-top: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress {
+    height: 100%;
+    background-color: #0078D4;
+    width: 0%;
+    transition: width 0.5s;
+  }
+
+  .progress-text {
+    font-size: 1rem;
+    color: #0078D4;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  /* Like Button */
+  .like-button {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  #like-btn {
+    background: #0078D4;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #like-btn:hover {
+    background: #005a99;
+  }
+
+  /* Live Chat Modal */
+  .chat-btn {
+    background-color: #0078D4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .chat-btn:hover {
+    background-color: #005a99;
+  }
+  .chat-modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat-header h3 {
+    font-size: 1.5rem;
+    color: #0078D4;
+  }
+  .close-chat-btn {
+    background: #FF0000;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .chat-body {
+    margin-top: 20px;
+  }
+  .chat-body textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    resize: none;
+  }
+  .send-chat-btn {
+    margin-top: 10px;
+    background: #0078D4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Resources */
+  .resources {
+    margin-top: 30px;
+  }
+  .resources h3 {
+    font-size: 1.5rem;
+    color: #0078D4;
+  }
+  .resources ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .resources ul li {
+    margin: 10px 0;
+  }
+  .resources ul li a {
+    color: #0078D4;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .resources ul li a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Live Stats */
+  .live-stats {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0078D4;
+  }
+  /* Bouton J'aime avec animation de pulsation */
+#like-btn {
+  background: #0078D4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+#like-btn:hover {
+  background-color: #005a99;
+  transform: scale(1.05);
+}
+
+/* Bouton de Discussion en Direct */
+.chat-btn {
+  background: linear-gradient(135deg, #0078D4, #005a99);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #005a99, #0078D4);
+}
+
+/* Bouton "Partager sur Twitter" */
+.twitter-share-btn {
+  background-color: #1DA1F2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.twitter-share-btn:hover {
+  background-color: #007bb5;
+  transform: scale(1.05);
+}
+
+</style>
+
+<script>
+  // Mise à jour de la barre de progression audio
+  const audioPlayer = document.getElementById('audio-player');
+  const progress = document.getElementById('progress');
+  const progressText = document.getElementById('progress-text');
+
+  audioPlayer.addEventListener('timeupdate', function() {
+    const duration = audioPlayer.duration;
+    const currentTime = audioPlayer.currentTime;
+    const progressWidth = (currentTime / duration) * 100;
+    progress.style.width = `${progressWidth}%`;
+
+    // Formatage du temps écoulé
+    const minutes = Math.floor(currentTime / 60);
+    const seconds = Math.floor(currentTime % 60);
+    progressText.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  });
+
+  // Fonction pour gérer le bouton "like"
+  let likeCount = 0;
+  const likeBtn = document.getElementById('like-btn');
+  const likeCountElement = document.getElementById('like-count');
+
+  likeBtn.addEventListener('click', function() {
+    likeCount++;
+    likeCountElement.textContent = likeCount;
+  });
+
+  // Ouverture/fermeture du chat en direct
+  const openChatBtn = document.getElementById('open-chat-btn');
+  const chatModal = document.getElementById('chat-modal');
+  const closeChatBtn = document.getElementById('close-chat-btn');
+  const sendChatBtn = document.getElementById('send-chat');
+  const chatInput = document.getElementById('chat-input');
+  const chatResponse = document.getElementById('chat-response');
+
+  openChatBtn.addEventListener('click', function() {
+    chatModal.style.display = 'block';
+  });
+  closeChatBtn.addEventListener('click', function() {
+    chatModal.style.display = 'none';
+  });
+
+  sendChatBtn.addEventListener('click', function() {
+    const question = chatInput.value;
+    if (question) {
+      chatResponse.textContent = `Merci pour votre question ! Le mentor y répondra bientôt.`;
+      chatInput.value = '';
+    } else {
+      chatResponse.textContent = `Veuillez entrer une question.`;
+    }
+  });
+
+  // Statistiques d'écoute en temps réel (exemple simplifié)
+  setInterval(function() {
+    const listenerCount = Math.floor(Math.random() * 1000); // Exemple de nombre aléatoire pour l'écoute
+    document.getElementById('listener-count').textContent = listenerCount;
+  }, 1000);
+
+  // Partage sur Twitter
+  const twitterShareBtn = document.getElementById('share-twitter');
+  twitterShareBtn.addEventListener('click', function() {
+    const tweetText = "Écoutez le dernier épisode de #MentorTalks2025 !";
+    const tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+    window.open(tweetUrl, '_blank');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="creative-duo" class="workshop-section">
+    <div class="container">
+      <header class="workshop-header">
+        <h2>🎨 Ateliers Créatifs en Duo</h2>
+        <p>Explorez la créativité avec votre mentor ou mentoré grâce à des activités artistiques uniques.</p>
+      </header>
+  
+      <!-- Galerie Virtuelle -->
+      <div class="virtual-gallery">
+        <h3>Galerie Virtuelle</h3>
+        <div class="gallery">
+          <img src="artwork1.jpg" alt="Création 1" class="gallery-item">
+          <img src="artwork2.jpg" alt="Création 2" class="gallery-item">
+          <img src="artwork3.jpg" alt="Création 3" class="gallery-item">
+        </div>
+        <button id="next-gallery">Suivant</button>
+      </div>
+  
+      <!-- Section Invités Spéciaux -->
+      <div class="special-guests">
+        <h3>Invités Spéciaux</h3>
+        <p id="guest-display">Cliquez pour découvrir un invité spécial !</p>
+        <button id="reveal-guest">Découvrir</button>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Section globale */
+  .workshop-section {
+    background: linear-gradient(135deg, #ffefba, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* En-tête */
+  .workshop-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D35400;
+  }
+  .workshop-header p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Galerie Virtuelle */
+  .virtual-gallery {
+    margin: 30px 0;
+  }
+  .virtual-gallery h3 {
+    font-size: 1.5rem;
+    color: #D35400;
+  }
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .gallery-item {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  #next-gallery {
+    background: #D35400;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #next-gallery:hover {
+    background: #A84300;
+  }
+  
+  /* Invités Spéciaux */
+  .special-guests {
+    margin-top: 40px;
+  }
+  .special-guests h3 {
+    font-size: 1.5rem;
+    color: #D35400;
+  }
+  #reveal-guest {
+    background: #D35400;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #reveal-guest:hover {
+    background: #A84300;
+  }
+  #guest-display {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333;
+  }
+  </style>
+  
+  <script>
+  // Galerie Virtuelle : Changement d'images
+  const galleryImages = [
+    "artwork1.jpg",
+    "artwork2.jpg",
+    "artwork3.jpg",
+    "artwork4.jpg",
+    "artwork5.jpg"
+  ];
+  let currentGalleryIndex = 0;
+  
+  document.getElementById('next-gallery').addEventListener('click', () => {
+    const gallery = document.querySelector('.gallery');
+    gallery.innerHTML = ''; // Efface les images actuelles
+    currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+    const img = document.createElement('img');
+    img.src = galleryImages[currentGalleryIndex];
+    img.alt = `Création ${currentGalleryIndex + 1}`;
+    img.className = 'gallery-item';
+    gallery.appendChild(img);
+  });
+  
+  // Révéler un invité spécial
+  const specialGuests = [
+    "🎭 Aïssa Maïga (Actrice)",
+    "📚 Chimamanda Ngozi Adichie (Auteure)",
+    "🎨 El Anatsui (Artiste)",
+    "🎼 Salif Keita (Musicien)",
+    "🎤 Angelique Kidjo (Chanteuse)"
+  ];
+  
+  document.getElementById('reveal-guest').addEventListener('click', () => {
+    const randomGuest = specialGuests[Math.floor(Math.random() * specialGuests.length)];
+    document.getElementById('guest-display').textContent = `Invité spécial : ${randomGuest}`;
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="live-hackathon" class="hackathon-section">
+  <div class="container">
+    <header class="hackathon-header">
+      <h2>💻 Hackathon en Direct</h2>
+      <p>Collaborez en temps réel pour résoudre des défis technologiques captivants.</p>
+    </header>
+
+    <!-- Thèmes -->
+    <div class="hackathon-themes">
+      <h3>Thèmes du Mois</h3>
+      <ul>
+        <li>🌱 Développement Durable</li>
+        <li>🤖 IA Éthique</li>
+        <li>🌍 Inclusion Technologique</li>
+      </ul>
+    </div>
+
+    <!-- Diffusion en Direct -->
+    <div class="live-stream">
+      <h3>Diffusion en Direct</h3>
+      <div class="video-placeholder">
+        <p>🔴 Live Stream en cours...</p>
+        <p>(Intégrez ici une diffusion vidéo via YouTube ou une autre plateforme.)</p>
+      </div>
+      <button id="toggle-live">Arrêter la diffusion</button>
+    </div>
+
+    <!-- Récompenses -->
+    <div class="awards">
+      <h3>Récompenses et Mentions Spéciales</h3>
+      <table id="awards-table">
+        <thead>
+          <tr>
+            <th>Équipe</th>
+            <th>Projet</th>
+            <th>Récompense</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Équipe Alpha</td>
+            <td>App pour réduire le gaspillage alimentaire</td>
+            <td>🏆 Meilleure Innovation</td>
+          </tr>
+          <tr>
+            <td>Équipe Beta</td>
+            <td>Outil éducatif inclusif basé sur l'IA</td>
+            <td>✨ Mention Spéciale</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Section globale */
+  .hackathon-section {
+    background: linear-gradient(135deg, #f5e9f7, #fff);
+    padding: 60px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+    position: relative;
+  }
+
+  /* En-tête */
+  .hackathon-header h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #9c1b3a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+  }
+  .hackathon-header p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  /* Thèmes */
+  .hackathon-themes h3 {
+    font-size: 1.8rem;
+    color: #9c1b3a;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-out;
+  }
+  .hackathon-themes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .hackathon-themes li {
+    margin: 12px 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+    animation: fadeInUp 1.4s ease-out;
+  }
+
+  /* Diffusion en Direct */
+  .live-stream {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fbe2e7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.6s ease-out;
+  }
+  .video-placeholder {
+    background: #fff;
+    padding: 20px;
+    border: 2px dashed #9c1b3a;
+    border-radius: 12px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+  }
+  .video-placeholder:hover {
+    transform: scale(1.05);
+  }
+  .video-placeholder p {
+    font-size: 1.5rem;
+    color: #9c1b3a;
+  }
+  #toggle-live {
+    background: #9c1b3a;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  #toggle-live:hover {
+    background: #80162a;
+    transform: scale(1.05);
+  }
+
+  /* Récompenses */
+  .awards h3 {
+    font-size: 1.8rem;
+    color: #9c1b3a;
+    font-weight: bold;
+    margin-top: 40px;
+    animation: fadeInUp 1.8s ease-out;
+  }
+  #awards-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: left;
+    animation: fadeInUp 2s ease-out;
+  }
+  #awards-table th, #awards-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  #awards-table th {
+    background: #9c1b3a;
+    color: white;
+  }
+  #awards-table td {
+    background: #f8f8f8;
+    color: #333;
+  }
+
+  /* Animation de transition */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  // Simuler le contrôle de la diffusion en direct
+  let isLive = true;
+
+  document.getElementById('toggle-live').addEventListener('click', () => {
+    const liveText = document.querySelector('.video-placeholder p:first-child');
+    if (isLive) {
+      liveText.textContent = '🛑 Diffusion arrêtée.';
+      document.getElementById('toggle-live').textContent = 'Redémarrer la diffusion';
+    } else {
+      liveText.textContent = '🔴 Live Stream en cours...';
+      document.getElementById('toggle-live').textContent = 'Arrêter la diffusion';
+    }
+    isLive = !isLive;
+  });
+
+  // Animation pour changer la couleur des lignes du tableau au survol
+  const rows = document.querySelectorAll('#awards-table tr');
+  rows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+      row.style.backgroundColor = '#fce5cd';
+      row.style.transition = 'background-color 0.3s ease';
+    });
+    row.addEventListener('mouseleave', () => {
+      row.style.backgroundColor = '';
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="virtual-mentorship" class="metaverse-section">
+  <div class="container">
+      <header class="metaverse-header">
+          <h2>🌐 Explorez le Métavers du Mentorat</h2>
+          <p>Vivez une expérience immersive de mentorat, de collaboration et d'innovation !</p>
+      </header>
+
+      <!-- Mode Sombre/Clair avec animation -->
+      <div class="mode-switcher">
+          <label for="theme-toggle">Mode Sombre</label>
+          <input type="checkbox" id="theme-toggle" />
+      </div>
+
+      <!-- Chat Dynamique -->
+      <div class="chat-card card">
+          <h3>💬 Discussion en Temps Réel</h3>
+          <div class="chat-box">
+              <div id="chat-messages" class="chat-messages"></div>
+              <input type="text" id="chat-input" placeholder="Écrivez un message..." />
+              <button id="send-message" class="btn">Envoyer</button>
+          </div>
+      </div>
+
+      <!-- Avatar 3D et Animation -->
+      <div class="avatar-card card">
+          <h3>Créez Votre Avatar 3D</h3>
+          <div class="avatar-preview">
+              <img id="avatar" src="default-avatar.png" alt="Avatar Personnalisé" class="avatar-3d">
+          </div>
+          <div class="avatar-controls">
+              <label for="avatar-color">Couleur de peau :</label>
+              <input type="color" id="avatar-color" value="#f4c2c2">
+              <label for="avatar-outfit">Tenue :</label>
+              <select id="avatar-outfit">
+                  <option value="default">Décontractée</option>
+                  <option value="formal">Professionnelle</option>
+                  <option value="sporty">Sportive</option>
+              </select>
+              <button id="update-avatar" class="btn">Mettre à jour l'avatar</button>
+          </div>
+      </div>
+
+      <!-- Salles Thématiques - Effet Parallax -->
+      <div class="rooms-card card" data-parallax="true">
+          <h3>Salles Thématiques</h3>
+          <div class="rooms">
+              <button class="room-button">Brainstorming</button>
+              <button class="room-button">Techniques</button>
+              <button class="room-button">Informelles</button>
+          </div>
+          <p id="current-room">Salle actuelle : Brainstorming</p>
+      </div>
+
+      <!-- Calendrier avec Animations -->
+      <div class="calendar-card card">
+          <h3>📅 Calendrier des Événements</h3>
+          <div id="calendar">
+              <p>Aucun événement à venir.</p>
+          </div>
+      </div>
+
+      <!-- Suivi de Progrès avec Effet de Chargement -->
+      <div class="progress-card card">
+          <h3>📈 Suivi de Progrès</h3>
+          <div class="progress-dashboard">
+              <div id="progress-bar" class="progress-bar"></div>
+              <p id="progress-status">Votre progression : 0%</p>
+              <button id="update-progress" class="btn">Mettre à jour le progrès</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  /* Effet parallax pour certaines sections */
+  .rooms-card[data-parallax="true"] {
+      background: url('background.jpg') no-repeat center center;
+      background-size: cover;
+      transform: translateZ(0);
+      transition: transform 0.3s ease;
+  }
+
+  /* Corps principal */
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease;
+  }
+
+  /* Mode sombre */
+  body.dark-mode {
+      background-color: #121212;
+      color: #fff;
+  }
+
+  /* Animation d'éléments à l'entrée */
+  .metaverse-section {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 60px 30px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1s ease-in-out;
+  }
+
+  @keyframes slideIn {
+      0% {
+          transform: translateX(-100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  /* Mode sombre/clair */
+  .mode-switcher {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+
+  /* Cartes de contenu */
+  .card {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .card:hover {
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+  }
+
+  /* Avatar 3D */
+  .avatar-3d {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+  }
+
+  .avatar-3d:hover {
+      transform: scale(1.1);
+  }
+
+  /* Animation de progression */
+  .progress-bar {
+      height: 30px;
+      background: #f0f0f0;
+      border-radius: 5px;
+      position: relative;
+  }
+
+  .progress-bar::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0;
+      background: #2C3E50;
+      transition: width 1s ease-in-out;
+  }
+
+  /* Animation de notification */
+  .notification {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 123, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      display: none;
+      transition: all 0.5s ease-in-out;
+  }
+
+  .notification.show {
+      display: block;
+      animation: slideInNotification 1s ease-in-out;
+  }
+
+  @keyframes slideInNotification {
+      0% {
+          transform: translateX(100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+</style>
+
+<script>
+  // Bascule entre mode sombre et clair
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode', themeToggle.checked);
+  });
+
+  // Fonction d'animation d'avatar
+  const updateAvatarButton = document.getElementById('update-avatar');
+  updateAvatarButton.addEventListener('click', () => {
+      const avatar = document.getElementById('avatar');
+      const color = document.getElementById('avatar-color').value;
+      avatar.style.backgroundColor = color; // Change la couleur de l'avatar
+  });
+
+  // Notification dynamique
+  const notification = document.createElement('div');
+  notification.classList.add('notification');
+  document.body.appendChild(notification);
+
+  function showNotification(message) {
+      notification.textContent = message;
+      notification.classList.add('show');
+      setTimeout(() => {
+          notification.classList.remove('show');
+      }, 3000);
+  }
+
+  // Test de notification
+  showNotification('Bienvenue dans le Métavers du Mentorat!');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="adventure-journal" class="journal-section">
+  <div class="container">
+    <header class="journal-header">
+      <h2>📖 Carnet d’Aventures de Mentorat</h2>
+      <p>Créez un journal illustré pour immortaliser votre voyage de mentorat.</p>
+    </header>
+
+    <!-- Galerie Multimédia -->
+    <div class="media-gallery">
+      <h3>Ajoutez vos moments mémorables</h3>
+      <div class="upload-buttons">
+        <label>
+          🖼️ Ajouter une image
+          <input type="file" accept="image/*" id="add-image" hidden>
+        </label>
+        <label>
+          📹 Ajouter une vidéo
+          <input type="file" accept="video/*" id="add-video" hidden>
+        </label>
+        <label>
+          ✍️ Ajouter un texte
+          <button id="add-text">Écrire</button>
+        </label>
+      </div>
+      <div class="gallery" id="gallery">
+        <p>Aucun contenu ajouté pour le moment. Commencez à créer !</p>
+      </div>
+    </div>
+
+    <!-- Témoignages croisés -->
+    <div class="testimonials">
+      <h3>Témoignages Croisés</h3>
+      <div class="testimonial mentor-testimonial">
+        <h4>🎓 Mentor</h4>
+        <textarea placeholder="Partagez votre perspective..."></textarea>
+      </div>
+      <div class="testimonial mentee-testimonial">
+        <h4>🧑‍🎓 Mentoré</h4>
+        <textarea placeholder="Partagez votre perspective..."></textarea>
+      </div>
+    </div>
+
+    <!-- Export du carnet -->
+    <div class="export">
+      <button id="export-journal">📤 Exporter le carnet</button>
+      <p id="export-message" style="display: none;">Votre carnet est prêt à être téléchargé !</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section principale */
+.journal-section {
+  background: linear-gradient(135deg, #faf0e6, #ffffff);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.journal-section:hover {
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* En-tête */
+.journal-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.journal-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.journal-header h2:hover {
+  color: #27ae60;
+}
+
+/* Galerie Multimédia */
+.media-gallery h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.upload-buttons label, #add-text {
+  display: inline-block;
+  background: #2c3e50;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin: 0 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+label:hover, #add-text:hover {
+  background: #34495e;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.gallery p {
+  font-size: 1.4rem;
+  color: #888;
+  font-style: italic;
+}
+
+.gallery-item {
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+textarea {
+  width: 80%;
+  height: 120px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #27ae60;
+  box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
+}
+
+/* Témoignages Croisés */
+.testimonials {
+  margin: 40px 0;
+}
+
+.testimonial {
+  margin-bottom: 30px;
+}
+
+.testimonial h4 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.testimonial textarea {
+  padding: 15px;
+}
+
+/* Export */
+.export button {
+  background: #27ae60;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.export button:hover {
+  background: #229954;
+}
+
+#export-message {
+  margin-top: 12px;
+  color: #27ae60;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+</style>
+
+<script>
+// Ajout de contenu dans la galerie
+const gallery = document.getElementById('gallery');
+const addImageInput = document.getElementById('add-image');
+const addVideoInput = document.getElementById('add-video');
+const addTextButton = document.getElementById('add-text');
+
+addImageInput.addEventListener('change', () => {
+  const file = addImageInput.files[0];
+  if (file) {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    img.className = 'gallery-item';
+    gallery.appendChild(img);
+    gallery.querySelector('p')?.remove();
+  }
+});
+
+addVideoInput.addEventListener('change', () => {
+  const file = addVideoInput.files[0];
+  if (file) {
+    const video = document.createElement('video');
+    video.src = URL.createObjectURL(file);
+    video.controls = true;
+    video.className = 'gallery-item';
+    gallery.appendChild(video);
+    gallery.querySelector('p')?.remove();
+  }
+});
+
+addTextButton.addEventListener('click', () => {
+  const text = prompt('Écrivez votre texte :');
+  if (text) {
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.textContent = text;
+    gallery.appendChild(div);
+    gallery.querySelector('p')?.remove();
+  }
+});
+
+// Export du carnet
+document.getElementById('export-journal').addEventListener('click', () => {
+  document.getElementById('export-message').style.display = 'block';
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="adventure-journal" class="journal-section">
+    <div class="container">
+      <header class="journal-header">
+        <h2>📖 Carnet d’Aventures de Mentorat</h2>
+        <p>Consignez vos moments de mentorat sous forme de journal interactif.</p>
+      </header>
+  
+      <!-- Formulaire d'ajout de contenu -->
+      <div class="journal-inputs">
+        <h3>Ajouter du contenu</h3>
+        <div class="inputs">
+          <input type="file" id="image-input" accept="image/*" title="Ajouter une image">
+          <input type="file" id="video-input" accept="video/*" title="Ajouter une vidéo">
+          <button id="add-text-btn">Ajouter du texte</button>
+        </div>
+      </div>
+  
+      <!-- Journal affiché -->
+      <div id="journal-display">
+        <h3>Pages du Carnet</h3>
+        <div class="journal-pages" id="pages-container">
+          <p>Aucun contenu ajouté pour le moment. Commencez à écrire votre histoire !</p>
+        </div>
+      </div>
+  
+      <!-- Témoignages -->
+      <div class="testimonials">
+        <h3>Témoignages</h3>
+        <div class="testimonial mentor">
+          <h4>🎓 Mentor</h4>
+          <textarea id="mentor-input" placeholder="Partagez votre perspective ici..."></textarea>
+        </div>
+        <div class="testimonial mentee">
+          <h4>🧑‍🎓 Mentoré</h4>
+          <textarea id="mentee-input" placeholder="Partagez votre expérience ici..."></textarea>
+        </div>
+      </div>
+  
+      <!-- Export PDF -->
+      <div class="export-section">
+        <button id="export-btn">📤 Exporter en PDF</button>
+        <p id="export-status"></p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Général */
+  .journal-section {
+    background: linear-gradient(to right, #f7f9fc, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .journal-header h2 {
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  .journal-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Inputs */
+  .journal-inputs .inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  #image-input, #video-input, #add-text-btn {
+    background: #34495e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  #add-text-btn {
+    background: #2ecc71;
+  }
+  
+  #image-input:hover, #video-input:hover, #add-text-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Journal */
+  .journal-pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .page {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f7f9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1rem;
+  }
+  
+  .page img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+  }
+  
+  .page video {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Témoignages */
+  .testimonials {
+    margin-top: 30px;
+  }
+  
+  .testimonials h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial {
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    width: 80%;
+    height: 80px;
+    border: 1px solid #dcdde1;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  /* Export */
+  .export-section {
+    margin-top: 30px;
+  }
+  
+  #export-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  #export-btn:hover {
+    background: #c0392b;
+  }
+  
+  #export-status {
+    margin-top: 10px;
+    color: #27ae60;
+    font-size: 1rem;
+  }
+  </style>
+  
+  <script>
+  // Ajouter une image au journal
+  document.getElementById('image-input').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      addPageToJournal(img);
+    }
+  });
+  
+  // Ajouter une vidéo au journal
+  document.getElementById('video-input').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+      const video = document.createElement('video');
+      video.src = URL.createObjectURL(file);
+      video.controls = true;
+      addPageToJournal(video);
+    }
+  });
+  
+  // Ajouter du texte au journal
+  document.getElementById('add-text-btn').addEventListener('click', function () {
+    const text = prompt('Entrez votre texte :');
+    if (text) {
+      const textDiv = document.createElement('div');
+      textDiv.textContent = text;
+      textDiv.style.color = '#34495e';
+      addPageToJournal(textDiv);
+    }
+  });
+  
+  // Fonction pour ajouter une page au journal
+  function addPageToJournal(content) {
+    const container = document.getElementById('pages-container');
+    if (container.querySelector('p')) {
+      container.innerHTML = ''; // Supprime le texte par défaut
+    }
+    const page = document.createElement('div');
+    page.classList.add('page');
+    page.appendChild(content);
+    container.appendChild(page);
+  }
+  
+  // Exporter le carnet en PDF (simulation)
+  document.getElementById('export-btn').addEventListener('click', function () {
+    document.getElementById('export-status').textContent = 'Le carnet a été exporté avec succès !';
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="role-reversal-workshops" class="workshop-section">
+    <div class="container">
+      <header class="workshop-header">
+        <h2>🔄 Ateliers d'Inversion des Rôles</h2>
+        <p>Une journée où les mentorés deviennent mentors et vice versa, pour une expérience d'apprentissage inversé.</p>
+      </header>
+  
+      <!-- Participants -->
+      <div class="participants">
+        <h3>Participants</h3>
+        <div class="role-selection">
+          <div class="mentor-selection">
+            <h4>Mentor</h4>
+            <input type="text" id="mentor-name" placeholder="Nom du Mentor">
+          </div>
+          <div class="mentee-selection">
+            <h4>Mentoré</h4>
+            <input type="text" id="mentee-name" placeholder="Nom du Mentoré">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Ateliers et apprentissage inversé -->
+      <div class="reversal-learning">
+        <h3>Apprentissage inversé</h3>
+        <p>Les mentorés enseignent ce qu'ils maîtrisent le mieux. Que souhaitez-vous partager ?</p>
+        <textarea id="mentee-teaching" placeholder="Décrivez ce que vous souhaitez enseigner..."></textarea>
+        <button id="submit-teaching">Partager le sujet</button>
+      </div>
+  
+      <!-- Réflexion -->
+      <div class="reflection">
+        <h3>Réflexion des Mentors</h3>
+        <textarea id="mentor-reflection" placeholder="Mentor, partagez vos impressions après cette expérience..."></textarea>
+      </div>
+  
+      <!-- Rapport renforcé -->
+      <div class="strengthened-bond">
+        <h3>Renforcement du lien</h3>
+        <p>Mentor et mentoré partagent ce qu'ils ont appris de cette expérience et comment cela a renforcé leur relation.</p>
+        <button id="share-experience">Partager l'expérience</button>
+        <div id="shared-experience" style="display:none;">
+          <p><strong>Mentoré : </strong><span id="mentee-message"></span></p>
+          <p><strong>Mentor : </strong><span id="mentor-message"></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Style général */
+  .workshop-section {
+    background: linear-gradient(135deg, #f9f9f9, #f0f4f8);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #34495e;
+    text-align: center;
+  }
+  
+  .workshop-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  .workshop-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+  }
+  
+  /* Section des participants */
+  .participants {
+    margin-bottom: 30px;
+  }
+  
+  .participants h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .role-selection {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .role-selection div {
+    width: 40%;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Apprentissage inversé */
+  .reversal-learning {
+    margin-bottom: 30px;
+  }
+  
+  .reversal-learning h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Réflexion des mentors */
+  .reflection {
+    margin-bottom: 30px;
+  }
+  
+  #submit-teaching, #share-experience {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  #submit-teaching:hover, #share-experience:hover {
+    background-color: #229954;
+  }
+  
+  /* Affichage des expériences partagées */
+  #shared-experience {
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  </style>
+  
+  <script>
+  // Fonction pour partager le sujet enseigné par le mentoré
+  document.getElementById('submit-teaching').addEventListener('click', function() {
+    const teachingContent = document.getElementById('mentee-teaching').value;
+    if (teachingContent.trim() !== '') {
+      alert('Sujet partagé avec succès !');
+      document.getElementById('mentee-teaching').value = '';
+    } else {
+      alert('Veuillez entrer un sujet à partager.');
+    }
+  });
+  
+  // Fonction pour partager les impressions des mentors
+  document.getElementById('mentor-reflection').addEventListener('blur', function() {
+    const mentorReflection = document.getElementById('mentor-reflection').value;
+    if (mentorReflection.trim() !== '') {
+      console.log('Mentor a partagé ses impressions :', mentorReflection);
+    }
+  });
+  
+  // Fonction pour partager l'expérience et renforcer le lien
+  document.getElementById('share-experience').addEventListener('click', function() {
+    const menteeMessage = document.getElementById('mentee-teaching').value;
+    const mentorMessage = document.getElementById('mentor-reflection').value;
+  
+    if (menteeMessage && mentorMessage) {
+      document.getElementById('mentee-message').innerText = menteeMessage;
+      document.getElementById('mentor-message').innerText = mentorMessage;
+      document.getElementById('shared-experience').style.display = 'block';
+    } else {
+      alert('Veuillez partager vos expériences avant.');
+    }
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="virtual-dinners" class="dinner-section">
+    <div class="container">
+      <header class="dinner-header">
+        <h2>🍽️ Dîners Virtuels avec les Mentors</h2>
+        <p>Partagez un repas virtuel tout en discutant de sujets créatifs et personnels avec votre mentor.</p>
+      </header>
+  
+      <!-- Atmosphère détendue -->
+      <div class="atmosphere">
+        <h3>Créez une ambiance conviviale</h3>
+        <p>Choisissez un plat ou une boisson à partager pendant la discussion.</p>
+        <div class="food-choice">
+          <input type="file" id="food-photo" accept="image/*" title="Téléchargez une photo de votre plat">
+          <button id="submit-food">Partager votre plat</button>
+        </div>
+      </div>
+  
+      <!-- Thèmes surprenants -->
+      <div class="discussion-themes">
+        <h3>Thèmes de la Discussion</h3>
+        <p>Voici quelques sujets pour amorcer la conversation :</p>
+        <ul id="themes-list">
+          <li>La créativité dans le travail</li>
+          <li>Les voyages et découvertes</li>
+          <li>Les passions cachées</li>
+          <li>Les leçons de vie importantes</li>
+          <li>Vos inspirations et mentors personnels</li>
+        </ul>
+        <button id="random-theme-btn">Thème aléatoire</button>
+        <div id="random-theme-display"></div>
+      </div>
+  
+      <!-- Partage de recettes -->
+      <div class="recipe-sharing">
+        <h3>Partagez vos Recettes</h3>
+        <textarea id="recipe-input" placeholder="Décrivez votre recette favorite ou votre plat du jour..."></textarea>
+        <button id="submit-recipe">Partager la recette</button>
+      </div>
+  
+      <!-- Débriefing informel -->
+      <div class="informal-debrief">
+        <h3>Débriefing Informel</h3>
+        <p>Après le dîner, partagez ce que vous avez appris ou apprécié durant la conversation.</p>
+        <textarea id="debrief-input" placeholder="Que retenez-vous de cette discussion ?"></textarea>
+        <button id="submit-debrief">Partager votre ressenti</button>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Style général */
+  .dinner-section {
+    background: linear-gradient(to right, #fff, #f7f9fc);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #34495e;
+  }
+  
+  .dinner-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .dinner-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Atmosphère détendue */
+  .atmosphere {
+    margin-bottom: 30px;
+  }
+  
+  .atmosphere h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .food-choice {
+    margin-top: 20px;
+  }
+  
+  #food-photo {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #submit-food {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #submit-food:hover {
+    background-color: #229954;
+  }
+  
+  /* Thèmes de discussion */
+  .discussion-themes {
+    margin-bottom: 30px;
+  }
+  
+  .discussion-themes h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  #themes-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #themes-list li {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    color: #34495e;
+  }
+  
+  #random-theme-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #random-theme-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  #random-theme-display {
+    margin-top: 20px;
+    font-style: italic;
+    color: #e67e22;
+  }
+  
+  /* Partage de recettes */
+  .recipe-sharing {
+    margin-bottom: 30px;
+  }
+  
+  #recipe-input {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  #submit-recipe {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #submit-recipe:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Débriefing informel */
+  .informal-debrief {
+    margin-bottom: 30px;
+  }
+  
+  #debrief-input {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  #submit-debrief {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #submit-debrief:hover {
+    background-color: #c0392b;
+  }
+  </style>
+  
+  <script>
+  // Partage du plat virtuel (image)
+  document.getElementById('submit-food').addEventListener('click', function() {
+    const fileInput = document.getElementById('food-photo');
+    if (fileInput.files.length > 0) {
+      alert('Votre plat a été partagé avec succès !');
+    } else {
+      alert('Veuillez télécharger une photo de votre plat.');
+    }
+  });
+  
+  // Thème aléatoire pour discussion
+  document.getElementById('random-theme-btn').addEventListener('click', function() {
+    const themes = [
+      "La créativité dans le travail",
+      "Les voyages et découvertes",
+      "Les passions cachées",
+      "Les leçons de vie importantes",
+      "Vos inspirations et mentors personnels"
+    ];
+    const randomTheme = themes[Math.floor(Math.random() * themes.length)];
+    document.getElementById('random-theme-display').textContent = `Thème choisi : "${randomTheme}"`;
+  });
+  
+  // Partage de recette
+  document.getElementById('submit-recipe').addEventListener('click', function() {
+    const recipe = document.getElementById('recipe-input').value;
+    if (recipe.trim() !== '') {
+      alert('Recette partagée avec succès !');
+      document.getElementById('recipe-input').value = '';
+    } else {
+      alert('Veuillez entrer une recette.');
+    }
+  });
+  
+  // Débriefing informel
+  document.getElementById('submit-debrief').addEventListener('click', function() {
+    const debrief = document.getElementById('debrief-input').value;
+    if (debrief.trim() !== '') {
+      alert('Merci pour votre ressenti !');
+      document.getElementById('debrief-input').value = '';
+    } else {
+      alert('Veuillez partager vos impressions.');
+    }
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="failure-lab" class="failure-lab-section">
+    <div class="container">
+      <header class="failure-lab-header">
+        <h2>⚡ Laboratoire des Échecs</h2>
+        <p>Une plateforme où les mentorés explorent les erreurs de leurs mentors pour en tirer des enseignements précieux.</p>
+      </header>
+  
+      <!-- Histoires authentiques -->
+      <div class="authentic-stories">
+        <h3>Histoires Authentiques</h3>
+        <p>Les mentors partagent leurs plus grands échecs et les leçons apprises.</p>
+        <textarea id="mentor-failure-story" placeholder="Racontez un échec majeur et les leçons apprises..."></textarea>
+        <button id="submit-failure-story">Partager l'Histoire</button>
+      </div>
+  
+      <!-- Simulations -->
+      <div class="failure-simulations">
+        <h3>Simulations</h3>
+        <p>Vivez un scénario d'échec et trouvez des solutions alternatives pour résoudre le problème.</p>
+        <select id="failure-scenario">
+          <option value="perte-contrat">Perte d'un contrat important</option>
+          <option value="projet-echoue">Échec d'un projet majeur</option>
+          <option value="erreur-communication">Erreur de communication avec un client</option>
+          <option value="perte-d-emploi">Perte d'emploi ou d'opportunité</option>
+        </select>
+        <textarea id="failure-solution" placeholder="Comment résoudre ce scénario d'échec ?"></textarea>
+        <button id="submit-simulation">Partager la solution</button>
+      </div>
+  
+      <!-- Débat sur l'échec -->
+      <div class="failure-debate">
+        <h3>Débat sur l'Échec</h3>
+        <p>Ouvrons la discussion : L'échec est-il un moteur de succès ? Partagez vos pensées.</p>
+        <textarea id="debate-input" placeholder="Votre réflexion sur l'échec et son rôle dans le succès..."></textarea>
+        <button id="submit-debate">Partager votre réflexion</button>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Style général */
+  .failure-lab-section {
+    background: linear-gradient(135deg, #f7f9f9, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #34495e;
+  }
+  
+  .failure-lab-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .failure-lab-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Histoires authentiques */
+  .authentic-stories {
+    margin-bottom: 30px;
+  }
+  
+  .authentic-stories h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  textarea {
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Simulations */
+  .failure-simulations {
+    margin-bottom: 30px;
+  }
+  
+  .failure-simulations h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  select {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  textarea#failure-solution {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Débat sur l'échec */
+  .failure-debate {
+    margin-bottom: 30px;
+  }
+  
+  .failure-debate h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  textarea#debate-input {
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  </style>
+  
+  <script>
+  // Fonction pour partager l'histoire d'échec du mentor
+  document.getElementById('submit-failure-story').addEventListener('click', function() {
+    const story = document.getElementById('mentor-failure-story').value;
+    if (story.trim() !== '') {
+      alert('Histoire d\'échec partagée avec succès !');
+      document.getElementById('mentor-failure-story').value = '';
+    } else {
+      alert('Veuillez entrer une histoire d\'échec.');
+    }
+  });
+  
+  // Fonction pour partager la solution d'un scénario d'échec
+  document.getElementById('submit-simulation').addEventListener('click', function() {
+    const solution = document.getElementById('failure-solution').value;
+    if (solution.trim() !== '') {
+      alert('Solution partagée avec succès !');
+      document.getElementById('failure-solution').value = '';
+    } else {
+      alert('Veuillez entrer une solution pour le scénario.');
+    }
+  });
+  
+  // Fonction pour partager la réflexion sur l'échec
+  document.getElementById('submit-debate').addEventListener('click', function() {
+    const reflection = document.getElementById('debate-input').value;
+    if (reflection.trim() !== '') {
+      alert('Réflexion partagée avec succès !');
+      document.getElementById('debate-input').value = '';
+    } else {
+      alert('Veuillez entrer votre réflexion sur l\'échec.');
+    }
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="inspiration-circle" class="inspiration-circle-section">
+    <div class="container">
+      <header class="inspiration-circle-header">
+        <h2>🌟 Cercle des Inspirations</h2>
+        <p>Une série de discussions ouvertes et créatives où mentors et mentorés explorent des thèmes tels que la philosophie, l’art, ou les sciences humaines.</p>
+      </header>
+  
+      <!-- Approche multidisciplinaire -->
+      <div class="multidisciplinary-approach">
+        <h3>Approche Multidisciplinaire</h3>
+        <p>Un mélange de tech et de réflexion créative pour stimuler l'innovation et la pensée.</p>
+        <textarea id="discussion-topic" placeholder="Proposez un thème créatif ou philosophique à discuter..."></textarea>
+        <button id="submit-topic">Proposer le Thème</button>
+      </div>
+  
+      <!-- Ateliers expressifs -->
+      <div class="expressive-workshops">
+        <h3>Ateliers Expressifs</h3>
+        <p>Exprimez-vous à travers le dessin, l'écriture ou la musique pour explorer différentes perspectives.</p>
+        <div class="workshop-options">
+          <button id="draw-workshop">Dessin</button>
+          <button id="write-workshop">Écriture</button>
+          <button id="music-workshop">Musique</button>
+        </div>
+        <div id="workshop-output"></div>
+      </div>
+  
+      <!-- Invités spéciaux -->
+      <div class="special-guests">
+        <h3>Invités Spéciaux</h3>
+        <p>Philosophes, artistes ou scientifiques enrichissent les discussions avec leurs perspectives uniques.</p>
+        <button id="guest-invite">Inviter un Invité Spécial</button>
+        <div id="guest-info"></div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Style général */
+  .inspiration-circle-section {
+    background: linear-gradient(45deg, #f0f4f7, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #34495e;
+  }
+  
+  .inspiration-circle-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .inspiration-circle-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Approche multidisciplinaire */
+  .multidisciplinary-approach {
+    margin-bottom: 30px;
+  }
+  
+  .multidisciplinary-approach h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  textarea {
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  button:hover {
+    background-color: #3498db;
+  }
+  
+  /* Ateliers expressifs */
+  .expressive-workshops {
+    margin-bottom: 30px;
+  }
+  
+  .expressive-workshops h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .workshop-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  button#draw-workshop,
+  button#write-workshop,
+  button#music-workshop {
+    background-color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  button#draw-workshop:hover,
+  button#write-workshop:hover,
+  button#music-workshop:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Invités spéciaux */
+  .special-guests {
+    margin-bottom: 30px;
+  }
+  
+  #guest-info {
+    margin-top: 20px;
+    font-style: italic;
+    color: #f39c12;
+  }
+  </style>
+  
+  <script>
+  // Fonction pour proposer un thème créatif ou philosophique
+  document.getElementById('submit-topic').addEventListener('click', function() {
+    const topic = document.getElementById('discussion-topic').value;
+    if (topic.trim() !== '') {
+      alert('Thème proposé avec succès !');
+      document.getElementById('discussion-topic').value = '';
+    } else {
+      alert('Veuillez proposer un thème pour la discussion.');
+    }
+  });
+  
+  // Fonction pour ateliers expressifs
+  document.getElementById('draw-workshop').addEventListener('click', function() {
+    document.getElementById('workshop-output').innerHTML = "<p>Explorez vos idées à travers le dessin! Prenez un papier et un crayon...</p>";
+  });
+  
+  document.getElementById('write-workshop').addEventListener('click', function() {
+    document.getElementById('workshop-output').innerHTML = "<p>Exprimez vos pensées par l'écriture. Prenez un moment pour rédiger vos idées...</p>";
+  });
+  
+  document.getElementById('music-workshop').addEventListener('click', function() {
+    document.getElementById('workshop-output').innerHTML = "<p>Lancez-vous dans la création musicale. Quel instrument ou logiciel allez-vous utiliser ?</p>";
+  });
+  
+  // Fonction pour inviter un invité spécial
+  document.getElementById('guest-invite').addEventListener('click', function() {
+    const guests = [
+      { name: 'Marie Curie', field: 'Scientifique', specialty: 'Physique et chimie' },
+      { name: 'Pablo Picasso', field: 'Artiste', specialty: 'Peinture et sculpture' },
+      { name: 'Socrate', field: 'Philosophe', specialty: 'Philosophie antique' }
+    ];
+  
+    const randomGuest = guests[Math.floor(Math.random() * guests.length)];
+    document.getElementById('guest-info').innerHTML = `<p>Invité spécial: <strong>${randomGuest.name}</strong><br>Domain: ${randomGuest.field}<br>Spécialité: ${randomGuest.specialty}</p>`;
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="ideas-arena" class="ideas-arena-section">
+    <div class="container">
+      <header class="ideas-arena-header">
+        <h2>🏆 L'Arène des Idées</h2>
+        <p>Une arène virtuelle où les mentorés présentent leurs idées devant un panel de mentors dans un format gamifié et interactif.</p>
+      </header>
+  
+      <!-- Soumettre une idée -->
+      <div class="submit-idea">
+        <h3>Proposez une Idée</h3>
+        <textarea id="idea-description" placeholder="Décrivez votre idée novatrice ici..."></textarea>
+        <button id="submit-idea">Soumettre l'Idée</button>
+      </div>
+  
+      <!-- Affichage des points de créativité -->
+      <div class="creativity-points">
+        <h3>Points de Créativité</h3>
+        <p>Les idées les plus novatrices gagnent des badges ou des récompenses.</p>
+        <button id="award-points">Attribuer des Points</button>
+        <div id="badge-display"></div>
+      </div>
+  
+      <!-- Feedback en direct -->
+      <div class="live-feedback">
+        <h3>Feedback en Direct</h3>
+        <p>Les mentors offrent des conseils tactiques instantanés.</p>
+        <button id="get-feedback">Obtenir du Feedback</button>
+        <div id="feedback-display"></div>
+      </div>
+  
+      <!-- Évolutivité des idées -->
+      <div class="idea-evolution">
+        <h3>Évolutivité des Idées</h3>
+        <p>Les idées peuvent évoluer et être représentées à d'autres arènes.</p>
+        <button id="evolve-idea">Faire Évoluer l'Idée</button>
+        <div id="evolution-display"></div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Style général */
+  .ideas-arena-section {
+    background: linear-gradient(45deg, #e3f2fd, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #34495e;
+  }
+  
+  .ideas-arena-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+  
+  .ideas-arena-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  /* Soumettre une idée */
+  .submit-idea h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  textarea {
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Boutons */
+  button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  button:hover {
+    background-color: #2ecc71;
+  }
+  
+  /* Points de créativité */
+  .creativity-points {
+    margin-top: 30px;
+  }
+  
+  #badge-display {
+    margin-top: 15px;
+    font-style: italic;
+    color: #f39c12;
+  }
+  
+  /* Feedback en direct */
+  .live-feedback {
+    margin-top: 30px;
+  }
+  
+  #feedback-display {
+    margin-top: 15px;
+    font-style: italic;
+    color: #3498db;
+  }
+  
+  /* Évolutivité des idées */
+  .idea-evolution {
+    margin-top: 30px;
+  }
+  
+  #evolution-display {
+    margin-top: 15px;
+    font-style: italic;
+    color: #9b59b6;
+  }
+  </style>
+  
+  <script>
+  // Fonction pour soumettre une idée
+  document.getElementById('submit-idea').addEventListener('click', function() {
+    const idea = document.getElementById('idea-description').value;
+    if (idea.trim() !== '') {
+      alert('Idée soumise avec succès!');
+      document.getElementById('idea-description').value = '';
+    } else {
+      alert('Veuillez décrire votre idée.');
+    }
+  });
+  
+  // Fonction pour attribuer des points de créativité
+  document.getElementById('award-points').addEventListener('click', function() {
+    const badges = ['Badge de Créativité', 'Badge d’Innovation', 'Badge de Vision'];
+    const randomBadge = badges[Math.floor(Math.random() * badges.length)];
+    document.getElementById('badge-display').innerHTML = `<p>Félicitations ! Vous avez gagné le <strong>${randomBadge}</strong></p>`;
+  });
+  
+  // Fonction pour donner un feedback en direct
+  document.getElementById('get-feedback').addEventListener('click', function() {
+    const feedbacks = [
+      'Pensez à affiner la présentation de votre idée pour la rendre plus claire.',
+      'Excellente approche ! Ajoutez des données concrètes pour renforcer l’impact.',
+      'Votre idée pourrait être plus viable si vous la reliez à des tendances actuelles.'
+    ];
+    const randomFeedback = feedbacks[Math.floor(Math.random() * feedbacks.length)];
+    document.getElementById('feedback-display').innerHTML = `<p><strong>Feedback du Mentor:</strong> ${randomFeedback}</p>`;
+  });
+  
+  // Fonction pour faire évoluer l'idée
+  document.getElementById('evolve-idea').addEventListener('click', function() {
+    const evolutions = [
+      'Votre idée peut être adaptée pour un marché plus large.',
+      'Ajoutez une fonctionnalité mobile pour élargir la portée.',
+      'Réfléchissez à l’intégration d’une IA pour améliorer l’efficacité.'
+    ];
+    const randomEvolution = evolutions[Math.floor(Math.random() * evolutions.length)];
+    document.getElementById('evolution-display').innerHTML = `<p><strong>Évolution de l'idée:</strong> ${randomEvolution}</p>`;
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="innovation-lab" class="innovation-lab-section">
+  <div class="container">
+    <header class="innovation-lab-header">
+      <h2>💡 Le Laboratoire des Innovations</h2>
+      <p>Un espace virtuel de brainstorming où les mentorés et mentors co-créent des projets technologiques de A à Z, comme dans un laboratoire scientifique.</p>
+    </header>
+
+    <!-- Projets collaboratifs -->
+    <div class="collaborative-projects">
+      <h3>Projets Collaboratifs</h3>
+      <textarea id="project-idea" placeholder="Décrivez votre idée de projet technologique..."></textarea>
+      <button id="submit-project">Soumettre l'Idée de Projet</button>
+      <div id="project-display" class="project-display"></div>
+    </div>
+
+    <!-- Pitch final -->
+    <div class="final-pitch">
+      <h3>Pitch Final</h3>
+      <p>Chaque équipe présente son projet sous forme de pitch créatif avec des visuels.</p>
+      <textarea id="pitch-description" placeholder="Décrivez le pitch de votre projet..." style="height: 100px;"></textarea>
+      <button id="submit-pitch">Soumettre le Pitch</button>
+      <div id="pitch-display" class="pitch-display"></div>
+    </div>
+
+    <!-- Soutien continu -->
+    <div class="continuous-support">
+      <h3>Soutien Continu</h3>
+      <p>Des mentors experts offrent un feedback en temps réel.</p>
+      <button id="get-feedback">Obtenir du Feedback</button>
+      <div id="feedback-display"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Style général */
+  .innovation-lab-section {
+    background: linear-gradient(45deg, #d5e8f0, #ffffff);
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #34495e;
+    transition: all 0.3s ease;
+  }
+
+  .innovation-lab-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+
+  .innovation-lab-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+
+  .collaborative-projects h3, .final-pitch h3, .continuous-support h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+
+  textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+  }
+
+  textarea:focus {
+    border-color: #3498db;
+  }
+
+  button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #3498db;
+  }
+
+  .project-display, .pitch-display, .feedback-display {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .project-display.visible, .pitch-display.visible, .feedback-display.visible {
+    display: block;
+  }
+
+  .continuous-support button {
+    background-color: #27ae60;
+  }
+
+  .continuous-support button:hover {
+    background-color: #2ecc71;
+  }
+</style>
+
+<script>
+  // Fonction pour soumettre une idée de projet
+  document.getElementById('submit-project').addEventListener('click', function() {
+    const projectIdea = document.getElementById('project-idea').value;
+    if (projectIdea.trim() !== '') {
+      const projectDisplay = document.getElementById('project-display');
+      projectDisplay.innerHTML = `<p>Votre projet: <strong>${projectIdea}</strong> a été soumis avec succès !</p>`;
+      projectDisplay.classList.add('visible');
+      document.getElementById('project-idea').value = ''; // Réinitialiser le champ
+    } else {
+      alert('Veuillez décrire votre idée de projet.');
+    }
+  });
+
+  // Fonction pour soumettre le pitch final
+  document.getElementById('submit-pitch').addEventListener('click', function() {
+    const pitchDescription = document.getElementById('pitch-description').value;
+    if (pitchDescription.trim() !== '') {
+      const pitchDisplay = document.getElementById('pitch-display');
+      pitchDisplay.innerHTML = `<p>Votre pitch: <strong>${pitchDescription}</strong> a été soumis avec succès !</p>`;
+      pitchDisplay.classList.add('visible');
+      document.getElementById('pitch-description').value = ''; // Réinitialiser le champ
+    } else {
+      alert('Veuillez décrire votre pitch.');
+    }
+  });
+
+  // Fonction pour obtenir un feedback en temps réel
+  document.getElementById('get-feedback').addEventListener('click', function() {
+    const feedbacks = [
+      'Excellente idée ! Ajoutez une fonctionnalité mobile pour augmenter l’impact.',
+      'Il serait intéressant d’explorer des partenariats avec des entreprises pour tester votre solution.',
+      'Pensez à la durabilité à long terme de votre projet et comment il pourra évoluer.'
+    ];
+    const randomFeedback = feedbacks[Math.floor(Math.random() * feedbacks.length)];
+    const feedbackDisplay = document.getElementById('feedback-display');
+    feedbackDisplay.innerHTML = `<p><strong>Feedback du Mentor:</strong> ${randomFeedback}</p>`;
+    feedbackDisplay.classList.add('visible');
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="mentor-toolbox" class="mentor-toolbox-section">
+  <div class="container">
+    <header class="mentor-toolbox-header">
+      <h2>🧰 La Boîte à Outils du Mentor</h2>
+      <p>Chaque mentor apporte une boîte virtuelle remplie d'outils et de ressources adaptés aux besoins et objectifs du mentoré.</p>
+    </header>
+
+    <!-- Boîte personnalisée -->
+    <div class="toolbox-customization">
+      <h3>Personnalisez la Boîte à Outils</h3>
+      <textarea id="resource-description" placeholder="Ajoutez une ressource (livre, vidéo, exercice...)"></textarea>
+      <button id="add-resource">Ajouter une Ressource</button>
+      <div id="resource-display"></div>
+      <input type="file" id="resource-file" />
+      <label for="resource-file" class="upload-button">Télécharger une Ressource</label>
+    </div>
+
+    <!-- Calendrier des Ateliers -->
+    <div class="calendar-section">
+      <h3>Planification des Ateliers</h3>
+      <div id="calendar"></div>
+    </div>
+
+    <!-- Ateliers interactifs -->
+    <div class="interactive-workshops">
+      <h3>Ateliers Interactifs</h3>
+      <p>À chaque nouvelle ressource, un atelier pratique est organisé pour appliquer ce qui a été appris.</p>
+      <button id="start-workshop">Commencer un Atelier</button>
+      <div id="workshop-display"></div>
+    </div>
+
+    <!-- Témoignages -->
+    <div class="testimonials">
+      <h3>Témoignages des Mentorés</h3>
+      <textarea id="testimonial" placeholder="Laissez votre témoignage après un atelier..." style="height: 100px;"></textarea>
+      <button id="submit-testimonial">Soumettre le Témoignage</button>
+      <div id="testimonial-display"></div>
+    </div>
+
+    <!-- Feedback et réajustement -->
+    <div class="feedback-adjustment">
+      <h3>Feedback et Réajustement</h3>
+      <p>À la fin de chaque cycle, un feedback détaillé et personnalisé est donné pour adapter la boîte à outils.</p>
+      <textarea id="feedback-description" placeholder="Donnez votre feedback ici..." style="height: 100px;"></textarea>
+      <button id="submit-feedback">Soumettre le Feedback</button>
+      <div id="feedback-display"></div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* Style général */
+.mentor-toolbox-section {
+  background: linear-gradient(45deg, #e6f7ff, #ffffff);
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  color: #34495e;
+}
+
+.mentor-toolbox-header h2 {
+  font-size: 2.8rem;
+  color: #2980b9;
+  font-weight: 700;
+}
+
+.mentor-toolbox-header p {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+/* Boîte personnalisée */
+.toolbox-customization h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.upload-button:hover {
+  background-color: #3498db;
+}
+
+/* Calendrier */
+.calendar-section {
+  margin-top: 30px;
+  background-color: #f2f7f6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#calendar {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  height: 200px;
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+}
+
+/* Ateliers interactifs */
+.interactive-workshops h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+#workshop-display {
+  margin-top: 15px;
+  font-style: italic;
+  color: #f39c12;
+}
+
+/* Témoignages */
+.testimonials h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+#testimonial-display {
+  margin-top: 15px;
+  font-style: italic;
+  color: #2ecc71;
+}
+
+/* Feedback et réajustement */
+.feedback-adjustment h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+#feedback-display {
+  margin-top: 15px;
+  font-style: italic;
+  color: #e74c3c;
+}
+
+/* Boutons */
+button {
+  background-color: #2980b9;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+</style>
+
+<script>
+// Fonction pour ajouter une ressource à la boîte
+document.getElementById('add-resource').addEventListener('click', function() {
+  const resourceDescription = document.getElementById('resource-description').value;
+  if (resourceDescription.trim() !== '') {
+    document.getElementById('resource-display').innerHTML += `<p><strong>Ressource ajoutée:</strong> ${resourceDescription}</p>`;
+    document.getElementById('resource-description').value = ''; // Réinitialiser le champ
+  } else {
+    alert('Veuillez décrire une ressource.');
+  }
+});
+
+// Fonction pour démarrer un atelier interactif
+document.getElementById('start-workshop').addEventListener('click', function() {
+  const workshops = [
+    'Atelier sur la gestion du temps et des priorités.',
+    'Atelier sur l’innovation technologique et la création d’applications.',
+    'Atelier sur le leadership et la gestion d’équipe.'
+  ];
+  const randomWorkshop = workshops[Math.floor(Math.random() * workshops.length)];
+  document.getElementById('workshop-display').innerHTML = `<p><strong>Atelier en cours:</strong> ${randomWorkshop}</p>`;
+});
+
+// Fonction pour soumettre un témoignage
+document.getElementById('submit-testimonial').addEventListener('click', function() {
+  const testimonialDescription = document.getElementById('testimonial').value;
+  if (testimonialDescription.trim() !== '') {
+    document.getElementById('testimonial-display').innerHTML = `<p><strong>Témoignage:</strong> ${testimonialDescription}</p>`;
+    document.getElementById('testimonial').value = ''; // Réinitialiser le champ
+  } else {
+    alert('Veuillez décrire votre témoignage.');
+  }
+});
+
+// Fonction pour soumettre un feedback et réajuster la boîte
+document.getElementById('submit-feedback').addEventListener('click', function() {
+  const feedbackDescription = document.getElementById('feedback-description').value;
+  if (feedbackDescription.trim() !== '') {
+    document.getElementById('feedback-display').innerHTML = `<p><strong>Feedback:</strong> ${feedbackDescription}</p>`;
+    document.getElementById('feedback-description').value = ''; // Réinitialiser le champ
+  } else {
+    alert('Veuillez décrire votre feedback.');
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>
+<footer class=" container-fluid text-dark py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: About -->
+        <div class="col-md-3 mb-4">
+          <h5>À propos de Jongoma Tech</h5>
+          <p>
+            Jongoma Tech est une plateforme dédiée à l'autonomisation des femmes africaines dans la technologie. 
+            Nous connectons, soutenons et inspirons les femmes pour façonner l'avenir de la tech.
+          </p>
+        </div>
+  
+        <!-- Column 2: Quick Links -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Liens rapides</h5>
+          <ul class="list-unstyled text-dark">
+            <li><a href="#about-us" class="text-dark text-decoration-none">À propos</a></li>
+            <li><a href="#features" class="text-dark text-decoration-none">Fonctionnalités</a></li>
+            <li><a href="#blog" class="text-dark text-decoration-none">Blog</a></li>
+            <li><a href="#testimonials" class="text-dark text-decoration-none">Témoignages</a></li>
+            <li><a href="#contact" class="text-dark text-decoration-none">Contactez-nous</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Contact -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal</li>
+            <li><i class="bi bi-telephone-fill"></i> +221 33 123 4567</li>
+            <li><i class="bi bi-envelope-fill"></i> contact@jongomatech.com</li>
+          </ul>
+        </div>
+  
+        <!-- Column 4: Follow Us -->
+        <div class="col-md-3 mb-4 text-dark">
+          <h5>Suivez-nous</h5>
+          <div class="d-flex">
+            <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
+            <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light text-dark">
+      <!-- Footer Bottom -->
+      <div class="text-center">
+        <p class="mb-0">
+          &copy; 2024 Jongoma Tech. Tous droits réservés. | Conçu avec 💖 par Jongoma Tech Team
+        </p>
+      </div>
+    </div>
+  </footer>
+  

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Publication Féminine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style général de la page */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #4A4A4A;
+        }
+
+        /* Section publication */
+        .publication-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .publication-section:hover {
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .publication-section h4 {
+            color: #E91E63;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 12px;
+            border: 1px solid #E91E63;
+            border-radius: 8px;
+            resize: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #F48FB1;
+            outline: none;
+        }
+
+        .file-upload {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .file-upload label {
+            cursor: pointer;
+            color: #F48FB1;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload label:hover {
+            color: #E91E63;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .file-preview {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .file-preview img, .file-preview video {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            background-color: #E91E63;
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #F48FB1;
+        }
+
+        /* Section publication affichée */
+        .publication-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .publication-card .content p {
+            margin: 0;
+            font-size: 16px;
+            color: #4A4A4A;
+        }
+
+        .publication-card small {
+            color: #B0BEC5;
+            font-size: 14px;
+        }
+
+        .interactions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: #E91E63;
+        }
+
+        .interactions button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #E91E63;
+        }
+
+        .comment-container {
+            margin-top: 10px;
+        }
+
+        .comment-container p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .comment-container input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #E91E63;
+        }
+
+        .confidentiality {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .confidentiality label {
+            font-size: 14px;
+            color: #4A4A4A;
+        }
+
+        .confidentiality select {
+            margin-left: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #E91E63;
+        }
+
+        /* Section supplémentaire à droite */
+        .reaction-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .reaction-section h4 {
+            color: #E91E63;
+            font-size: 20px;
+        }
+
+        .reaction-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .reaction-item button {
+            color: #E91E63;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+
+        .reaction-item button:hover {
+            color: #F48FB1;
+        }
+        .user-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #E91E63;
+}
+
+.user-name {
+    color: #E91E63;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.user-status {
+    color: #4A4A4A;
+    font-size: 14px;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #E91E63;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #f9f7fb;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #F48FB1;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #4A4A4A;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #E91E63;
+    color: white;
+}
+.stats-section {
+    margin-top: 20px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #f9f7fb;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.stat:hover {
+    background-color: #F48FB1;
+    color: white;
+}
+
+.stat span {
+    font-size: 16px;
+}
+.notifications-section {
+    margin-top: 20px;
+}
+
+.notification-item {
+    padding: 10px 15px;
+    background-color: #f9f7fb;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #4A4A4A;
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #E91E63;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+    </style>
+</head>
+<body>
+
+  <!-- Menu de Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg container-fluid">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/Fatou5.png" alt="Logo" class="logo me-2" height="70">
+        </a>
+
+        <!-- Bouton toggle pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Liens du menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="tableau.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Formation.html">Formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mentorat.html">Mentorat</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Projet.html">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="salon.html">Salon</a>
+                </li>
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/profil.jpg" alt="Utilisateur" class="rounded-circle me-2" height="35">
+                         Profil
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#profil">Voir le Profil</a></li>
+                        <li><a class="dropdown-item" href="#parametres">Paramètres</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#logout">Déconnexion</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+
+            <!-- Section à gauche -->
+            <div class="col-lg-3 col-md-12">
+                <div class="sidebar">
+                    <div class="user-section text-center">
+                        <img src="images/analyse.jpg" alt="Utilisateur" class="img-fluid rounded-circle">
+                        <h4 class="user-name mt-3">Étudiante en Informatique</h4>
+                        <p class="user-status">En ligne</p>
+                    </div>
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Recherche rapide...">
+                    </div>
+
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li>Mon Profil</li>
+                        <li>Mes Projets</li>
+                        <li>Mon Réseau</li>
+                        <li>Paramètres</li>
+                        <li>Messages</li>
+                        <li>Notifications</li>
+                    </ul>
+
+                    <!-- Stats Section -->
+                    <div class="stats-section">
+                        <h4>Statistiques</h4>
+                        <div class="stat">
+                            <span>Publications</span><span>5</span>
+                        </div>
+                        <div class="stat">
+                            <span>Projets Terminés</span><span>3</span>
+                        </div>
+                        <div class="stat">
+                            <span>Suivi de Réseau</span><span>12</span>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="notifications-section">
+                        <h3>Notifications</h3>
+                        <div class="notification-item">
+                            Nouvelle activité dans votre projet.
+                            <div class="notification-badge">2</div>
+                        </div>
+                        <div class="notification-item">
+                            Nouveau message de votre mentor.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section de publication au centre -->
+            <div class="col-lg-6 col-md-12">
+                <div class="publication-section">
+                    <h4>Créer une publication</h4>
+                    <textarea id="publicationContent" placeholder="Partagez vos idées ici..." rows="4"></textarea>
+
+                    <div class="file-upload">
+                        <label for="fileInput">
+                            <i class="fas fa-cloud-upload-alt"></i> Télécharger une image ou vidéo
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*,video/*" onchange="previewFile()" />
+                    </div>
+
+                    <div class="file-preview" id="filePreview"></div>
+
+                    <div class="confidentiality">
+                        <label for="privacySelect">Confidentialité:</label>
+                        <select id="privacySelect">
+                            <option value="public">Public</option>
+                            <option value="private">Privé</option>
+                        </select>
+                    </div>
+
+                    <button onclick="submitPublication()">Publier</button>
+                </div>
+
+                <!-- Liste des publications -->
+                <div id="publicationsList"></div>
+            </div>
+
+            <!-- Section à droite -->
+            <div class="col-lg-3 col-md-12">
+                <div class="publication-section">
+                    <h4>Communauté</h4>
+                    <p>Rejoignez notre communauté pour échanger, poser des questions et partager des expériences.</p>
+                    <button>Rejoindre</button>
+                </div>
+
+                <div class="reaction-section">
+                    <h4>Réactions récentes</h4>
+                    <div class="reaction-item">
+                        <span>Un utilisateur a aimé votre publication !</span>
+                        <button>❤️</button>
+                    </div>
+                    <div class="reaction-item">
+                        <span>Vous avez un nouveau commentaire.</span>
+                        <button>💬</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("fileInput").addEventListener("change", previewFile);
+
+        function submitPublication() {
+            var content = document.getElementById("publicationContent").value.trim();
+            var fileInput = document.getElementById("fileInput");
+            var files = fileInput.files;
+            var privacy = document.getElementById("privacySelect").value;
+
+            if (!content && files.length === 0) {
+                alert("Veuillez écrire une publication ou ajouter un fichier.");
+                return;
+            }
+
+            var publication = {
+                content: content,
+                timestamp: new Date().toLocaleString(),
+                files: [],
+                privacy: privacy
+            };
+
+            if (files.length > 0) {
+                let filesProcessed = 0;
+                for (let file of files) {
+                    let reader = new FileReader();
+                    reader.onload = function (event) {
+                        publication.files.push({
+                            base64: event.target.result,
+                            type: file.type
+                        });
+
+                        filesProcessed++;
+                        if (filesProcessed === files.length) {
+                            displayPublication(publication);
+                            resetFields();
+                        }
+                    };
+                    reader.readAsDataURL(file);
+                }
+            } else {
+                displayPublication(publication);
+                resetFields();
+            }
+        }
+
+        function displayPublication(publication) {
+            var publicationsList = document.getElementById("publicationsList");
+
+            var publicationCard = document.createElement("div");
+            publicationCard.classList.add("publication-card");
+
+            var content = document.createElement("div");
+            content.classList.add("content");
+            var pContent = document.createElement("p");
+            pContent.textContent = publication.content;
+            content.appendChild(pContent);
+
+            var timestamp = document.createElement("small");
+            timestamp.textContent = "Publié le : " + publication.timestamp;
+
+            var fileContainer = document.createElement("div");
+            fileContainer.classList.add("file-container");
+
+            publication.files.forEach(file => {
+                if (file.type.startsWith("image/")) {
+                    var img = document.createElement("img");
+                    img.src = file.base64;
+                    img.alt = "Image téléchargée";
+                    fileContainer.appendChild(img);
+                } else if (file.type.startsWith("video/")) {
+                    var video = document.createElement("video");
+                    video.src = file.base64;
+                    video.controls = true;
+                    fileContainer.appendChild(video);
+                }
+            });
+
+            var interactionContainer = document.createElement("div");
+            interactionContainer.classList.add("interactions");
+
+            var likeButton = document.createElement("button");
+            likeButton.innerHTML = "❤️ J'aime";
+            likeButton.onclick = function () {
+                alert("Vous avez aimé cette publication !");
+            };
+
+            var commentInput = document.createElement("input");
+            commentInput.type = "text";
+            commentInput.placeholder = "Écrire un commentaire...";
+
+            var commentButton = document.createElement("button");
+            commentButton.textContent = "💬 Publier";
+            commentButton.onclick = function () {
+                addComment(publicationCard, commentInput.value);
+                commentInput.value = "";
+            };
+
+            interactionContainer.appendChild(likeButton);
+            interactionContainer.appendChild(commentInput);
+            interactionContainer.appendChild(commentButton);
+
+            publicationCard.appendChild(content);
+            publicationCard.appendChild(fileContainer);
+            publicationCard.appendChild(interactionContainer);
+            publicationCard.appendChild(timestamp);
+
+            publicationsList.prepend(publicationCard);
+        }
+
+        function previewFile() {
+            var files = document.getElementById("fileInput").files;
+            var previewContainer = document.getElementById("filePreview");
+            previewContainer.innerHTML = "";
+
+            if (files.length > 0) {
+                for (let file of files) {
+                    let reader = new FileReader();
+
+                    reader.onload = function (event) {
+                        var fileUrl = event.target.result;
+
+                        if (file.type.startsWith("image/")) {
+                            var img = document.createElement("img");
+                            img.src = fileUrl;
+                            img.alt = "Prévisualisation";
+                            previewContainer.appendChild(img);
+                        } else if (file.type.startsWith("video/")) {
+                            var video = document.createElement("video");
+                            video.src = fileUrl;
+                            video.controls = true;
+                            previewContainer.appendChild(video);
+                        }
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+
+        function addComment(publicationCard, commentText) {
+            if (commentText.trim()) {
+                var commentContainer = publicationCard.querySelector(".comment-container");
+                if (!commentContainer) {
+                    commentContainer = document.createElement("div");
+                    commentContainer.classList.add("comment-container");
+                    publicationCard.appendChild(commentContainer);
+                }
+
+                var comment = document.createElement("p");
+                comment.textContent = commentText;
+                commentContainer.appendChild(comment);
+            }
+        }
+
+        function resetFields() {
+            document.getElementById("publicationContent").value = "";
+            document.getElementById("fileInput").value = "";
+            document.getElementById("filePreview").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
+
+
+

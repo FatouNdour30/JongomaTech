@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Mon Histoire</title>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #fafafa;
+        color: #34495e;
+        margin: 0;
+        padding: 0;
+      }
+
+      #mon-histoire {
+        background-color: #fdf2f8;
+        padding: 60px 15px;
+      }
+
+      .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.8rem;
+        color: #d81b60;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .section-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+      .rounded-image {
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        width: 100%;
+        height: auto;
+      }
+
+      .rounded-image:hover {
+        transform: scale(1.05);
+      }
+
+      .quote-section {
+        background-color: #fff0f6;
+        padding: 40px 20px;
+        margin-top: 40px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .quote-section .blockquote {
+        font-size: 1.5rem;
+        font-family: 'Playfair Display', serif;
+        color: #d81b60;
+        font-style: italic;
+      }
+
+      .btn-custom {
+        background-color: #d81b60;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .btn-custom:hover {
+        background-color: #ad1457;
+      }
+
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 2.2rem;
+        }
+
+        .section-text {
+          font-size: 1rem;
+        }
+
+        .col-md-6 {
+          margin-bottom: 20px;
+        }
+
+        .btn-custom {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Mon Histoire Section -->
+    <section id="mon-histoire" class="container py-5">
+      <div class="row align-items-center">
+        <!-- Image d'illustration -->
+        <div class="col-md-6 mb-4">
+          <img src="images/Fatoundoura.jpeg" class="img-fluid rounded-image" alt="Mon Histoire">
+        </div>
+
+        <!-- Texte inspirant -->
+        <div class="col-md-6">
+          <h2 class="section-title">Mon Parcours : Du Rêve à la Réalité</h2>
+          <p class="section-text">
+            Mon amour pour l'informatique est né dès l'enfance, encouragé par ma famille et alimenté par ma curiosité. Aujourd'hui, malgré les obstacles, je suis fière de transformer mes rêves en réalité avec Jongoma Tech, un espace dédié aux femmes passionnées par la technologie.
+          </p>
+          <button class="btn btn-custom mt-3" data-bs-toggle="collapse" data-bs-target="#more-story" aria-expanded="false" aria-controls="more-story"><i class="fas fa-chevron-right"></i> Découvrir plus</button>
+        </div>
+      </div>
+
+      <!-- Texte additionnel caché -->
+      <div class="collapse mt-4" id="more-story">
+        <p class="section-text">
+          Mon amour pour l'informatique a émergé dès mon plus jeune âge... 
+          Je m'appelle Ndeye Fatou Ndour, et mon amour pour l'informatique a pris racine dès mon plus jeune âge. Encouragée par mon père et mon frère, j'ai passé de longues heures devant l'ordinateur familial, découvrant un monde fascinant à travers la création de montages photo et vidéo. Ces moments ont nourri une passion durable, renforcée par les encouragements de mes proches. Très tôt, je partageais mes connaissances avec mes cousins, qui venaient me voir pour apprendre, agissant comme une coach autodidacte bien avant de comprendre la portée de mes talents.
+
+Cependant, ce parcours n’a pas toujours été linéaire. Après mon Bac en L2, beaucoup ont remis en question mon choix de poursuivre en informatique, suggérant que seules les filières scientifiques (S) étaient légitimes. Malgré les doutes extérieurs, je suis restée fidèle à mon rêve. Mon orientation vers l’UVS en Multimédia, Internet et Communication a été une étape clé, mais je sentais qu’il me fallait aller plus loin. Une conversation fortuite entre ma sœur et un expert en informatique a changé ma trajectoire. J’ai découvert l’immense diversité des branches informatiques et, surtout, le codage, une discipline où je pouvais créer des plateformes et donner vie à mes idées.
+
+Mon chemin m’a conduit vers une école recommandée par cet expert. Dès mon premier jour, où l’on m’a demandé de partager mon histoire devant mes camarades, j’ai su que cette école serait un tremplin pour mes rêves. Sous la guidance d’un mentor exceptionnel, j’ai commencé à coder, découvrant une affinité naturelle pour cette discipline. Mon enthousiasme grandissait au fil des jours et des nuits passées à perfectionner mes compétences, souvent jusqu’à tard dans la nuit. Mon mentor, impressionné par ma détermination et mes progrès, a joué un rôle clé en me soutenant et en m’encourageant à croire en mes capacités.
+
+Mais ce succès a attiré des rivalités. À mesure que ma réputation grandissait, certains coachs et camarades ont commencé à voir en moi une menace. Les tensions se sont accrues, et les obstacles se sont multipliés : des pièges tendus par des coachs, des mensonges répandus par des amis proches, et une surveillance constante de mes progrès. Ces expériences ont fini par éroder ma confiance en moi. À un moment, un coach m’a même dit : « Tu as peur de ton propre potentiel », un commentaire qui m’a profondément marquée.
+
+Ma famille, préoccupée par mon bien-être, m’a conseillé de quitter cette école. Bien que cette décision fût difficile, j’ai fini par partir sans diplôme ni attestation, me sentant brisée et perdue. Cependant, cet échec apparent a ouvert la voie à une nouvelle opportunité. Reprenant mes études à l’ESTM, j’ai été admise directement en Licence 3, un moment marquant qui a ravivé ma motivation.
+
+C’est dans ce contexte que j’ai fondé Jongoma Tech. Inspirée par mes défis et mes triomphes, cette initiative vise à créer un espace sûr et inclusif pour les femmes passionnées par la technologie. À Jongoma Tech, les femmes peuvent apprendre, se former, et s’épanouir sans craindre les jugements ou les rivalités. Cet espace est conçu pour permettre à chacune de se concentrer sur son potentiel et de construire un avenir prometteur dans le domaine technologique.
+
+Mon parcours, bien que semé d’embûches, m’a appris la résilience et l’importance de croire en ses rêves, malgré les obstacles. Aujourd’hui, à travers Jongoma Tech, je souhaite inspirer d’autres femmes à poursuivre leur passion pour la technologie et à se construire un chemin vers l’excellence.
+        </p>
+        
+      </div>
+
+      
+    </section>
+
+    <!-- Citation Inspirante -->
+    <section class="quote-section">
+      <blockquote class="blockquote">
+        <p>"Les épreuves forgent notre force, les doutes nourrissent notre détermination, et chaque pas dans l'inconnu devient un pas vers la réalisation de nos rêves." – Ndeye Fatou Ndour</p>
+      </blockquote>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

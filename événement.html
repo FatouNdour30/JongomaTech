@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jongoma Tech Star Award - Tableau de Bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="events-webinars">
+    <div class="container">
+        <!-- En-tête de la section -->
+        <div class="section-header">
+            <h2>Événements et Webinaires</h2>
+            <p>Rejoignez-nous pour découvrir, apprendre et interagir lors de nos webinaires et événements exclusifs.</p>
+        </div>
+
+        <!-- Webinaires à venir -->
+        <div class="upcoming-events">
+            <h3>Webinaires à Venir</h3>
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="images/intelligence.jpg" alt="Webinaire IA" class="img-fluid">
+                </div>
+                <div class="event-info">
+                    <h4>Introduction à l'Intelligence Artificielle</h4>
+                    <p class="event-date"><strong>Date:</strong> 25 Décembre 2024, 18h00</p>
+                    <p><strong>Lieu:</strong> Zoom (lien envoyé après inscription)</p>
+                    <button class="btn register-btn">S'inscrire</button>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="images/React.jpeg" alt="Webinaire React" class="img-fluid">
+                </div>
+                <div class="event-info">
+                    <h4>Développement Web avec React.js</h4>
+                    <p class="event-date"><strong>Date:</strong> 5 Janvier 2025, 14h00</p>
+                    <p><strong>Lieu:</strong> YouTube (lien de diffusion en direct)</p>
+                    <button class="btn register-btn">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Événements passés -->
+        <div class="past-events">
+            <h3>Événements Passés</h3>
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="images/cloud.jpg" alt="Webinaire Cloud" class="img-fluid">
+                </div>
+                <div class="event-info">
+                    <h4>Webinaire sur le Cloud Computing</h4>
+                    <p><strong>Date:</strong> 10 Novembre 2024</p>
+                    <a href="#" class="btn replay-btn">Regarder l'enregistrement</a>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="images/python.jpg" alt="Atelier Python" class="img-fluid">
+                </div>
+                <div class="event-info">
+                    <h4>Atelier Python pour Débutants</h4>
+                    <p><strong>Date:</strong> 20 Octobre 2024</p>
+                    <a href="#" class="btn replay-btn">Regarder l'enregistrement</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Q&R -->
+        <div class="qa-section">
+            <h3>Questions & Réponses</h3>
+            <p>Posez vos questions en direct et obtenez des réponses de nos intervenants lors des événements.</p>
+            <form action="#" class="qa-form">
+                <textarea placeholder="Posez votre question ici..." rows="4"></textarea>
+                <button type="submit" class="btn ask-btn">Poser la question</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Style global */
+.events-webinars {
+    background-color: #f8f9fb;
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* En-tête de la section */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #3a3a3a;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+/* Webinaires à venir */
+.upcoming-events {
+    margin-bottom: 50px;
+}
+
+.event-card {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-image img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-info h4 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-info .event-date {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.register-btn {
+    background-color: #5b2c7a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Événements passés */
+.past-events {
+    margin-bottom: 50px;
+}
+
+.replay-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.replay-btn:hover {
+    background-color: #45a049;
+}
+
+/* Section Questions & Réponses */
+.qa-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.qa-section h3 {
+    font-size: 2rem;
+    color: #5b2c7a;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.qa-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.qa-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+.ask-btn {
+    background-color: #5b2c7a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.ask-btn:hover {
+    background-color: #8e44ad;
+}
+</style>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+</body>
+</html>
+
+
